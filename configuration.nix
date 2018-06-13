@@ -5,7 +5,7 @@
 { config, pkgs, ... }:
 
 {
-  # nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfree = true;
 
   imports =
     [ # Include the results of the hardware scan.
@@ -52,7 +52,7 @@
   #   };
   # };
 
-  # time.timeZone = "Europe/Amsterdam";
+  time.timeZone = "Europe/Amsterdam";
 
   # List packages installed in system profile. To search, run $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -82,19 +82,19 @@
   #   };
   # };
 
-  # # Enable sound.
-  # sound.enable = true;
-  # hardware = {
-  #   pulseaudio.enable = true;
-  # };
+  # Enable sound.
+  sound.enable = true;
+  hardware = {
+    pulseaudio.enable = true;
+  };
 
   # List services that you want to enable:
   services = {
-    # # Enable the OpenSSH daemon.
-    # openssh.enable = true;
+    # Enable the OpenSSH daemon.
+    openssh.enable = true;
 
-    # # Enable CUPS to print documents.
-    # printing.enable = true;
+    # Enable CUPS to print documents.
+    printing.enable = true;
 
     # X11 windowing system
     xserver = {
@@ -117,7 +117,7 @@
     home = "/home/tycho";
     description = "Tycho Grouwstra <tychogrouwstra@gmail.com>";
     extraGroups = [ "wheel" "networkmanager" ];
-    # openssh.authorizedKeys.keys = [];
+    openssh.authorizedKeys.keys = [];
     initialPassword = "password";
     # shell = pkgs.zsh;
     # # shell = pkgs.fish;
@@ -125,10 +125,10 @@
 
   system = {
     stateVersion = "18.03";
-    # autoUpgrade = {
-    #   enable = true;
-    #   channel = https://nixos.org/channels/nixos-18.03;
-    # };
+    autoUpgrade = {
+      enable = true;
+      channel = https://nixos.org/channels/nixos-18.03;
+    };
   };
 
   # nix = {
