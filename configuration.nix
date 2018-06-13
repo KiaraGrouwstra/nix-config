@@ -21,15 +21,15 @@
   networking = {
     # Define your hostname.
     hostName = "nixos";
-    # wireless = {
-    #   # Enables wireless support via wpa_supplicant.
-    #   enable = true;
-    #   networks = {
-    #     lia = {
-    #       psk = "magnolia";
-    #     };
-    #   };
-    # };
+    wireless = {
+      # Enables wireless support via wpa_supplicant.
+      enable = true;
+      networks = {
+        lia = {
+          psk = "magnolia";
+        };
+      };
+    };
 
     # firewall = {
     #   # Open ports in the firewall.
@@ -40,17 +40,17 @@
     # };
   };
 
-  # i18n = {
-  #   consoleFont = "Lat2-Terminus16";
-  #   consoleKeyMap = "us";
-  #   defaultLocale = "en_US.UTF-8";
-  #   inputMethod = {
-  #     # enabled = "ibus";
-  #     # ibus.engines = with pkgs.ibus-engines; [ anthy hangul mozc ];
-  #     enabled = "fcitx";
-  #     fcitx.engines = with pkgs.fcitx-engines; [ mozc hangul ]; #  m17n
-  #   };
-  # };
+  i18n = {
+    consoleFont = "Lat2-Terminus16";
+    consoleKeyMap = "us";
+    defaultLocale = "en_US.UTF-8";
+    inputMethod = {
+      # enabled = "ibus";
+      # ibus.engines = with pkgs.ibus-engines; [ anthy hangul mozc ];
+      enabled = "fcitx";
+      fcitx.engines = with pkgs.fcitx-engines; [ mozc hangul ]; #  m17n
+    };
+  };
 
   time.timeZone = "Europe/Amsterdam";
 
