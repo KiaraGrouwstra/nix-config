@@ -21,15 +21,15 @@
   networking = {
     # Define your hostname.
     hostName = "nixos";
-    wireless = {
-      # Enables wireless support via wpa_supplicant.
-      enable = true;
-      networks = {
-        lia = {
-          psk = "magnolia";
-        };
-      };
-    };
+    # wireless = {
+    #   # Enables wireless support via wpa_supplicant.
+    #   enable = true;
+    #   networks = {
+    #     lia = {
+    #       psk = "magnolia";
+    #     };
+    #   };
+    # };
 
     # firewall = {
     #   # Open ports in the firewall.
@@ -99,11 +99,11 @@
     # X11 windowing system
     xserver = {
       enable = true;
-      # layout = "us";
-      # videoDrivers = [ "nvidia" ];
+      layout = "us";
+      videoDrivers = [ "nvidia" ];
 
-      # # Enable touchpad support.
-      # libinput.enable = true;
+      # Enable touchpad support.
+      libinput.enable = true;
 
       desktopManager.gnome3.enable = true;
       displayManager.gdm.enable = true;
@@ -119,8 +119,8 @@
     extraGroups = [ "wheel" "networkmanager" ];
     openssh.authorizedKeys.keys = [];
     initialPassword = "password";
-    # shell = pkgs.zsh;
-    # # shell = pkgs.fish;
+    shell = pkgs.zsh;
+    # shell = pkgs.fish;
   };
 
   system = {
@@ -131,12 +131,12 @@
     };
   };
 
-  # nix = {
-  #   gc = {
-  #     automatic = true;
-  #     dates = "03:15";
-  #   };
-  # };
+  nix = {
+    gc = {
+      automatic = true;
+      dates = "03:15";
+    };
+  };
 
 }
 
