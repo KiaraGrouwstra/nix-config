@@ -5,7 +5,7 @@
 { config, pkgs, ... }:
 
 {
-  nixpkgs.config.allowUnfree = true;
+  # nixpkgs.config.allowUnfree = true;
 
   imports =
     [ # Include the results of the hardware scan.
@@ -40,58 +40,70 @@
     # };
   };
 
-  i18n = {
-    consoleFont = "Lat2-Terminus16";
-    consoleKeyMap = "us";
-    defaultLocale = "en_US.UTF-8";
-    inputMethod = {
-      # enabled = "ibus";
-      # ibus.engines = with pkgs.ibus-engines; [ anthy hangul mozc ];
-      enabled = "fcitx";
-      fcitx.engines = with pkgs.fcitx-engines; [ mozc hangul ]; #  m17n
-    };
-  };
+  # i18n = {
+  #   consoleFont = "Lat2-Terminus16";
+  #   consoleKeyMap = "us";
+  #   defaultLocale = "en_US.UTF-8";
+  #   inputMethod = {
+  #     # enabled = "ibus";
+  #     # ibus.engines = with pkgs.ibus-engines; [ anthy hangul mozc ];
+  #     enabled = "fcitx";
+  #     fcitx.engines = with pkgs.fcitx-engines; [ mozc hangul ]; #  m17n
+  #   };
+  # };
 
-  time.timeZone = "Europe/Amsterdam";
+  # time.timeZone = "Europe/Amsterdam";
 
   # List packages installed in system profile. To search, run $ nix search wget
   environment.systemPackages = with pkgs; [
-    wget vim firefox git nox zsh oh-my-zsh fish docker gitkraken vscode stack thefuck
+    wget
+    vim
+    firefox
+    git
+    # nox
+    # zsh
+    # oh-my-zsh
+    # fish
+    # docker
+    # gitkraken
+    # vscode
+    # stack
+    # thefuck
   ];
 
-  programs = {
-    bash.enableCompletion = true;
-    zsh.enable = true;
-    fish.enable = true;
-    mtr.enable = true;
-    gnupg.agent = {
-      enable = true;
-      enableSSHSupport = true;
-    };
-  };
+  # programs = {
+  #   bash.enableCompletion = true;
+  #   zsh.enable = true;
+  #   fish.enable = true;
+  #   mtr.enable = true;
+  #   gnupg.agent = {
+  #     enable = true;
+  #     enableSSHSupport = true;
+  #   };
+  # };
 
-  # Enable sound.
-  sound.enable = true;
-  hardware = {
-    pulseaudio.enable = true;
-  };
+  # # Enable sound.
+  # sound.enable = true;
+  # hardware = {
+  #   pulseaudio.enable = true;
+  # };
 
   # List services that you want to enable:
   services = {
-    # Enable the OpenSSH daemon.
-    openssh.enable = true;
+    # # Enable the OpenSSH daemon.
+    # openssh.enable = true;
 
-    # Enable CUPS to print documents.
-    printing.enable = true;
+    # # Enable CUPS to print documents.
+    # printing.enable = true;
 
     # X11 windowing system
     xserver = {
       enable = true;
-      layout = "us";
-      videoDrivers = [ "nvidia" ];
+      # layout = "us";
+      # videoDrivers = [ "nvidia" ];
 
-      # Enable touchpad support.
-      libinput.enable = true;
+      # # Enable touchpad support.
+      # libinput.enable = true;
 
       desktopManager.gnome3.enable = true;
       displayManager.gdm.enable = true;
@@ -105,26 +117,26 @@
     home = "/home/tycho";
     description = "Tycho Grouwstra <tychogrouwstra@gmail.com>";
     extraGroups = [ "wheel" "networkmanager" ];
-    openssh.authorizedKeys.keys = [];
+    # openssh.authorizedKeys.keys = [];
     initialPassword = "password";
-    shell = pkgs.zsh;
-    # shell = pkgs.fish;
+    # shell = pkgs.zsh;
+    # # shell = pkgs.fish;
   };
 
   system = {
     stateVersion = "18.03";
-    autoUpgrade = {
-      enable = true;
-      channel = https://nixos.org/channels/nixos-18.03;
-    };
+    # autoUpgrade = {
+    #   enable = true;
+    #   channel = https://nixos.org/channels/nixos-18.03;
+    # };
   };
 
-  nix = {
-    gc = {
-      automatic = true;
-      dates = "03:15";
-    };
-  };
+  # nix = {
+  #   gc = {
+  #     automatic = true;
+  #     dates = "03:15";
+  #   };
+  # };
 
 }
 
