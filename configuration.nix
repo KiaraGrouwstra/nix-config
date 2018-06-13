@@ -56,7 +56,7 @@
 
   # List packages installed in system profile. To search, run $ nix search wget
   environment.systemPackages = with pkgs; [
-    wget vim firefox git nox zsh oh-my-zsh fish docker gitkraken vscode stack
+    wget vim firefox git nox zsh oh-my-zsh fish docker gitkraken vscode stack thefuck
   ];
 
   programs = {
