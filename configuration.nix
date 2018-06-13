@@ -100,7 +100,7 @@
     xserver = {
       enable = true;
       layout = "us";
-      videoDrivers = [ "nvidia" ];
+      # videoDrivers = [ "nvidia" ];
 
       # Enable touchpad support.
       libinput.enable = true;
