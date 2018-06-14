@@ -31,13 +31,9 @@
     #   };
     # };
 
-    # firewall = {
-    #   # Open ports in the firewall.
-    #   allowedTCPPorts = [ ... ];
-    #   allowedUDPPorts = [ ... ];
-    #   # Or disable the firewall altogether.
-    #   enable = false;
-    # };
+    firewall = {
+      enable = false;
+    };
   };
 
   i18n = {
@@ -45,10 +41,8 @@
     consoleKeyMap = "us";
     defaultLocale = "en_US.UTF-8";
     inputMethod = {
-      # enabled = "ibus";
-      # ibus.engines = with pkgs.ibus-engines; [ anthy hangul mozc ];
       enabled = "fcitx";
-      fcitx.engines = with pkgs.fcitx-engines; [ mozc hangul ]; #  m17n
+      fcitx.engines = with pkgs.fcitx-engines; [ mozc hangul ];
     };
   };
 
@@ -60,40 +54,36 @@
     vim
     firefox
     git
-    # nox
-    # zsh
-    # oh-my-zsh
-    # fish
-    # docker
+    nox
+    zsh
+    oh-my-zsh
+    fish
+    docker
     # gitkraken
     # vscode
     # stack
     # thefuck
   ];
 
-  # programs = {
-  #   bash.enableCompletion = true;
-  #   zsh.enable = true;
-  #   fish.enable = true;
-  #   mtr.enable = true;
-  #   gnupg.agent = {
-  #     enable = true;
-  #     enableSSHSupport = true;
-  #   };
-  # };
+  programs = {
+    bash.enableCompletion = true;
+    zsh.enable = true;
+    fish.enable = true;
+    mtr.enable = true;
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+    };
+  };
 
-  # Enable sound.
+  # sound
   sound.enable = true;
   hardware = {
     pulseaudio.enable = true;
   };
 
-  # List services that you want to enable:
   services = {
-    # Enable the OpenSSH daemon.
     openssh.enable = true;
-
-    # Enable CUPS to print documents.
     printing.enable = true;
 
     # X11 windowing system
@@ -102,7 +92,7 @@
       layout = "us";
       # videoDrivers = [ "nvidia" ];
 
-      # Enable touchpad support.
+      # touchpad
       libinput.enable = true;
 
       desktopManager.gnome3.enable = true;
