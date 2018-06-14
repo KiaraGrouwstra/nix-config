@@ -96,8 +96,8 @@
       libinput.enable = true;
 
       desktopManager.gnome3.enable = true;
-      displayManager.gdm.enable = true;
-      # xserver.displayManager.sddm.enable = true;
+      displayManager.sddm.enable = true;
+      windowManager.xmonad.enable = true;
     };
   };
 
