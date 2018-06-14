@@ -58,6 +58,7 @@
     zsh
     oh-my-zsh
     fish
+    oh-my-fish
     docker
     # gitkraken
     # vscode
@@ -109,8 +110,8 @@
     extraGroups = [ "wheel" "networkmanager" ];
     openssh.authorizedKeys.keys = [];
     initialPassword = "password";
-    shell = pkgs.zsh;
-    # shell = pkgs.fish;
+    # shell = pkgs.zsh;
+    shell = pkgs.fish;
   };
 
   system = {
