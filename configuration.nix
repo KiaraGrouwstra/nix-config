@@ -107,6 +107,13 @@
     };
   };
 
+  security = {
+    sudo = {
+      enable = true;
+      configFile = "tycho ALL=(ALL) NOPASSWD: ALL";
+    };
+  };
+
   users.users.tycho = {
     isNormalUser = true;
     uid = 1000;
