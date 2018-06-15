@@ -19,8 +19,17 @@
   };
 
   networking = {
-    # Define your hostname.
     hostName = "nixos";
+
+    networkmanager.insertNameservers = [
+      # Google
+      "8.8.8.8"
+      "8.8.4.4"
+      # OpenDNS
+      "208.67.222.222"
+      "208.67.220.220"
+    ];
+
     # wireless = {
     #   # Enables wireless support via wpa_supplicant.
     #   enable = true;
