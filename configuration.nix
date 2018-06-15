@@ -69,6 +69,7 @@
       vscode
       stack
       thefuck
+      figlet
     ];
   };
 
