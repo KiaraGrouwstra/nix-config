@@ -63,6 +63,7 @@
       oh-my-zsh
       fish
       docker
+      lolcat
       # gitkraken
       # vscode
       # stack
