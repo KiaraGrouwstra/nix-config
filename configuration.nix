@@ -73,7 +73,6 @@
       fish
       docker
       lolcat
-      powerline-fonts
       gitkraken
       vscode
       stack
@@ -98,6 +97,10 @@
   hardware = {
     pulseaudio.enable = true;
   };
+
+  fonts.fonts = with pkgs; [
+    powerline-fonts
+  ];
 
   services = {
     openssh.enable = true;
