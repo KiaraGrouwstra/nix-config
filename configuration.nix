@@ -65,7 +65,7 @@
       docker
       lolcat
       powerline-fonts
-      # gitkraken
+      gitkraken
       # vscode
       # stack
       thefuck
