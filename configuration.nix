@@ -80,6 +80,7 @@
       thefuck
       figlet
       adapta-gtk-theme
+      paper-icon-theme
     ];
   };
 
