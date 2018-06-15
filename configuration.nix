@@ -49,22 +49,26 @@
   time.timeZone = "Europe/Amsterdam";
 
   # List packages installed in system profile. To search, run $ nix search wget
-  environment.systemPackages = with pkgs; [
-    wget
-    vim
-    firefox
-    git
-    nox
-    zsh
-    oh-my-zsh
-    fish
-    oh-my-fish
-    docker
-    # gitkraken
-    # vscode
-    # stack
-    # thefuck
-  ];
+  environment = {
+    variables = {
+      EDITOR = "vim";
+    };
+    systemPackages = with pkgs; [
+      wget
+      vim
+      firefox
+      git
+      nox
+      zsh
+      oh-my-zsh
+      fish
+      docker
+      # gitkraken
+      # vscode
+      # stack
+      # thefuck
+    ];
+  };
 
   programs = {
     bash.enableCompletion = true;
@@ -97,7 +101,8 @@
       libinput.enable = true;
 
       desktopManager.gnome3.enable = true;
-      displayManager.sddm.enable = true;
+      displayManager.gdm.enable = true;
+      # displayManager.sddm.enable = true;
       windowManager.xmonad.enable = true;
     };
   };
