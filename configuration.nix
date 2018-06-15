@@ -144,6 +144,13 @@
     shell = pkgs.fish;
   };
 
+  virtualisation = {
+    docker = {
+      enable = true;
+      socketActivation = true;
+    };
+  };
+
   system = {
     stateVersion = "18.03";
     autoUpgrade = {
