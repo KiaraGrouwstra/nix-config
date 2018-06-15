@@ -67,7 +67,7 @@
       powerline-fonts
       gitkraken
       vscode
-      # stack
+      stack
       thefuck
     ];
   };
