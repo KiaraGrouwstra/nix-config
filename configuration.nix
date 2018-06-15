@@ -79,6 +79,7 @@
       stack
       thefuck
       figlet
+      adapta-gtk-theme
     ];
   };
 
@@ -119,6 +120,7 @@
       desktopManager.gnome3.enable = true;
       displayManager.gdm.enable = true;
       # displayManager.sddm.enable = true;
+      # displayManager.slim.defaultUser = "tycho";
       windowManager.xmonad.enable = true;
     };
   };
