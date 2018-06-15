@@ -68,7 +68,7 @@
       # gitkraken
       # vscode
       # stack
-      # thefuck
+      thefuck
     ];
   };
 
