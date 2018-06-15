@@ -66,7 +66,7 @@
       lolcat
       powerline-fonts
       gitkraken
-      # vscode
+      vscode
       # stack
       thefuck
     ];
