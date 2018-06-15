@@ -64,6 +64,7 @@
       fish
       docker
       lolcat
+      powerline-fonts
       # gitkraken
       # vscode
       # stack
