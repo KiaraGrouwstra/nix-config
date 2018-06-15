@@ -142,7 +142,7 @@
     stateVersion = "18.03";
     autoUpgrade = {
       enable = true;
-      channel = https://nixos.org/channels/nixos-18.03;
+      channel = "https://nixos.org/channels/nixos-unstable";
     };
   };
 
