@@ -61,6 +61,7 @@
   environment = {
     variables = {
       EDITOR = "vim";
+      DEFAULT_USER = "tycho";
     };
     systemPackages = with pkgs; [
       wget
