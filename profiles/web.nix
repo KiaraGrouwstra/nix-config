@@ -3,10 +3,7 @@
 {
 
   environment.systemPackages = with pkgs; [
-    # TODO: upgrade to binary
-    firefox
-    # firefox-bin
-    # firefox-devedition-bin
+    firefox-devedition-bin
     # chromium
   ];
 
