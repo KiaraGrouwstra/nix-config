@@ -81,6 +81,7 @@
       figlet
       adapta-gtk-theme
       paper-icon-theme
+      gnumake
     ];
   };
 
