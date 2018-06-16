@@ -167,7 +167,13 @@
       displayManager.gdm.enable = true;
       # displayManager.sddm.enable = true;
       # displayManager.slim.defaultUser = "tycho";
-      windowManager.xmonad.enable = true;
+
+      windowManager = {
+        xmonad.enable = true;
+        xmonad.enableContribAndExtras = true;
+        default = "xmonad";
+      };
+
     };
   };
 
