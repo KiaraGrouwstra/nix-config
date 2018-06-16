@@ -7,8 +7,6 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    zsh
-    oh-my-zsh
     fish
     # TODO: oh-my-fish
   ];
@@ -20,7 +18,6 @@
   programs = {
 
     bash.enableCompletion = true;
-    zsh.enable = true;
     fish.enable = true;
 
   };

@@ -11,6 +11,7 @@
 
     # theme
 
+    # TODO: carousel
     [org.gnome.desktop.background]
     picture-uri='https://people.csail.mit.edu/vgod/vim/vim-cheat-sheet-en.png'
 
