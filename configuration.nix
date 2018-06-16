@@ -244,6 +244,7 @@
   #     git config --global -l
   #       user.email=tychogrouwstra@gmail.com
   #       user.name=Tycho Grouwstra
+  #       core.excludesfile=~/.gitignore
   #     cat ~/.gitconfig
   #       [user]
   #         email = tychogrouwstra@gmail.com
