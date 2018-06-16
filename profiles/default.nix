@@ -14,7 +14,6 @@
 
   virtualisation.docker.enable = true;
 
-  # # TODO: set to `false` after setting user password in conf
-  # users.mutableUsers = false;
+  users.mutableUsers = false;
 
 }

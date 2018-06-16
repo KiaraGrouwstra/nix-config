@@ -13,9 +13,7 @@ in
     home = "/home/tycho";
     description = "Tycho Grouwstra <tychogrouwstra@gmail.com>";
     openssh.authorizedKeys.keys = secrets.sshKeys;
-    initialPassword = "password";
-    # # TODO: include password -- blocker for `mutableUsers = false`
-    # hashedPassword = secrets.hashedPassword;
+    hashedPassword = secrets.hashedPassword;
 
     shell = pkgs.fish;
 

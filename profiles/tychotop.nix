@@ -50,6 +50,4 @@ rec {
     EDITOR = "vim";
   };
 
-  # TODO: ssh-keygen -t rsa -b 4096 -C "tychogrouwstra@gmail.com"
-
 }
