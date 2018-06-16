@@ -36,6 +36,7 @@ in
   security = {
     sudo = {
       enable = true;
+      # TODO: fix broken NOPASSWD
       configFile = "tycho ALL=(ALL) NOPASSWD: ALL";
     };
   };
