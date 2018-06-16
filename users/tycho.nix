@@ -53,11 +53,10 @@ in
 
   system.activationScripts =
   {
-    # TODO: figure out dotfiles
     # Configure various dotfiles.
     dotfiles = stringAfter [ "users" ]
     ''
-      cd /home/tycho
+      cp -r /etc/nixos/dotfiles/. /home/tycho
     '';
   };
 
