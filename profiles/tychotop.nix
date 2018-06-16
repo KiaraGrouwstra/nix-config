@@ -41,7 +41,6 @@ rec {
   ];
 
   networking.firewall.enable = false;
-  services.xserver.xkbVariant = "colemak"; # TODO: switch thru fcitx?
 
   programs = {
     mtr.enable = true;
