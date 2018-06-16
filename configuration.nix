@@ -82,6 +82,7 @@
       adapta-gtk-theme
       paper-icon-theme
       gnumake
+      tmux
     ];
   };
 
