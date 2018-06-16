@@ -194,7 +194,6 @@
     extraGroups = [ "wheel" "networkmanager" ];
     openssh.authorizedKeys.keys = [];
     initialPassword = "password";
-    # shell = pkgs.zsh;
     shell = pkgs.fish;
   };
 
@@ -218,6 +217,23 @@
       dates = "03:15";
     };
   };
+
+  # TODO:
+  # - Gnome default applications
+  # - ssh-keygen -t rsa -b 4096 -C "tychogrouwstra@gmail.com"
+  # - wifi password
+  # - oh-my-fish
+  # - vscode extensions/settings/keys
+  # - firefox settings: ublock prebake
+  # - git config:
+  #     git config --global -l
+  #       user.email=tychogrouwstra@gmail.com
+  #       user.name=Tycho Grouwstra
+  #     cat ~/.gitconfig
+  #       [user]
+  #         email = tychogrouwstra@gmail.com
+  #         name = Tycho Grouwstra
+  # - keyboard mapping
 
 }
 
