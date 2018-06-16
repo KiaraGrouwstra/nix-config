@@ -1,0 +1,11 @@
+{
+    "terminal.integrated.fontFamily": "Meslo LG M for Powerline",
+    "editor.minimap.enabled": false,
+    "explorer.confirmDelete": false,
+    "workbench.panel.defaultLocation": "right",
+    "terminal.integrated.rightClickBehavior": "copyPaste",
+    "workbench.iconTheme": "eq-material-theme-icons",
+    "workbench.colorTheme": "Material Theme",
+    "materialTheme.fixIconsRunning": false,
+    "explorer.confirmDragAndDrop": false
+}

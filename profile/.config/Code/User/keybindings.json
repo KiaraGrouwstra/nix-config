@@ -1,0 +1,5 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    { "key": "ctrl+pagedown", "command": "workbench.action.terminal.focusNext" },
+    { "key": "ctrl+pageup", "command": "workbench.action.terminal.focusPrevious" }
+]
