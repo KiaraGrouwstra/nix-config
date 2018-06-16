@@ -134,7 +134,14 @@
     rem = remote rename
 
 [push]
-    default = simple
+    # default = simple
+    default = upstream
 
 [url "git@github.com:"]
     insteadof = github:
+
+[branch]
+    autosetuprebase = always
+
+[remote "origin"]
+    push = HEAD
