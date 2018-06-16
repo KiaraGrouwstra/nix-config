@@ -121,6 +121,7 @@
     openssh.enable = true;
     printing.enable = true;
 
+    # # https://askubuntu.com/questions/742946/how-to-find-the-hwdb-header-of-a-general-input-device#743291
     # udev.extraHwdb = ''
     #   # Microsoft Natural Ergonomic Keyboard 4000
     #   keyboard:usb:v045Ep00DB*
