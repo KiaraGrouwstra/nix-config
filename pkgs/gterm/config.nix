@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  programs.gnome-terminal = {
+  nixpkgs.config.gnome-terminal = {
     enable = true;
     showMenubar = false;
     # profile = {

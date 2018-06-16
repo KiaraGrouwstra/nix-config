@@ -1,5 +1,6 @@
+# TODO: handle dotfile copying from nixos-rebuild
 if [ $1 ]; then
-  sudo cp ./configuration.nix /etc/nixos/ && sudo nixos-rebuild dry-build && sudo nixos-rebuild switch -p $1 && cp ./dotfiles/* ~ && git add . && git commit -am "$1"
+  sudo cp -r ./* /etc/nixos/ && sudo nixos-rebuild dry-build && sudo nixos-rebuild switch -p $1 && cp -r ./dotfiles/* ~ && git add . && git commit -am "$1"
 else
   echo "add a name!"
 fi

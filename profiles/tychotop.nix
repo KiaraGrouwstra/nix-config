@@ -47,10 +47,8 @@ rec {
     mtr.enable = true;
   };
 
-  environment = {
-    variables = {
-      EDITOR = "vim";
-    };
+  environment.variables = {
+    EDITOR = "vim";
   };
 
   # TODO: ssh-keygen -t rsa -b 4096 -C "tychogrouwstra@gmail.com"

@@ -1,27 +1,42 @@
 # https://github.com/ghuntley/dotfiles-nixos/tree/master/machines
 { config, pkgs, ... }:
 
-{
-
-  wireless = {
-    # Enables wireless support via wpa_supplicant.
-    enable = true;
-    # TODO: figure out how how to enable wireless
-    # networks = secrets.networks;
-  };
-
-  # FIXME: wpa_supplicant expects the wpa_supplicant.conf file to be in a read/write filesystem. This is a problem.
-  #    # Configure wireless networks
-  #    wpa_supplicant = ''  # FIXME: does this name have potential for conflict? must investigate
-  #      ln -fs ${./private/etc/wpa_supplicant.conf} /etc/wpa_supplicant.conf
-  #    '';
-  #  };
+let secrets = import ../secrets.nix;
+in
+rec {
 
   networking = {
 
-    firewall = {
-
+    # /etc/hosts
+    extraHosts = secrets.extraHosts;
+    networkmanager = {
       enable = true;
+      insertNameservers = [
+        # Google
+        "8.8.8.8"
+        "8.8.4.4"
+        # OpenDNS
+        "208.67.222.222"
+        "208.67.220.220"
+      ];
+    };
+
+    # # wpa_supplicant.
+    # wireless = {
+    #   enable = true;
+    #   # TODO: figure out how how to enable wireless
+    #   # networks = secrets.networks;
+    # };
+
+    # FIXME: wpa_supplicant expects the wpa_supplicant.conf file to be in a read/write filesystem. This is a problem.
+    #    # Configure wireless networks
+    #    wpa_supplicant = ''  # FIXME: does this name have potential for conflict? must investigate
+    #      ln -fs ${./private/etc/wpa_supplicant.conf} /etc/wpa_supplicant.conf
+    #    '';
+    #  };
+
+    firewall = {
+      # enable = true;
       allowPing = true;
 
       # # Allow ChromeCast to send/receive packets

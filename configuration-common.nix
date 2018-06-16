@@ -9,9 +9,7 @@
 { config, lib, pkgs, ... }:
 with lib;
 
-let secrets = import ./secrets.nix;
-in
-rec {
+{
   imports = [
     # Import default packages.
     ./profiles/default.nix
@@ -39,18 +37,6 @@ rec {
 
   };
  
-  # /etc/hosts
-  networking.extraHosts = secrets.extraHosts;
-
-  networking.networkmanager.insertNameservers = [
-    # Google
-    "8.8.8.8"
-    "8.8.4.4"
-    # OpenDNS
-    "208.67.222.222"
-    "208.67.220.220"
-  ];
-
   # automatic updates every day
   system = {
     stateVersion = "18.03";
@@ -91,11 +77,9 @@ rec {
     defaultLocale = "en_US.UTF-8";
   };
 
-  gnupg.agent = {
+  programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
   };
-
-  openssh.enable = true;
 
 }

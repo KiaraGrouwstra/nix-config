@@ -13,6 +13,11 @@ rec {
     vscode
     # TODO: vscode extensions
     # # code --list-extensions
+    # # - EditorConfig.EditorConfig
+    # # - Equinusocio.vsc-material-theme
+    # # - PKief.material-icon-theme
+    # # - bbenoist.Nix
+    # # - skyapps.fish-vscode
     # # ls ~/.vscode/extensions
     # vscode-with-extensions.override {
     #   vscodeExtensions = vscode-utils.extensionsFromVscodeMarketplace [

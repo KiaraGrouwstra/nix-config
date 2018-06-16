@@ -9,7 +9,7 @@ rec {
   ];
 
   # touchpad
-  libinput.enable = true;
+  services.xserver.libinput.enable = true;
 
   # sound
   sound.enable = true;
@@ -17,6 +17,6 @@ rec {
     pulseaudio.enable = true;
   };
 
-  printing.enable = true;
+  services.printing.enable = true;
 
 }
