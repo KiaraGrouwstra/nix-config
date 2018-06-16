@@ -43,8 +43,6 @@ in
   };
 
   i18n = {
-    # https://en.wikipedia.org/wiki/ISO/IEC_8859-15
-    consoleKeyMap = "colemak/en-latin9";
     inputMethod = {
       enabled = "fcitx";
       fcitx.engines = with pkgs.fcitx-engines; [ mozc hangul ];
