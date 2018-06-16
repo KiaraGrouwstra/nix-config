@@ -72,6 +72,7 @@
       wget
       vim
       firefox
+      # firefox-devedition-bin
       git
       nox
       zsh
@@ -88,6 +89,8 @@
       paper-icon-theme
       gnumake
       tmux
+      mkpasswd
+      # telegram
     ];
   };
 
@@ -96,10 +99,67 @@
     zsh.enable = true;
     fish.enable = true;
     mtr.enable = true;
+
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;
     };
+
+    # git = {
+    #   enable = true;
+    #   # ~/.gitconfig
+    #   # https://git-scm.com/docs/git-config
+    #   extraConfig = ''
+    #     [hub]
+    #       username = tycho01
+    #       # oauthtoken = ${secrets.gitHubOAuthToken}
+    #     [user]
+    #       email = tychogrouwstra@gmail.com
+    #       name = Tycho Grouwstra
+    #       # signingKey = "9E65DC86"
+    #     [push]
+    #       default = simple
+    #     [core]
+    #       excludesfile = ~/.gitignore
+    #     [alias]
+    #       s = status
+    #       d = diff
+    #       ci = commit -v
+    #       cia = commit -v -a
+    #       co = checkout
+    #       l = log --graph --oneline --decorate --all
+    #       b = branch
+    #       r = "!git stash save \"snapshot: $(date)\" && git pull && git stash apply \"stash@{0}\"";
+    #   '';
+    # };
+
+    # gnome-terminal = {
+    #   enable = true;
+    #   showMenubar = false;
+    #   # profile = {
+    #   #   "5ddfe964-7ee6-4131-b449-26bdd97518f7" = {
+    #   #     default = true;
+    #   #     visibleName = "Tomorrow Night - RAH";
+    #   #     cursorShape = "ibeam";
+    #   #     font = "DejaVu Sans Mono 8";
+    #   #     showScrollbar = false;
+    #   #     colors = {
+    #   #       foregroundColor = "rgb(197,200,198)";
+    #   #       palette = [
+    #   #         "rgb(0,0,0)" "rgb(145,34,38)" "rgb(119,137,0)"
+    #   #         "rgb(174,123,0)" "rgb(103,123,192)" "rgb(104,42,155)"
+    #   #         "rgb(43,102,81)" "rgb(146,149,147)" "rgb(102,102,102)"
+    #   #         "rgb(204,102,102)" "rgb(181,189,104)" "rgb(240,198,116)"
+    #   #         "rgb(140,152,191)" "rgb(178,148,187)" "rgb(138,190,183)"
+    #   #         "rgb(236,235,236)"
+    #   #       ];
+    #   #       boldColor = "rgb(138,186,183)";
+    #   #       backgroundColor = "rgb(29,31,33)";
+    #   #     };
+    #   #   };
+    #   # };
+    # };
+
   };
 
   # sound
@@ -196,20 +256,24 @@
     };
   };
 
-  users.users.tycho = {
-    isNormalUser = true;
-    uid = 1000;
-    home = "/home/tycho";
-    description = "Tycho Grouwstra <tychogrouwstra@gmail.com>";
-    extraGroups = [ "wheel" "networkmanager" "docker" ];
-    openssh.authorizedKeys.keys = [
-      # (builtins.readFile (builtins.fetchurl {
-      #   url = "https://github.com/puffnfresh.keys";
-      #   sha256 = "0gv8wpjxvb18fmvjvlg5ba9phqdhrmyl86qkkv8n7s7kq4dy12di";
-      # }))
-    ];
-    initialPassword = "password";
-    shell = pkgs.fish;
+  users = {
+    # mutableUsers = false;
+    users.tycho = {
+      isNormalUser = true;
+      uid = 1000;
+      home = "/home/tycho";
+      description = "Tycho Grouwstra <tychogrouwstra@gmail.com>";
+      extraGroups = [ "wheel" "networkmanager" "docker" ];
+      openssh.authorizedKeys.keys = [
+        # (builtins.readFile (builtins.fetchurl {
+        #   url = "https://github.com/puffnfresh.keys";
+        #   sha256 = "0gv8wpjxvb18fmvjvlg5ba9phqdhrmyl86qkkv8n7s7kq4dy12di";
+        # }))
+      ];
+      initialPassword = "password";
+      # hashedPassword = "";
+      shell = pkgs.fish;
+    };
   };
 
   virtualisation = {
