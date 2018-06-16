@@ -5,9 +5,12 @@
 {
   nixpkgs.config = {
     allowUnfree = true;
-    firefox = {
-      # enableAdobeFlash = true;
-    };
+
+    # https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/networking/browsers/firefox/wrapper.nix
+    # TODO: login, ublock prebake
+    # firefox = {
+    #   enableAdobeFlash = true;
+    # };
   };
 
   imports =
@@ -72,6 +75,7 @@
       wget
       vim
       firefox
+      # firefox-bin
       # firefox-devedition-bin
       git
       nox
@@ -82,6 +86,16 @@
       lolcat
       gitkraken
       vscode
+      # vscode-with-extensions.override {
+      #   vscodeExtensions = vscode-utils.extensionsFromVscodeMarketplace [
+      #     {
+      #       name = "code-runner";
+      #       publisher = "formulahendry";
+      #       version = "0.6.33";
+      #       sha256 = "166ia73vrcl5c9hm4q1a73qdn56m0jc7flfsk5p5q41na9f10lb0";
+      #     }
+      #   ];
+      # }
       stack
       thefuck
       figlet
@@ -274,17 +288,7 @@
   # - ssh-keygen -t rsa -b 4096 -C "tychogrouwstra@gmail.com"
   # - wifi password
   # - oh-my-fish
-  # - vscode extensions/settings/keys
   # - firefox settings: ublock prebake
-  # - git config:
-  #     git config --global -l
-  #       user.email=tychogrouwstra@gmail.com
-  #       user.name=Tycho Grouwstra
-  #       core.excludesfile=~/.gitignore
-  #     cat ~/.gitconfig
-  #       [user]
-  #         email = tychogrouwstra@gmail.com
-  #         name = Tycho Grouwstra
+  # - telegram: Adapta-Nokto theme
 
 }
-
