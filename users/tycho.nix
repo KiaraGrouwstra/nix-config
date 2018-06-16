@@ -33,14 +33,6 @@ in
 
   time.timeZone = "Europe/Amsterdam";
 
-  security = {
-    sudo = {
-      enable = true;
-      # TODO: fix broken NOPASSWD
-      configFile = "tycho ALL=(ALL) NOPASSWD: ALL";
-    };
-  };
-
   i18n = {
     inputMethod = {
       enabled = "fcitx";

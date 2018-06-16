@@ -50,4 +50,8 @@ rec {
     EDITOR = "vim";
   };
 
+  security.sudo.extraConfig = ''
+    %wheel ALL=(ALL) NOPASSWD:ALL
+  '';
+
 }
