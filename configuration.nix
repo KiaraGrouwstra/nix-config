@@ -5,7 +5,12 @@
 { config, pkgs, ... }:
 
 {
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+    firefox = {
+      # enableAdobeFlash = true;
+    };
+  };
 
   imports =
     [ # Include the results of the hardware scan.
