@@ -104,7 +104,8 @@
       gnumake
       tmux
       mkpasswd
-      tdesktop
+      tdesktop  # telegram
+      vlc
     ];
   };
 
@@ -188,6 +189,17 @@
       # touchpad
       libinput.enable = true;
 
+      # # https://github.com/NixOS/nixpkgs/pull/2315/files?utf8=%E2%9C%93&diff=split&w=1#diff-ccba88566614c96adaf4c39ce48526c1
+      # .override {
+      #   mimeAppsList = pkgs.writeTextFile {
+      #     name = "gnome-mimeapps";
+      #     destination = "/share/applications/mimeapps.list";
+      #     text = ''
+      #       [Default Applications]
+      #       inode/directory=nautilus.desktop
+      #     '';
+      #   };
+      # }
       desktopManager.gnome3 = {
         enable = true;
 
@@ -196,6 +208,8 @@
         ];
 
         extraGSettingsOverrides = ''
+
+          # theme
 
           [org.gnome.desktop.background]
           picture-uri='https://people.csail.mit.edu/vgod/vim/vim-cheat-sheet-en.png'
@@ -210,6 +224,8 @@
 
           [org.gnome.desktop.wm.preferences]
           theme="Adapta-Nokto"
+
+          # gedit
 
           [org.gnome.gedit.preferences.editor]
           auto-indent=true

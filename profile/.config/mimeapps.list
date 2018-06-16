@@ -1,0 +1,69 @@
+[Default Applications]
+
+text/plain=org.gnome.gedit.desktop;
+inode/directory=nautilus.desktop
+terminal=gnome-terminal
+# office.tasks=evolution -c tasks
+# office.calendar=evolution -c calendar
+# image/jpeg=
+
+# firefox
+
+x-scheme-handler/http=firefox.desktop
+text/html=firefox.desktop
+text/xml=firefox.desktop
+application/xhtml+xml=firefox.desktop
+application/vnd.mozilla.xul+xml=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/ftp=firefox.desktop
+
+# vlc
+
+video/dv=vlc.desktop;
+video/mpeg=vlc.desktop;
+video/x-mpeg=vlc.desktop;
+video/msvideo=vlc.desktop;
+video/quicktime=vlc.desktop;
+video/x-anim=vlc.desktop;
+video/x-avi=vlc.desktop;
+video/x-ms-asf=vlc.desktop;
+video/x-ms-wmv=vlc.desktop;
+video/x-msvideo=vlc.desktop;
+video/x-nsv=vlc.desktop;
+video/x-flc=vlc.desktop;
+video/x-fli=vlc.desktop;
+application/ogg=vlc.desktop;
+application/x-ogg=vlc.desktop;
+application/x-matroska=vlc.desktop;
+audio/x-mp3;audio/x-mpeg=vlc.desktop;
+audio/mpeg;audio/x-wav=vlc.desktop;
+audio/x-mpegurl=vlc.desktop;
+audio/x-scpls=vlc.desktop;
+audio/x-m4a=vlc.desktop;
+audio/x-ms-asf=vlc.desktop;
+audio/x-ms-asx=vlc.desktop;
+audio/x-ms-wax=vlc.desktop;
+application/vnd.rn-realmedia=vlc.desktop;
+audio/x-real-audio=vlc.desktop;
+audio/x-pn-realaudio=vlc.desktop;
+application/x-flac=vlc.desktop;
+audio/x-flac=vlc.desktop;
+application/x-shockwave-flash=vlc.desktop;
+misc/ultravox;audio/vnd.rn-realaudio=vlc.desktop;
+audio/x-pn-aiff;audio/x-pn-au=vlc.desktop;
+audio/x-pn-wav=vlc.desktop;
+audio/x-pn-windows-acm=vlc.desktop;
+image/vnd.rn-realpix=vlc.desktop;
+video/vnd.rn-realvideo=vlc.desktop;
+audio/x-pn-realaudio-plugin=vlc.desktop;
+application/x-extension-mp4=vlc.desktop;
+audio/mp4;video/mp4=vlc.desktop;
+video/mp4v-es=vlc.desktop;
+x-content/video-vcd=vlc.desktop;
+x-content/video-svcd=vlc.desktop;
+x-content/video-dvd=vlc.desktop;
+x-content/audio-cdda=vlc.desktop;
+x-content/audio-player=vlc.desktop;
+video/x-flv=vlc.desktop;
+
+[Added Associations]
