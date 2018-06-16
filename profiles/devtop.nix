@@ -11,8 +11,9 @@ rec {
   environment.systemPackages = with pkgs; [
     gitkraken
     vscode
-    # TODO: vscode dotfiles
     # TODO: vscode extensions
+    # # code --list-extensions
+    # # ls ~/.vscode/extensions
     # vscode-with-extensions.override {
     #   vscodeExtensions = vscode-utils.extensionsFromVscodeMarketplace [
     #     {

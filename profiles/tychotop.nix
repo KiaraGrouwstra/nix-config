@@ -31,6 +31,15 @@ rec {
     # ./virtualization.nix
   ];
 
+
+  # TODO: add more
+  # https://github.com/NixOS/nixpkgs/tree/master/pkgs
+  # https://github.com/NixOS/nixpkgs/tree/master/nixos/modules
+  # nox
+  environment.systemPackages = with pkgs; [
+    # ...
+  ];
+
   networking.firewall.enable = false;
   services.xserver.xkbVariant = "colemak"; # TODO: switch thru fcitx?
 

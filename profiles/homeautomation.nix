@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    hue-cli
+    home-assistant
+    # hue-cli
   ];
 }

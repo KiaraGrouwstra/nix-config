@@ -1,0 +1,2 @@
+thefuck --alias | source
+

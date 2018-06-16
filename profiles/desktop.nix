@@ -9,6 +9,7 @@
     layout = "us";
     videoDrivers = [ "intel" ];  # TODO: "nvidia"
 
+    # TODO: upgrade
     desktopManager.gnome3.enable = true;
 
     displayManager = {

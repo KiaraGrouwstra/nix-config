@@ -13,11 +13,11 @@
     # TODO: oh-my-fish
   ];
 
-   fonts.fonts = with pkgs; [
+  fonts.fonts = with pkgs; [
     powerline-fonts  # used in oh-my-* themes
   ];
 
- programs = {
+  programs = {
 
     bash.enableCompletion = true;
     zsh.enable = true;
