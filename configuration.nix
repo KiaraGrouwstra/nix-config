@@ -24,7 +24,7 @@
   };
 
   networking = {
-    hostName = "nixos";
+    hostName = "tycho";
 
     networkmanager.insertNameservers = [
       # Google
