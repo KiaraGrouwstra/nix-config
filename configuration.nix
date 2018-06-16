@@ -1,6 +1,4 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
+# see `nixos-help`, https://nixos.org/nixos/options.html
 
 { config, pkgs, ... }:
 
@@ -127,6 +125,9 @@
       enable = true;
       layout = "us";
       xkbVariant = "colemak";
+      # https://wiki.archlinux.org/index.php/Keyboard_configuration_in_Xorg
+      # https://help.ubuntu.com/community/GtkComposeTable
+      xkbOptions = "compose:swapcaps, menu:ralt";
       # videoDrivers = [ "nvidia" ];
 
       # touchpad
@@ -233,7 +234,6 @@
   #       [user]
   #         email = tychogrouwstra@gmail.com
   #         name = Tycho Grouwstra
-  # - keyboard mapping
 
 }
 
