@@ -52,7 +52,8 @@
 
   i18n = {
     consoleFont = "Lat2-Terminus16";
-    consoleKeyMap = "us";
+    # consoleKeyMap = "us";
+    consoleKeyMap = "colemak/en-latin9";
     defaultLocale = "en_US.UTF-8";
     inputMethod = {
       enabled = "fcitx";
@@ -125,6 +126,7 @@
     xserver = {
       enable = true;
       layout = "us";
+      xkbVariant = "colemak";
       # videoDrivers = [ "nvidia" ];
 
       # touchpad
