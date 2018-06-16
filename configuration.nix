@@ -200,8 +200,13 @@
     uid = 1000;
     home = "/home/tycho";
     description = "Tycho Grouwstra <tychogrouwstra@gmail.com>";
-    extraGroups = [ "wheel" "networkmanager" ];
-    openssh.authorizedKeys.keys = [];
+    extraGroups = [ "wheel" "networkmanager" "docker" ];
+    openssh.authorizedKeys.keys = [
+      # (builtins.readFile (builtins.fetchurl {
+      #   url = "https://github.com/puffnfresh.keys";
+      #   sha256 = "0gv8wpjxvb18fmvjvlg5ba9phqdhrmyl86qkkv8n7s7kq4dy12di";
+      # }))
+    ];
     initialPassword = "password";
     shell = pkgs.fish;
   };
