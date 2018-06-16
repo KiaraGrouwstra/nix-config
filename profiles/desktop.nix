@@ -12,6 +12,7 @@
     # TODO: upgrade
     desktopManager.gnome3.enable = true;
 
+    # TODO: try display managers
     displayManager = {
       gdm.enable = true;
       # sddm.enable = true;
@@ -19,6 +20,7 @@
       # sessionCommands = "i3status &";
     };
 
+    # TODO: try window managers
     windowManager = {
       # # i3
       # i3.enable = true;
