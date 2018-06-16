@@ -12,11 +12,10 @@
     # TODO: upgrade
     desktopManager.gnome3.enable = true;
 
-    # TODO: try display managers
     displayManager = {
-      gdm.enable = true;
-      # sddm.enable = true;
-      # slim.defaultUser = "tycho";
+      # gdm.enable = true;
+      sddm.enable = true;
+      slim.defaultUser = "tycho";
       # sessionCommands = "i3status &";
     };
 
