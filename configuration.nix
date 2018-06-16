@@ -50,6 +50,7 @@
 
   i18n = {
     consoleFont = "Lat2-Terminus16";
+    # https://en.wikipedia.org/wiki/ISO/IEC_8859-15
     # consoleKeyMap = "us";
     consoleKeyMap = "colemak/en-latin9";
     defaultLocale = "en_US.UTF-8";
@@ -128,7 +129,7 @@
       # https://wiki.archlinux.org/index.php/Keyboard_configuration_in_Xorg
       # https://help.ubuntu.com/community/GtkComposeTable
       xkbOptions = "compose:swapcaps, menu:ralt";
-      # videoDrivers = [ "nvidia" ];
+      videoDrivers = [ "intel" ];  # "nvidia"
 
       # touchpad
       libinput.enable = true;
