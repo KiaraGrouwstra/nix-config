@@ -90,7 +90,7 @@
       gnumake
       tmux
       mkpasswd
-      # telegram
+      tdesktop
     ];
   };
 
@@ -104,34 +104,6 @@
       enable = true;
       enableSSHSupport = true;
     };
-
-    # git = {
-    #   enable = true;
-    #   # ~/.gitconfig
-    #   # https://git-scm.com/docs/git-config
-    #   extraConfig = ''
-    #     [hub]
-    #       username = tycho01
-    #       # oauthtoken = ${secrets.gitHubOAuthToken}
-    #     [user]
-    #       email = tychogrouwstra@gmail.com
-    #       name = Tycho Grouwstra
-    #       # signingKey = "9E65DC86"
-    #     [push]
-    #       default = simple
-    #     [core]
-    #       excludesfile = ~/.gitignore
-    #     [alias]
-    #       s = status
-    #       d = diff
-    #       ci = commit -v
-    #       cia = commit -v -a
-    #       co = checkout
-    #       l = log --graph --oneline --decorate --all
-    #       b = branch
-    #       r = "!git stash save \"snapshot: $(date)\" && git pull && git stash apply \"stash@{0}\"";
-    #   '';
-    # };
 
     # gnome-terminal = {
     #   enable = true;
@@ -271,7 +243,7 @@
         # }))
       ];
       initialPassword = "password";
-      # hashedPassword = "";
+      # hashedPassword = "YS94gZUENJ1ns";
       shell = pkgs.fish;
     };
   };
