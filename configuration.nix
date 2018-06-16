@@ -121,6 +121,13 @@
     openssh.enable = true;
     printing.enable = true;
 
+    # udev.extraHwdb = ''
+    #   # Microsoft Natural Ergonomic Keyboard 4000
+    #   keyboard:usb:v045Ep00DB*
+    #   KEYBOARD_KEY_c022d=pageup
+    #   KEYBOARD_KEY_c022e=pagedown
+    # '';
+
     # X11 windowing system
     xserver = {
       enable = true;
