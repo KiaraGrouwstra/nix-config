@@ -21,10 +21,10 @@ in
     extraGroups = [
       "audio"
       "docker"
-      "libvirtd"
+      # "libvirtd"
       "networkmanager"
       "users"
-      "vboxusers"
+      # "vboxusers"
       "video"
       "wheel"
     ];
