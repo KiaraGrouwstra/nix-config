@@ -119,7 +119,26 @@
       # touchpad
       libinput.enable = true;
 
-      desktopManager.gnome3.enable = true;
+      desktopManager.gnome3 = {
+        enable = true;
+
+        extraGSettingsOverridePackages = with pkgs; [
+          gnome3.gedit
+        ];
+
+        extraGSettingsOverrides = ''
+
+          [org.gnome.gedit.preferences.editor]
+          auto-indent=true
+          bracket-matching=true
+          create-backup-copy=false
+          display-line-numbers=true
+          highlight-current-line=true
+          insert-spaces=true
+          tabs-size=4
+
+        '';
+      };
       displayManager.gdm.enable = true;
       # displayManager.sddm.enable = true;
       # displayManager.slim.defaultUser = "tycho";
