@@ -38,7 +38,32 @@ in
     # Configure various dotfiles.
     dotfiles = stringAfter [ "users" ]
     ''
-      cp -r /etc/nixos/dotfiles/. /home/tycho
+      function sha { sudo sha256sum `realpath $1` | head -c 64; }
+      path="/etc/nixos/dotfiles"
+      for file in $(sudo find $path); do
+        local=`echo "$file" | sed -e "s|$path|/home/tycho|"`
+        if [ -f "$file" ] && [ -f "$local" ]; then
+          sha1=`sha $file`
+          sha2=`sha $local`
+          if [ "$sha1" = "$sha2" ]; then
+            echo "matching SHA, skip: $local"
+          else
+            echo "differences found for $local <-> $file:"
+            diff "$file" "$local"
+            read -p "override/upstream/skip $local? (o/u/s) " -n 1 -r
+            echo # (\n)
+            if [[ $REPLY =~ ^[Yy]$ ]]; then
+              echo "overriding $local..."
+              sudo cp $file $local
+            elif [[ $REPLY =~ ^[Uu]$ ]]; then
+              echo "upstreaming $local..."
+              sudo cp $local $file
+            else
+              echo "skipping $local..."
+            fi
+          fi
+        fi
+      done
     '';
   };
 

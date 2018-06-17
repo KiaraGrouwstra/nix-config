@@ -16,8 +16,8 @@
     # https://nixos.wiki/wiki/Keyboard_Layout_Customization
     # vi "$(nix-build --no-out-link '<nixpkgs>' -A xorg.xkeyboardconfig)/etc/X11/xkb/rules/base.lst"
     # xkbModel = "pc104";
-    # xkbVariant = "colemak";
-    # xkbOptions = "caps:backspace"; # compose:caps,menu:ralt
+    xkbVariant = "colemak";
+    xkbOptions = "caps:backspace"; # compose:caps,menu:ralt
 
     # TODO: try window managers
     windowManager = {

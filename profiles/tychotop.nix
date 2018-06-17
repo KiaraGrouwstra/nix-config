@@ -63,7 +63,7 @@ rec {
       enabled = "fcitx";
       fcitx.engines = with pkgs.fcitx-engines; [
         mozc  # japanese
-        hangul  # korean
+        # hangul  # korean
       ];
     };
   };

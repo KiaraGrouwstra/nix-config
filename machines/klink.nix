@@ -26,7 +26,7 @@
   # https://wiki.archlinux.org/index.php/Keyboard_configuration_in_Xorg
   # https://help.ubuntu.com/community/GtkComposeTable
   # TODO: debug this
-  services.xserver.xkbVariant = "colemak";
-  services.xserver.xkbOptions = "caps:backspace"; # compose:caps,menu:ralt
+  # services.xserver.xkbVariant = "colemak";
+  # services.xserver.xkbOptions = "caps:backspace"; # compose:caps,menu:ralt
 
 }
