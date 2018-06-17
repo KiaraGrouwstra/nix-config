@@ -5,7 +5,7 @@
   # X11 windowing system
   services.xserver = {
     enable = true;
-    enableCtrlAltBackspace = true;
+    # enableCtrlAltBackspace = true;
     layout = "us";
     videoDrivers = [ "intel" ];  # TODO: "nvidia"
 

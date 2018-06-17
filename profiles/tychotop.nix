@@ -58,6 +58,7 @@ rec {
 
   i18n = {
     inputMethod = {
+      # TODO: debug colemak
       enabled = "fcitx";
       fcitx.engines = with pkgs.fcitx-engines; [
         mozc  # japanese

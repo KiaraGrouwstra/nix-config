@@ -12,7 +12,7 @@ rec {
     gitkraken
     vscode
     # TODO: vscode extensions
-    # # code --list-extensions
+    # # code --list-extensions --show-versions
     # # - EditorConfig.EditorConfig
     # # - Equinusocio.vsc-material-theme
     # # - PKief.material-icon-theme
