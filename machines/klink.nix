@@ -20,6 +20,7 @@
     # KEYBOARD_KEY_c022d=pageup
     # KEYBOARD_KEY_c022e=pagedown
     Alt_R = Menu
+    Caps_Lock = Multi_key
   '';
 
   # https://wiki.archlinux.org/index.php/Keyboard_configuration_in_Xorg
