@@ -54,8 +54,8 @@ in
 
   nixpkgs.overlays = [ overlay ];
 
-  # environment.systemPackages = with pkgs; [
-  #   vscode
-  # ];
+  environment.systemPackages = with pkgs; [
+    vscode
+  ];
 
 }
