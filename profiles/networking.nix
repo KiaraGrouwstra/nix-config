@@ -11,6 +11,7 @@ rec {
     extraHosts = secrets.extraHosts;
     networkmanager = {
       enable = true;
+      # TODO: debug DNS issues
       insertNameservers = [
         # Google
         "8.8.8.8"
