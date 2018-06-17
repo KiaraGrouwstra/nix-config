@@ -13,9 +13,8 @@
     desktopManager.gnome3.enable = true;
 
     displayManager = {
-      # gdm.enable = true;
-      sddm.enable = true;
-      slim.defaultUser = "tycho";
+      gdm.enable = true;
+      # slim.defaultUser = "tycho";
       # sessionCommands = "i3status &";
     };
 
