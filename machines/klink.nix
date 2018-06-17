@@ -14,18 +14,18 @@
   networking.hostName = "klink";
 
   # https://askubuntu.com/questions/742946/how-to-find-the-hwdb-header-of-a-general-input-device#743291
-  services.udev.extraHwdb = ''
-    # klink MSI keyboard
-    # keyboard:usb:v045Ep00DB*
-    # KEYBOARD_KEY_c022d=pageup
-    # KEYBOARD_KEY_c022e=pagedown
-    Alt_R = Menu
-    Caps_Lock = Multi_key
-  '';
+  # services.udev.extraHwdb = ''
+  #   # klink MSI keyboard
+  #   # keyboard:usb:v045Ep00DB*
+  #   # KEYBOARD_KEY_c022d=pageup
+  #   # KEYBOARD_KEY_c022e=pagedown
+  #   Alt_R = Menu
+  #   Caps_Lock = Multi_key
+  # '';
 
   # https://wiki.archlinux.org/index.php/Keyboard_configuration_in_Xorg
   # https://help.ubuntu.com/community/GtkComposeTable
   # TODO: debug this
-  # services.xserver.xkbOptions = "compose:swapcaps, menu:ralt";
+  # services.xserver.xkbOptions = "compose:caps,menu:ralt";
 
 }

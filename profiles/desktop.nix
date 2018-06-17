@@ -13,6 +13,8 @@
     desktopManager.gnome3.enable = true;
     displayManager.gdm.enable = true;
 
+    xkbOptions = "compose:caps,menu:ralt";
+
     # TODO: try window managers
     windowManager = {
       # i3
