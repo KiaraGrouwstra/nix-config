@@ -2,7 +2,6 @@
 
 let
   overlay = self: super: {
-    # TODO: fix extensions
     vscode-with-extensions = super.vscode-with-extensions.override {
       # code --list-extensions --show-versions
       # ls ~/.vscode/extensions
@@ -50,7 +49,6 @@ in
   nixpkgs.overlays = [ overlay ];
 
   environment.systemPackages = with pkgs; [
-    # vscode
     vscode-with-extensions
   ];
 
