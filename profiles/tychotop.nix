@@ -57,6 +57,7 @@ rec {
   time.timeZone = "Europe/Amsterdam";
 
   i18n = {
+    consoleUseXkbConfig = true;
     inputMethod = {
       # TODO: debug colemak
       enabled = "fcitx";
