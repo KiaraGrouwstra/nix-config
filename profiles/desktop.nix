@@ -15,10 +15,10 @@
 
     # TODO: try window managers
     windowManager = {
-      # # i3
-      # i3.enable = true;
-      # i3.package = pkgs.i3-gaps;
-      # default = "i3";
+      # i3
+      i3.enable = true;
+      i3.package = pkgs.i3-gaps;
+      default = "i3";
 
       # # xmonad
       # xmonad.enable = true;
