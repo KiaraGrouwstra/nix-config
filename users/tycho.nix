@@ -31,15 +31,6 @@ in
 
   };
 
-  time.timeZone = "Europe/Amsterdam";
-
-  i18n = {
-    inputMethod = {
-      enabled = "fcitx";
-      fcitx.engines = with pkgs.fcitx-engines; [ mozc hangul ];
-    };
-  };
-
   environment.variables.DEFAULT_USER = "tycho";
 
   system.activationScripts =

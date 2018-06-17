@@ -54,4 +54,21 @@ rec {
     %wheel ALL=(ALL) NOPASSWD:ALL
   '';
 
+  time.timeZone = "Europe/Amsterdam";
+
+  i18n = {
+    inputMethod = {
+      enabled = "fcitx";
+      fcitx.engines = with pkgs.fcitx-engines; [
+        mozc  # japanese
+        hangul  # korean
+      ];
+    };
+  };
+
+  services.xserver.displayManager.gdm.autoLogin = {
+    enable = true;
+    user = "tycho";
+  };
+
 }
