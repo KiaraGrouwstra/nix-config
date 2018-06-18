@@ -58,6 +58,8 @@ in
           fi
         fi
       done
+      echo "sudo cp -r /etc/nixos/dotfiles/. ./dotfiles/"
+      echo "git status"
     '');
   };
 
