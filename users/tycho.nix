@@ -54,10 +54,14 @@ in
             echo # (\n)
             if [[ $REPLY =~ ^[Yy]$ ]]; then
               echo "overriding $local..."
-              cp $file $local
+              cmd="cp $file $local"
+              echo $cmd
+              $cmd
             elif [[ $REPLY =~ ^[Uu]$ ]]; then
               echo "upstreaming $local..."
-              cp $local $file 
+              cmd="cp $local $file"
+              echo $cmd
+              $cmd
             else
               echo "skipping $local..."
             fi
