@@ -45,29 +45,15 @@ in
         if [ -f "$file" ] && [ -f "$local" ]; then
           sha1=`sha $file`
           sha2=`sha $local`
-          echo $file
-          echo $local
-          # echo $sha1
-          # echo $sha2
-          if [ "$sha1" = "$sha2" ]; then
-            echo "matching SHA, skip: $local"
-          else
+          if [ "$sha1" != "$sha2" ]; then
             echo "differences found for $local ($sha2) <-> $file ($sha1):"
             echo "sudo diff $file $local"  # not available :(
             read -p "override/upstream/skip $local? (o/u/s) " -n 1 -r
             echo # (\n)
             if [[ $REPLY =~ ^[Oo]$ ]]; then
-              echo "overriding $local..."
-              cmd="cp $file $local"
-              echo "sudo $cmd"
-              $cmd
+              echo "\nsudo cp $file $local\n"
             elif [[ $REPLY =~ ^[Uu]$ ]]; then
-              echo "upstreaming $local..."
-              cmd="cp $local $file"
-              echo "sudo $cmd"
-              $cmd
-            else
-              echo "skipping $local..."
+              echo "\nsudo cp $local $file\n"
             fi
           fi
         fi
