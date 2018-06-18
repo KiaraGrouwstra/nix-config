@@ -51,15 +51,14 @@ in
             read -p "override/upstream/skip $local? (o/u/s) " -n 1 -r
             echo # (\n)
             if [[ $REPLY =~ ^[Oo]$ ]]; then
-              echo "\nsudo cp $file $local\n"
+              echo "sudo cp $file $local"
             elif [[ $REPLY =~ ^[Uu]$ ]]; then
-              echo "\nsudo cp $local $file\n"
+              echo "sudo cp $local $file"
             fi
           fi
         fi
       done
-      echo "sudo cp -r /etc/nixos/dotfiles/. ./dotfiles/"
-      echo "git status"
+      echo "sudo cp -r /etc/nixos/dotfiles/. ./dotfiles/ && git status"
     '');
   };
 
