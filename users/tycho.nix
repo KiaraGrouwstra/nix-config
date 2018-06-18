@@ -45,8 +45,8 @@ in
         if [ -f "$file" ] && [ -f "$local" ]; then
           sha1=`sha $file`
           sha2=`sha $local`
-          # echo $file
-          # echo $local
+          echo $file
+          echo $local
           # echo $sha1
           # echo $sha2
           if [ "$sha1" = "$sha2" ]; then
