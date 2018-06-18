@@ -45,10 +45,14 @@ in
         if [ -f "$file" ] && [ -f "$local" ]; then
           sha1=`sha $file`
           sha2=`sha $local`
+          echo $file
+          echo $local
+          echo $sha1
+          echo $sha2
           if [ "$sha1" = "$sha2" ]; then
             echo "matching SHA, skip: $local"
           else
-            echo "differences found for $local <-> $file:"
+            echo "differences found for $local ($sha2) <-> $file ($sha1):"
             echo "sudo diff $file $local"  # not available :(
             read -p "override/upstream/skip $local? (o/u/s) " -n 1 -r
             echo # (\n)
