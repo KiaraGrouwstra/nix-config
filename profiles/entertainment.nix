@@ -8,4 +8,8 @@
     # ./games.nix
   ];
 
+  environment.systemPackages = with pkgs; [
+    webtorrent_desktop
+  ];
+
 }
