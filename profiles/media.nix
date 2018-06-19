@@ -4,6 +4,7 @@
 
   environment.systemPackages = with pkgs; [
     vlc
+    shotwell
     imagemagick
     gimp
   ];

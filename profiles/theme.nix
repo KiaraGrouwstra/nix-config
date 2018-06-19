@@ -14,6 +14,7 @@
     # TODO: carousel
     [org.gnome.desktop.background]
     picture-uri='https://people.csail.mit.edu/vgod/vim/vim-cheat-sheet-en.png'
+    # picture-uri='file:///home/tycho/.config/slideshow.xml'
 
     [org.gnome.desktop.screensaver]
     picture-uri='https://people.csail.mit.edu/vgod/vim/vim-cheat-sheet-en.png'
