@@ -4,7 +4,7 @@
 
   imports = [
     ./chat.nix
-    # ./media.nix
+    ./media.nix
     # ./games.nix
   ];
 
