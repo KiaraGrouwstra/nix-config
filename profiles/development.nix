@@ -2,8 +2,9 @@
 
 {
   imports = [
-    # ./haskell.nix
-    # ./ruby.nix
+    ./haskell.nix
+    ./ruby.nix
+    ./javascript.nix
   ];
 
   # install development packages

@@ -1,0 +1,20 @@
+<background>
+  <static>
+    <duration>3600.00</duration>
+    <file>/home/tycho/.local/share/shotwell/wallpaper/photo_2018-06-19_23-40-35.jpg</file>
+  </static>
+  <transition>
+    <duration>2.00</duration>
+    <from>/home/tycho/.local/share/shotwell/wallpaper/photo_2018-06-19_23-40-35.jpg</from>
+    <to>/home/tycho/.local/share/shotwell/wallpaper/ws_Kali_Linux_1920x1080.jpg</to>
+  </transition>
+  <static>
+    <duration>3600.00</duration>
+    <file>/home/tycho/.local/share/shotwell/wallpaper/ws_Kali_Linux_1920x1080.jpg</file>
+  </static>
+  <transition>
+    <duration>2.00</duration>
+    <from>/home/tycho/.local/share/shotwell/wallpaper/ws_Kali_Linux_1920x1080.jpg</from>
+    <to>/home/tycho/.local/share/shotwell/wallpaper/photo_2018-06-19_23-40-35.jpg</to>
+  </transition>
+</background>

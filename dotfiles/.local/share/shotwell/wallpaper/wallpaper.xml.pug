@@ -1,0 +1,14 @@
+background
+  - pics = [
+        "/home/tycho/.local/share/shotwell/wallpaper/photo_2018-06-19_23-40-35.jpg"
+      ]
+  - len = pics.length
+  each pic, index in pics
+    - next = pics[len % (index + 1)]
+    static
+      duration 3600.00
+      file=pic
+    transition
+      duration 2.00
+      from=pic
+      to=next

@@ -35,9 +35,8 @@ rec {
   # TODO: add more
   # https://github.com/NixOS/nixpkgs/tree/master/pkgs
   # https://github.com/NixOS/nixpkgs/tree/master/nixos/modules
-  # nox
   environment.systemPackages = with pkgs; [
-    # ...
+    nixui
   ];
 
   networking.firewall.enable = false;

@@ -2,16 +2,15 @@
 
 {
   environment.systemPackages = with pkgs; [
-
     ctags
-     
     cabal2nix
     cabal-install
     stack
 
     # TODO: test haskell
+    ghc
     # haskell.compiler.ghc822
-    haskell.compiler.ghc-8.4.2
+    # haskell.compiler.ghc-8.4.2
     # TODO: tf hs
 
     # # libraries
@@ -23,7 +22,7 @@
     #haskellPackages.hscope
     #haskellPackages.argon          # code complexity (req: haskell 7.10)
     # haskellPackages.codex           # ctags file generator for cabal project dependencies
-    haskellPackages.ghc-mod         # ghc-mod is a backend program to enrich editors
+    # haskellPackages.ghc-mod         # ghc-mod is a backend program to enrich editors
     haskellPackages.ghcid           # GHCi as a daemon
     # haskellPackages.hasktags        # Produces ctags "tags" and etags "TAGS" files for Haskell programs 
     haskellPackages.hlint           # linter
@@ -35,6 +34,5 @@
     haskellPackages.stylish-haskell # pretty printer
     haskellPackages.tasty           # testing framework
     haskellPackages.weeder          # dead code detection
-
   ];
 }

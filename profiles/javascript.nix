@@ -2,9 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    jekyll
-    ruby
-    bundler
-    bundix
+    nodejs
+    yarn
   ];
 }
