@@ -5,5 +5,6 @@
     thefuck
     lolcat
     figlet
+    beep
   ];
 }
