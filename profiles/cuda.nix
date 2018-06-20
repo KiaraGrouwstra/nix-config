@@ -27,11 +27,11 @@
 #     '';
 #   };
 
-  # # Enable 3D acceleration for 32bit applications (e.g. wine)
-  # hardware.opengl = {
-  #   enable = true;
-  #   driSupport = true;
-  #   driSupport32Bit = true;
-  # };
+  # Enable 3D acceleration for 32bit applications (e.g. wine)
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+  };
 
 }
