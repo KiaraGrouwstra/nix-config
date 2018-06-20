@@ -13,8 +13,8 @@
     # virtmanager
   ];
 
-  virtualisation.libvirtd = {
-    enable = true;
-    onShutdown = "shutdown";
-  };
+  # virtualisation.libvirtd = {
+  #   enable = true;
+  #   onShutdown = "shutdown";
+  # };
 }

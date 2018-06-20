@@ -28,7 +28,7 @@ rec {
     ./entertainment.nix
     ./office.nix
     # ./homeautomation.nix
-    # ./virtualization.nix
+    ./virtualization.nix
   ];
 
 
