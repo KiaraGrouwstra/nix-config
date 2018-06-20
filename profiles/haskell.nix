@@ -32,5 +32,7 @@
     haskellPackages.stylish-haskell # pretty printer
     haskellPackages.tasty           # testing framework
     haskellPackages.weeder          # dead code detection
+
+    haskellPackages.typedflow
   ];
 }
