@@ -15,17 +15,17 @@
   #   serviceConfig.ExecStart = "${pkgs.linuxPackages.nvidia_x11}/bin/nvidia-smi";
   # };
 
-#   system.activationScripts =
-#   {
-#     # Enable OpenCL
-#     opencl =
-#     ''
-#       cd /etc
-#       mkdir -p ./OpenCL/vendors
-#       cd ./OpenCL/vendors
-# #      echo '${pkgs.linuxPackages.nvidia_x11}' > nvidia.icd
-#     '';
-#   };
+  system.activationScripts =
+  {
+    # Enable OpenCL
+    opencl =
+    ''
+      cd /etc
+      mkdir -p ./OpenCL/vendors
+      cd ./OpenCL/vendors
+#      echo '${pkgs.linuxPackages.nvidia_x11}' > nvidia.icd
+    '';
+  };
 
   # Enable 3D acceleration for 32bit applications (e.g. wine)
   hardware.opengl = {
