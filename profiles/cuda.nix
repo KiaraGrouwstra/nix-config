@@ -10,28 +10,28 @@
 
   # services.xserver.videoDrivers = [ "nvidia" ];
 
-  systemd.services.nvidia-control-devices = {
-    wantedBy = [ "multi-user.target" ];
-    serviceConfig.ExecStart = "${pkgs.linuxPackages.nvidia_x11}/bin/nvidia-smi";
-  };
-      
-  system.activationScripts =
-  {
-    # Enable OpenCL
-    opencl =
-    ''
-      cd /etc
-      mkdir -p ./OpenCL/vendors
-      cd ./OpenCL/vendors
-#      echo '${pkgs.linuxPackages.nvidia_x11}' > nvidia.icd
-    '';
-  };
+  # systemd.services.nvidia-control-devices = {
+  #   wantedBy = [ "multi-user.target" ];
+  #   serviceConfig.ExecStart = "${pkgs.linuxPackages.nvidia_x11}/bin/nvidia-smi";
+  # };
 
-  # Enable 3D acceleration for 32bit applications (e.g. wine)
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
-  };
+#   system.activationScripts =
+#   {
+#     # Enable OpenCL
+#     opencl =
+#     ''
+#       cd /etc
+#       mkdir -p ./OpenCL/vendors
+#       cd ./OpenCL/vendors
+# #      echo '${pkgs.linuxPackages.nvidia_x11}' > nvidia.icd
+#     '';
+#   };
+
+  # # Enable 3D acceleration for 32bit applications (e.g. wine)
+  # hardware.opengl = {
+  #   enable = true;
+  #   driSupport = true;
+  #   driSupport32Bit = true;
+  # };
 
 }

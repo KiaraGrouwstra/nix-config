@@ -9,7 +9,7 @@ rec {
     ./default.nix
     ./desktop.nix
     ./networking.nix
-    # ./cuda.nix
+    ./cuda.nix
 
     # PERSONALIZATION
     ./shells.nix
@@ -36,7 +36,7 @@ rec {
   # https://github.com/NixOS/nixpkgs/tree/master/pkgs
   # https://github.com/NixOS/nixpkgs/tree/master/nixos/modules
   environment.systemPackages = with pkgs; [
-    nixui
+    # ...
   ];
 
   networking.firewall.enable = false;
