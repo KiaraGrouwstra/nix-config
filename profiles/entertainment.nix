@@ -5,7 +5,7 @@
   imports = [
     ./chat.nix
     ./media.nix
-    # ./games.nix
+    ./games.nix
   ];
 
   environment.systemPackages = with pkgs; [

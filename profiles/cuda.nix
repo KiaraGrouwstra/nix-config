@@ -8,7 +8,7 @@
     cudatoolkit
   ];
 
-  services.xserver.videoDrivers = [ "nvidia" ];
+  # services.xserver.videoDrivers = [ "nvidia" ];
 
   systemd.services.nvidia-control-devices = {
     wantedBy = [ "multi-user.target" ];
