@@ -1,7 +1,8 @@
 background
   - pics = [
-        "/home/tycho/.local/share/shotwell/wallpaper/photo_2018-06-19_23-40-35.jpg"
-      ]
+        //- array from wallpapers.yml
+        "photo_2018-06-19_23-40-35.jpg"
+      ].map(f => "/run/media/tycho/Drogon/Pics/wallpapers/" + f)
   - len = pics.length
   each pic, index in pics
     - next = pics[len % (index + 1)]

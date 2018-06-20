@@ -7,11 +7,9 @@
     cabal-install
     stack
 
-    # TODO: test haskell
     ghc
     # haskell.compiler.ghc822
     # haskell.compiler.ghc-8.4.2
-    # TODO: tf hs
 
     # # libraries
     # haskellPackages.alex

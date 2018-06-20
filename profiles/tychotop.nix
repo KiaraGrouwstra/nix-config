@@ -19,7 +19,7 @@ rec {
 
     # DEV
     # ./latex.nix
-    # ./mathematics.nix
+    ./mathematics.nix
     ./devtop.nix
     # ../pkgs/gedit/config.nix  # TODO: solve appending gsettings
 
