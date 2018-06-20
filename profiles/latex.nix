@@ -3,6 +3,6 @@
 {
   environment.systemPackages = with pkgs; [
     # pandoc
-    texlive
+    texlive.combined.scheme-basic
   ];
 }

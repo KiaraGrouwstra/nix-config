@@ -18,7 +18,7 @@ rec {
     ./crap.nix
 
     # DEV
-    # ./latex.nix
+    ./latex.nix
     ./mathematics.nix
     ./devtop.nix
     # ../pkgs/gedit/config.nix  # TODO: solve appending gsettings
