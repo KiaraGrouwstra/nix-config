@@ -5,21 +5,25 @@ let secrets = import ../secrets.nix;
 in
 rec {
 
+  services.dnsmasq = {
+    enable = true;
+    servers = [
+      # Google
+      "8.8.8.8"
+      "8.8.4.4"
+      # OpenDNS
+      "208.67.222.222"
+      "208.67.220.220"
+    ];
+  };
+
   networking = {
 
     # /etc/hosts
     extraHosts = secrets.extraHosts;
     networkmanager = {
       enable = true;
-      # TODO: debug DNS issues
-      insertNameservers = [
-        # Google
-        "8.8.8.8"
-        "8.8.4.4"
-        # OpenDNS
-        "208.67.222.222"
-        "208.67.220.220"
-      ];
+      useDnsmasq = true;
     };
 
     firewall = {
