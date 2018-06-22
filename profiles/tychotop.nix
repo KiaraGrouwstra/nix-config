@@ -60,6 +60,11 @@ rec {
     inputMethod = {
       enabled = "fcitx";
       fcitx.engines = with pkgs.fcitx-engines; [
+        # default:
+        # fcitx-keyboard-us
+        # pinyin
+
+        # add:
         mozc  # japanese
         # hangul  # korean
       ];
@@ -70,5 +75,8 @@ rec {
     enable = true;
     user = "tycho";
   };
+
+  # TODO:
+  # - gnome shell extensions: ~/.local/share/app-info/xmls/extensions-web.xml
 
 }
