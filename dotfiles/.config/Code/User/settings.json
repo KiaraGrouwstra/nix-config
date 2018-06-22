@@ -7,5 +7,6 @@
     "workbench.iconTheme": "eq-material-theme-icons",
     "workbench.colorTheme": "Material Theme",
     "materialTheme.fixIconsRunning": false,
-    "explorer.confirmDragAndDrop": false
+    "explorer.confirmDragAndDrop": false,
+    "window.zoomLevel": 0
 }
