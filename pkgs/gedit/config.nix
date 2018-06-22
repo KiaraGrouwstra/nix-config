@@ -5,7 +5,6 @@
     extraGSettingsOverridePackages = with pkgs; [
       gnome3.gedit
     ];
-    # TODO: figure out how to append, then import this file
     extraGSettingsOverrides = ''
 
       # gedit

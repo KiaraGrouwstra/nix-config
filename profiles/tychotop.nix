@@ -21,7 +21,7 @@ rec {
     ./latex.nix
     ./mathematics.nix
     ./devtop.nix
-    # ../pkgs/gedit/config.nix  # TODO: solve appending gsettings
+    ../pkgs/gedit/config.nix
 
     # APPLICATIONS
     ./web.nix
