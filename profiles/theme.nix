@@ -11,13 +11,11 @@
 
     # theme
 
-    # TODO: carousel
     [org.gnome.desktop.background]
-    picture-uri='https://people.csail.mit.edu/vgod/vim/vim-cheat-sheet-en.png'
-    # picture-uri='file:///home/tycho/.config/slideshow.xml'
+    picture-uri='file:///home/tycho/.local/share/shotwell/wallpaper/wallpaper.xml'
 
     [org.gnome.desktop.screensaver]
-    picture-uri='https://people.csail.mit.edu/vgod/vim/vim-cheat-sheet-en.png'
+    picture-uri='file:///home/tycho/.local/share/shotwell/wallpaper/wallpaper.xml'
 
     [org.gnome.desktop.interface]
     gtk-theme="Adapta-Nokto"
