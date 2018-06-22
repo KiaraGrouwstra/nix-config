@@ -22,20 +22,6 @@ rec {
       ];
     };
 
-    # # wpa_supplicant.
-    # wireless = {
-    #   enable = true;
-    #   # TODO: figure out how how to enable wireless
-    #   # networks = secrets.networks;
-    # };
-
-    # FIXME: wpa_supplicant expects the wpa_supplicant.conf file to be in a read/write filesystem. This is a problem.
-    #    # Configure wireless networks
-    #    wpa_supplicant = ''  # FIXME: does this name have potential for conflict? must investigate
-    #      ln -fs ${./private/etc/wpa_supplicant.conf} /etc/wpa_supplicant.conf
-    #    '';
-    #  };
-
     firewall = {
       # enable = true;
       allowPing = true;

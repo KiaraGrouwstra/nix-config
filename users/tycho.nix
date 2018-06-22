@@ -34,31 +34,41 @@ in
 
   system.activationScripts =
   {
+
     # Configure various dotfiles.
     dotfiles = stringAfter [ "users" ]
     (''
-      function sha { sha256sum `realpath $1` | head -c 64; } 
-      path="/etc/nixos/dotfiles"
-      i=`expr length "$path"`
-      for file in $(find $path); do
-        local="/home/tycho$'' + ''{file:$i:1000}"
-        if [ -f "$file" ] && [ -f "$local" ]; then
-          sha1=`sha $file`
-          sha2=`sha $local`
-          if [ "$sha1" != "$sha2" ]; then
-            echo "differences found for $local ($sha2) <-> $file ($sha1):"
-            echo "sudo diff $file $local"  # not available :(
-            read -p "override/upstream/skip $local? (o/u/s) " -n 1 -r
-            echo # (\n)
-            if [[ $REPLY =~ ^[Oo]$ ]]; then
-              echo "sudo cp $file $local"
-            elif [[ $REPLY =~ ^[Uu]$ ]]; then
-              echo "sudo cp $local $file"
+      function sha { sha256sum `realpath $1` | head -c 64; }
+      function syncFiles {
+        repoPath=$1
+        localPath=$2
+        nixPath="/etc/nixos/$repoPath"
+        i=`expr length "$nixPath"`
+        for file in $(find $nixPath); do
+          local="$localPath$'' + ''{file:$i:1000}"
+          if [ -f "$file" ] && [ -f "$local" ]; then
+            sha1=`sha $file`
+            sha2=`sha $local`
+            if [ "$sha1" != "$sha2" ]; then
+              echo "differences found for $local ($sha2) <-> $file ($sha1):"
+              echo "sudo diff $file $local"  # not available :(
+              read -p "override/upstream/skip $local? (o/u/s) " -n 1 -r
+              echo # (\n)
+              if [[ $REPLY =~ ^[Oo]$ ]]; then
+                echo "sudo cp $file $local"
+              elif [[ $REPLY =~ ^[Uu]$ ]]; then
+                echo "sudo cp $local $file"
+              fi
             fi
           fi
-        fi
-      done
-      echo "sudo cp -r /etc/nixos/dotfiles/. ./dotfiles/ && git status"
+        done
+        echo "sudo cp -r $nixPath/. ./$repoPath/"
+      }
+      echo ""
+      syncFiles "dotfiles" "/home/tycho"
+      syncFiles "private" "/"
+      echo "git status"
+      echo ""
     '');
   };
 
