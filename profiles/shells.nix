@@ -8,7 +8,7 @@
 
   environment.systemPackages = with pkgs; [
     fish
-    # TODO: oh-my-fish
+    # oh-my-fish  # https://github.com/NixOS/nixpkgs/pull/42458
   ];
 
   fonts.fonts = with pkgs; [

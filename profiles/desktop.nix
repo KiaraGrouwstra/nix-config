@@ -9,7 +9,9 @@
     layout = "us";
     videoDrivers = [ "intel" ];  # TODO: "nvidia"
 
-    # TODO: upgrade
+    # check current versions: nix-store -q --references /run/current-system/sw
+    # try build: nix-build -A gnome3
+    # install: nix-env -f . -iA gnome3
     desktopManager.gnome3.enable = true;
     displayManager.gdm.enable = true;
 
