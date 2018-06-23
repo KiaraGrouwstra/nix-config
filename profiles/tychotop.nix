@@ -27,7 +27,7 @@ rec {
     ./devtop.nix
 
     # APPLICATIONS
-    ./web.nix
+    ./browsers.nix
     ./entertainment.nix
     ./office.nix
     # ./homeautomation.nix

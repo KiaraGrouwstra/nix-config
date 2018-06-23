@@ -5,6 +5,7 @@
   environment.systemPackages = with pkgs; [
     firefox-devedition-bin
     # chromium
+    # tor-browser-bundle
   ];
 
   nixpkgs.config = {

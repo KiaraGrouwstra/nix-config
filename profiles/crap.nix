@@ -6,5 +6,10 @@
     lolcat
     figlet
     beep
+
+    # password managers
+    # pkgs.1password
+    keepass
+    keepassx
   ];
 }
