@@ -26,5 +26,6 @@
     theme="Adapta-Nokto"
 
   '';
+  # '' + (services.xserver.desktopManager.gnome3.extraGSettingsOverrides or "");
 
 }
