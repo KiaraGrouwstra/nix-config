@@ -7,7 +7,8 @@
     enable = true;
     # enableCtrlAltBackspace = true;
     layout = "us";
-    videoDrivers = [ "intel" ];  # TODO: "nvidia"
+    videoDrivers = [ "ati" "cirrus" "intel" "vesa" "vmware" "modesetting" ];
+    # TODO: "nvidia"
 
     # check current versions: nix-store -q --references /run/current-system/sw
     # try build: nix-build -A gnome3
