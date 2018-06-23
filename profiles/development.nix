@@ -11,6 +11,7 @@
   environment.systemPackages = with pkgs; [
     gcc
     gnumake
+    binutils-unwrapped
     zlib
   ];
 
