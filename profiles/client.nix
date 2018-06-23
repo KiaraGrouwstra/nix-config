@@ -2,7 +2,7 @@
 
 let secrets = import ../secrets.nix;
 in
-{ # rec {
+rec {
 
   environment.systemPackages = with pkgs; [
     gparted

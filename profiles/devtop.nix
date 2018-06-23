@@ -3,7 +3,7 @@
 let
   secrets = import ../secrets.nix;
 in
-{ # rec {
+rec {
 
   imports = [
     ./development.nix

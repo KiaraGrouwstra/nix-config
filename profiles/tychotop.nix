@@ -1,8 +1,12 @@
 { config, pkgs, ... }:
 
-let secrets = import ../secrets.nix;
+let
+  secrets = import ../secrets.nix;
+  # settings
+  theme = import ./theme.settings.nix;
+  gedit = import ../pkgs/gedit/config.nix { pkgs = pkgs; };
 in
-{ # rec {
+rec {
 
   imports = [
     # ESSENTIALS
@@ -21,7 +25,6 @@ in
     ./latex.nix
     ./mathematics.nix
     ./devtop.nix
-    ../pkgs/gedit/config.nix
 
     # APPLICATIONS
     ./web.nix
@@ -70,6 +73,9 @@ in
       ];
     };
   };
+
+  services.xserver.desktopManager.gnome3.extraGSettingsOverridePackages = gedit.extraGSettingsOverridePackages;
+  services.xserver.desktopManager.gnome3.extraGSettingsOverrides = theme.extraGSettingsOverrides + gedit.extraGSettingsOverrides;
 
   services.xserver.displayManager.gdm.autoLogin = {
     enable = true;
