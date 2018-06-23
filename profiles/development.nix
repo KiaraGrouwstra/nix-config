@@ -3,6 +3,7 @@
 {
   imports = [
     ./haskell.nix
+    ./python.nix
     ./ruby.nix
     ./javascript.nix
   ];

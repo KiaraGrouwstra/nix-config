@@ -29,6 +29,8 @@
       i3.package = pkgs.i3-gaps;
       default = "i3";
 
+      # awesome
+
       # # xmonad
       # xmonad.enable = true;
       # xmonad.enableContribAndExtras = true;
