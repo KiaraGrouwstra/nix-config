@@ -6,12 +6,13 @@ in
 rec {
 
   imports = [
-    ./development.nix
+    ../development/default.nix
     ./vscode.nix
   ];
 
   environment.systemPackages = with pkgs; [
     gitkraken
+    # idea-ultimate
   ];
 
 }

@@ -1,10 +1,10 @@
 { config, pkgs, ... }:
 
 let
-  secrets = import ../secrets.nix;
+  secrets = import ../../secrets.nix;
   # settings
   theme = import ./theme.settings.nix;
-  gedit = import ../pkgs/gedit/config.nix { pkgs = pkgs; };
+  gedit = import ../../pkgs/gedit/config.nix { pkgs = pkgs; };
 in
 rec {
 
@@ -13,29 +13,26 @@ rec {
     ./default.nix
     ./desktop.nix
     ./networking.nix
-    ./cuda.nix
+    ../development/cuda.nix
 
     # PERSONALIZATION
     ./shells.nix
     ./theme.nix
     ./fonts.nix
-    ./crap.nix
+    ../applications/crap.nix
 
     # DEV
-    ./latex.nix
-    ./mathematics.nix
-    ./devtop.nix
+    ../applications/devtop.nix
 
     # APPLICATIONS
-    ./browsers.nix
-    ./entertainment.nix
-    ./office.nix
-    # ./homeautomation.nix
-    ./virtualization.nix
+    ../applications/browsers.nix
+    ../applications/entertainment.nix
+    ../applications/office.nix
+    # ../applications/homeautomation.nix
+    ../development/virtualization.nix
   ];
 
 
-  # TODO: add more
   # https://github.com/NixOS/nixpkgs/tree/master/pkgs
   # https://github.com/NixOS/nixpkgs/tree/master/nixos/modules
   environment.systemPackages = with pkgs; [

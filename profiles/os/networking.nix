@@ -1,7 +1,7 @@
 # https://github.com/ghuntley/dotfiles-nixos/tree/master/machines
 { config, pkgs, ... }:
 
-let secrets = import ../secrets.nix;
+let secrets = import ../../secrets.nix;
 in
 rec {
 

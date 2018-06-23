@@ -2,7 +2,8 @@
 
 {
   environment.systemPackages = with pkgs; [
-    nodejs
-    yarn
+    go
+    dotnet-sdk
+    scala
   ];
 }

@@ -4,8 +4,8 @@
 {
   imports =
     [
-      ../profiles/client.nix
-      ../profiles/tychotop.nix
+      ../profiles/os/client.nix
+      ../profiles/os/tychotop.nix
     ];
 
   # Speed up development at the cost of possible build race conditions

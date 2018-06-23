@@ -5,8 +5,11 @@
     ./haskell.nix
     ./python.nix
     ./ruby.nix
-    ./javascript.nix
+    ./web.nix
     ./servers.nix
+    ./compilers.nix
+    ./latex.nix
+    ./mathematics.nix
   ];
 
   # install development packages

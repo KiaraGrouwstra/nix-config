@@ -3,7 +3,7 @@
 {
 
   imports = [
-    ../pkgs/gterm/config.nix
+    ../../pkgs/gterm/config.nix
   ];
 
   environment.systemPackages = with pkgs; [
