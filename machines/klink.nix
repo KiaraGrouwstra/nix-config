@@ -25,7 +25,7 @@
 
   # https://wiki.archlinux.org/index.php/Keyboard_configuration_in_Xorg
   # https://help.ubuntu.com/community/GtkComposeTable
-  # TODO: debug this
+  # bugged, fix in new gnome: https://github.com/NixOS/nixpkgs/issues/14318#issuecomment-361121902
   # services.xserver.xkbVariant = "colemak";
   # services.xserver.xkbOptions = "caps:backspace"; # compose:caps,menu:ralt
 

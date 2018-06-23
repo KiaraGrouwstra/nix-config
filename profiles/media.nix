@@ -7,6 +7,7 @@
     shotwell
     imagemagick
     gimp
+    obs-studio
   ];
 
 }
