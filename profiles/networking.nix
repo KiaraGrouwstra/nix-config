@@ -5,6 +5,10 @@ let secrets = import ../secrets.nix;
 in
 rec {
 
+  environment.systemPackages = with pkgs; [
+    kubernetes
+  ];
+
   services.dnsmasq = {
     enable = true;
     servers = [
