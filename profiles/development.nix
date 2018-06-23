@@ -6,6 +6,7 @@
     ./python.nix
     ./ruby.nix
     ./javascript.nix
+    ./servers.nix
   ];
 
   # install development packages
