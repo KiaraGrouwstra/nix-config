@@ -9,6 +9,7 @@
 
   # install development packages
   environment.systemPackages = with pkgs; [
+    gcc
     gnumake
     zlib
   ];
