@@ -53,22 +53,24 @@ in
               echo "differences found for $local ($sha2) <-> $file ($sha1):"
               echo "sudo diff $file $local"  # not available :(
               read -p "override/upstream/skip $local? (o/u/s) " -n 1 -r
-              echo # (\n)
+              echo
+              echo
               if [[ $REPLY =~ ^[Oo]$ ]]; then
                 echo "sudo cp $file $local"
               elif [[ $REPLY =~ ^[Uu]$ ]]; then
                 echo "sudo cp $local $file"
               fi
+              echo
             fi
           fi
         done
         echo "sudo cp -r $nixPath/. ./$repoPath/"
       }
-      echo ""
+      echo
       syncFiles "dotfiles" "/home/tycho"
       syncFiles "private" "/"
       echo "git status"
-      echo ""
+      echo
     '');
   };
 

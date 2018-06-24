@@ -79,7 +79,4 @@ rec {
     user = "tycho";
   };
 
-  # more:
-  # - gnome shell extensions: ~/.local/share/app-info/xmls/extensions-web.xml
-
 }
