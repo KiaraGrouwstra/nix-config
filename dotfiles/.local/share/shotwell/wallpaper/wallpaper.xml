@@ -1,51 +1,87 @@
 <background>
   <static>
-    <duration>60.00</duration>
-    <file>/home/tycho/.local/share/shotwell/wallpaper/westworld-season-2-poster-f9.jpg</file>
-  </static>
-  <transition>
-    <duration>2.00</duration>
-    <from>/home/tycho/.local/share/shotwell/wallpaper/westworld-season-2-poster-f9.jpg</from>
-    <to>/home/tycho/.local/share/shotwell/wallpaper/870874.jpg</to>
-  </transition>
-  <static>
-    <duration>60.00</duration>
+    <duration>300.00</duration>
     <file>/home/tycho/.local/share/shotwell/wallpaper/870874.jpg</file>
   </static>
   <transition>
     <duration>2.00</duration>
     <from>/home/tycho/.local/share/shotwell/wallpaper/870874.jpg</from>
-    <to>/home/tycho/.local/share/shotwell/wallpaper/t7LWs0z.jpg</to>
-  </transition>
-  <static>
-    <duration>60.00</duration>
-    <file>/home/tycho/.local/share/shotwell/wallpaper/t7LWs0z.jpg</file>
-  </static>
-  <transition>
-    <duration>2.00</duration>
-    <from>/home/tycho/.local/share/shotwell/wallpaper/t7LWs0z.jpg</from>
     <to>/home/tycho/.local/share/shotwell/wallpaper/ws_Kali_Linux_1920x1080.jpg</to>
   </transition>
   <static>
-    <duration>60.00</duration>
+    <duration>300.00</duration>
     <file>/home/tycho/.local/share/shotwell/wallpaper/ws_Kali_Linux_1920x1080.jpg</file>
   </static>
   <transition>
     <duration>2.00</duration>
     <from>/home/tycho/.local/share/shotwell/wallpaper/ws_Kali_Linux_1920x1080.jpg</from>
+    <to>/home/tycho/.local/share/shotwell/wallpaper/westworld-season-2-poster-f9.jpg</to>
+  </transition>
+  <static>
+    <duration>300.00</duration>
+    <file>/home/tycho/.local/share/shotwell/wallpaper/westworld-season-2-poster-f9.jpg</file>
+  </static>
+  <transition>
+    <duration>2.00</duration>
+    <from>/home/tycho/.local/share/shotwell/wallpaper/westworld-season-2-poster-f9.jpg</from>
+    <to>/home/tycho/.local/share/shotwell/wallpaper/t7LWs0z.jpg</to>
+  </transition>
+  <static>
+    <duration>300.00</duration>
+    <file>/home/tycho/.local/share/shotwell/wallpaper/t7LWs0z.jpg</file>
+  </static>
+  <transition>
+    <duration>2.00</duration>
+    <from>/home/tycho/.local/share/shotwell/wallpaper/t7LWs0z.jpg</from>
+    <to>/home/tycho/.local/share/shotwell/wallpaper/pokemon-go-3840x2160-red-yellow-green-blue-purple-grey-4k-1356.jpg</to>
+  </transition>
+  <static>
+    <duration>300.00</duration>
+    <file>/home/tycho/.local/share/shotwell/wallpaper/pokemon-go-3840x2160-red-yellow-green-blue-purple-grey-4k-1356.jpg</file>
+  </static>
+  <transition>
+    <duration>2.00</duration>
+    <from>/home/tycho/.local/share/shotwell/wallpaper/pokemon-go-3840x2160-red-yellow-green-blue-purple-grey-4k-1356.jpg</from>
+    <to>/home/tycho/.local/share/shotwell/wallpaper/photo_2018-06-19_23-40-35.jpg</to>
+  </transition>
+  <static>
+    <duration>300.00</duration>
+    <file>/home/tycho/.local/share/shotwell/wallpaper/photo_2018-06-19_23-40-35.jpg</file>
+  </static>
+  <transition>
+    <duration>2.00</duration>
+    <from>/home/tycho/.local/share/shotwell/wallpaper/photo_2018-06-19_23-40-35.jpg</from>
+    <to>/home/tycho/.local/share/shotwell/wallpaper/monster_hunter_palico_wallpaper_by_theinvisiblessed-d8nh18h.jpg</to>
+  </transition>
+  <static>
+    <duration>300.00</duration>
+    <file>/home/tycho/.local/share/shotwell/wallpaper/monster_hunter_palico_wallpaper_by_theinvisiblessed-d8nh18h.jpg</file>
+  </static>
+  <transition>
+    <duration>2.00</duration>
+    <from>/home/tycho/.local/share/shotwell/wallpaper/monster_hunter_palico_wallpaper_by_theinvisiblessed-d8nh18h.jpg</from>
     <to>/home/tycho/.local/share/shotwell/wallpaper/bvFwFPo.jpg</to>
   </transition>
   <static>
-    <duration>60.00</duration>
+    <duration>300.00</duration>
     <file>/home/tycho/.local/share/shotwell/wallpaper/bvFwFPo.jpg</file>
   </static>
   <transition>
     <duration>2.00</duration>
     <from>/home/tycho/.local/share/shotwell/wallpaper/bvFwFPo.jpg</from>
+    <to>/home/tycho/.local/share/shotwell/wallpaper/game_of_thrones_season_4-wallpaper-2560x1440.jpg</to>
+  </transition>
+  <static>
+    <duration>300.00</duration>
+    <file>/home/tycho/.local/share/shotwell/wallpaper/game_of_thrones_season_4-wallpaper-2560x1440.jpg</file>
+  </static>
+  <transition>
+    <duration>2.00</duration>
+    <from>/home/tycho/.local/share/shotwell/wallpaper/game_of_thrones_season_4-wallpaper-2560x1440.jpg</from>
     <to>/home/tycho/.local/share/shotwell/wallpaper/magikarp_by_krukmeister-d6hua8k.png</to>
   </transition>
   <static>
-    <duration>60.00</duration>
+    <duration>300.00</duration>
     <file>/home/tycho/.local/share/shotwell/wallpaper/magikarp_by_krukmeister-d6hua8k.png</file>
   </static>
   <transition>
@@ -54,12 +90,21 @@
     <to>/home/tycho/.local/share/shotwell/wallpaper/AjFJnbi.png</to>
   </transition>
   <static>
-    <duration>60.00</duration>
+    <duration>300.00</duration>
     <file>/home/tycho/.local/share/shotwell/wallpaper/AjFJnbi.png</file>
   </static>
   <transition>
     <duration>2.00</duration>
     <from>/home/tycho/.local/share/shotwell/wallpaper/AjFJnbi.png</from>
-    <to>/home/tycho/.local/share/shotwell/wallpaper/westworld-season-2-poster-f9.jpg</to>
+    <to>/home/tycho/.local/share/shotwell/wallpaper/westworld-wallpapers-31749-2048396.png</to>
+  </transition>
+  <static>
+    <duration>300.00</duration>
+    <file>/home/tycho/.local/share/shotwell/wallpaper/westworld-wallpapers-31749-2048396.png</file>
+  </static>
+  <transition>
+    <duration>2.00</duration>
+    <from>/home/tycho/.local/share/shotwell/wallpaper/westworld-wallpapers-31749-2048396.png</from>
+    <to>/home/tycho/.local/share/shotwell/wallpaper/870874.jpg</to>
   </transition>
 </background>
