@@ -68,6 +68,7 @@ in
       }
       echo
       syncFiles "dotfiles" "/home/tycho"
+      syncFiles "public" "/"
       syncFiles "private" "/"
       echo "git status"
       echo
