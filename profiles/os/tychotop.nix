@@ -3,8 +3,8 @@
 let
   secrets = import ../../secrets.nix;
   # settings
-  theme = import ./theme.settings.nix;
-  gedit = import ../../pkgs/gedit/config.nix { pkgs = pkgs; };
+  theme = import ./gnome.nix;
+  gedit = import ../../pkgs/gedit.nix { pkgs = pkgs; };
 in
 rec {
 
@@ -72,7 +72,6 @@ rec {
   };
 
   services.xserver.desktopManager.gnome3.extraGSettingsOverridePackages = gedit.extraGSettingsOverridePackages;
-  services.xserver.desktopManager.gnome3.extraGSettingsOverrides = theme.extraGSettingsOverrides + gedit.extraGSettingsOverrides;
 
   services.xserver.displayManager.gdm.autoLogin = {
     enable = true;
