@@ -1,5 +1,9 @@
 {
 
+  environment.systemPackages = with pkgs; [
+    gnome-shell-dash-to-dock
+  ];
+
   # `dconf dump /`
   # installed: ~/.local/share/app-info/xmls/extensions-web.xml
   # use `dconf watch /` then change stuff in gnome tweak tool

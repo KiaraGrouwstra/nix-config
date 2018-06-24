@@ -21,16 +21,16 @@ nix:
   enable: true
 
   # true by default. Tells Nix whether to run in a pure shell or not.
-  pure: true
+  pure: false
 
   # Empty by default. The list of packages you want to be
   # available in the nix-shell at build time (with `stack
   # build`) and run time (with `stack exec`).
-  packages: []
+  # packages: []
 
   # Unset by default. You cannot set this option if `packages:`
   # is already present and not empty.
-  shell-file: /home/tycho/.stack/shell.nix
+  # shell-file: /home/tycho/.stack/shell.nix
 
   # A list of strings, empty by default. Additional options that
   # will be passed verbatim to the `nix-shell` command.
