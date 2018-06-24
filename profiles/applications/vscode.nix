@@ -5,6 +5,7 @@ let
     vscode-with-extensions = super.vscode-with-extensions.override {
       # code --list-extensions --show-versions
       # ls ~/.vscode/extensions
+      # find version at https://marketplace.visualstudio.com/items?itemName=ms-python.python -> version
       vscodeExtensions =
         super.vscode-utils.extensionsFromVscodeMarketplace [
           {
@@ -36,6 +37,24 @@ let
             publisher = "skyapps";
             version = "0.2.0";
             sha256 = "148r186y3h7n84fcyh6wa2qwl2q3pfi8aykwkc9dhfj3kwfcm5rb";
+          }
+          {
+            name = "scala-lsp";
+            publisher = "dragos";
+            version = "0.2.3";
+            sha256 = "1xp8iv83rdzd8xq590n5b8wpvv99fb97sxwcvarapcp4rp8nas4n";
+          }
+          {
+            name = "python";
+            publisher = "ms-python";
+            version = "2018.6.0";
+            sha256 = "1s4s3zb443blrfdi6z29j75y8kj4wzrylcil1fgal35l8ndkjmx1";
+          }
+          {
+            name = "haskero";
+            publisher = "Vans";
+            version = "1.3.1";
+            sha256 = "0j8cn6rb071h8vn7arhqgczvrdqgwprh541ps2q1z2mivk15y1gd";
           }
         ];
         # ] ++ with super.vscode-extensions; [
