@@ -4,7 +4,7 @@ let secrets = import ../../secrets.nix;
 in
 rec {
 
-  # boot.blacklistedKernelModules = [ "i915" ];
+  boot.blacklistedKernelModules = [ "i915" ];
 
   environment.systemPackages = with pkgs; [
     gparted
