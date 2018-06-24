@@ -2,7 +2,10 @@
 
 {
 
-  # search packages with `nix-env -qaP | grep wget` or `nox wget`
+  # search packages:
+  # - `nix-env -qaP | grep wget`
+  # - `nox wget`
+  # - https://github.com/NixOS/nixpkgs/
   environment.systemPackages = with pkgs; [
     wget
     git

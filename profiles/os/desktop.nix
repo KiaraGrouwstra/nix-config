@@ -2,6 +2,10 @@
 
 {
 
+  environment.systemPackages = with pkgs; [
+    wmctrl
+  ];
+
   # X11 windowing system
   services.xserver = {
     enable = true;
