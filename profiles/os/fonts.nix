@@ -11,6 +11,9 @@
       inconsolata  # monospaced
       ubuntu_font_family  # Ubuntu fonts
       terminus_font  # for hidpi screens, large fonts
+      noto-fonts
+      noto-fonts-cjk
+      noto-fonts-emoji
       liberation_ttf
       dejavu_fonts
       emojione  # emoji
