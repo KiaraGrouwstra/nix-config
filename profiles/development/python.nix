@@ -11,6 +11,7 @@ let
 in
 {
   environment.systemPackages = with pkgs; [
-    conda
+    python
+    conda  # no conda executable exposed?
   ];
 }
