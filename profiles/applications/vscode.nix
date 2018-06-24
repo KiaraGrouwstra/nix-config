@@ -68,6 +68,7 @@ in
   nixpkgs.overlays = [ overlay ];
 
   environment.systemPackages = with pkgs; [
+    vscode
     vscode-with-extensions
   ];
 
