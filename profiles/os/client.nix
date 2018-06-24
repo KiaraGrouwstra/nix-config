@@ -18,10 +18,10 @@ rec {
   hardware = {
     pulseaudio.enable = true;
     # cpu.intel.updateMicrocode = true;
-    bumblebee = {
-      connectDisplay = true;
-      enable = true;
-    };
+    # bumblebee = {
+    #   connectDisplay = true;
+    #   enable = true;
+    # };
   };
 
   services.printing.enable = true;
