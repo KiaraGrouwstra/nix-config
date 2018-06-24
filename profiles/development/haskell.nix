@@ -10,6 +10,8 @@
     ghc
     # haskell.compiler.ghc822
     # haskell.compiler.ghc-8.4.2
+    # ghc-8.4.3
+    # ghc-8.5
 
     # # libraries
     # haskellPackages.alex
