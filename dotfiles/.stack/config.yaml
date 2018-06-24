@@ -30,7 +30,7 @@ nix:
 
   # Unset by default. You cannot set this option if `packages:`
   # is already present and not empty.
-  shell-file: shell.nix
+  shell-file: /home/tycho/.stack/shell.nix
 
   # A list of strings, empty by default. Additional options that
   # will be passed verbatim to the `nix-shell` command.
