@@ -27,6 +27,7 @@
     haskellPackages.hoogle          # type signature search
     haskellPackages.hpack           # yaml based package format
     haskellPackages.hspec           # testing framework
+    haskellPackages.intero          # IDE tooltips
     # haskellPackages.pointfree       # http://pointfree.io/
     # haskellPackages.pointful        # https://github.com/23Skidoo/pointful
     haskellPackages.stylish-haskell # pretty printer
