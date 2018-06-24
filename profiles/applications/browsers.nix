@@ -14,6 +14,7 @@
     firefox = {
       jre = false;
       enableAdobeFlash = false;
+      enableGnomeExtensions = true;
     };
 
     chromium = {

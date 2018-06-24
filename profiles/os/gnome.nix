@@ -2,7 +2,10 @@
 
   environment.systemPackages = with pkgs; [
     gnome-shell-dash-to-dock
+    chrome-gnome-shell
   ];
+
+  services.gnome3.chrome-gnome-shell.enable = true;
 
   # `dconf dump /`
   # installed: ~/.local/share/app-info/xmls/extensions-web.xml
