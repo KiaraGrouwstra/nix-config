@@ -20,9 +20,8 @@
 
     [org/gnome/shell]
     app-picker-view=uint32 1
-    command-history=['gconftool-2 --recursive-unset /apps/panel', 'code']
     enabled-extensions=['windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'alternate-tab@gnome-shell-extensions.gcampax.github.com']
-    favorite-apps=['org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop']
+    favorite-apps=['org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'firefox.desktop', 'telegram-desktop.desktop', 'gitkraken.desktop']
 
     [org/gnome/shell/window-switcher]
     app-icon-mode='both'
@@ -152,8 +151,8 @@
     sort-column='name'
     sidebar-width=174
     window-position=(2278, 47)
-    show-size-column=true
-    show-hidden=false
+    show-size-column=false
+    show-hidden=true
     window-size=(1203, 936)
     sort-directories-first=false
     date-format='regular'
