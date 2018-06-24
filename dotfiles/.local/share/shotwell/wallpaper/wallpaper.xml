@@ -42,15 +42,6 @@
   <transition>
     <duration>2.00</duration>
     <from>/home/tycho/.local/share/shotwell/wallpaper/pokemon-go-3840x2160-red-yellow-green-blue-purple-grey-4k-1356.jpg</from>
-    <to>/home/tycho/.local/share/shotwell/wallpaper/photo_2018-06-19_23-40-35.jpg</to>
-  </transition>
-  <static>
-    <duration>300.00</duration>
-    <file>/home/tycho/.local/share/shotwell/wallpaper/photo_2018-06-19_23-40-35.jpg</file>
-  </static>
-  <transition>
-    <duration>2.00</duration>
-    <from>/home/tycho/.local/share/shotwell/wallpaper/photo_2018-06-19_23-40-35.jpg</from>
     <to>/home/tycho/.local/share/shotwell/wallpaper/monster_hunter_palico_wallpaper_by_theinvisiblessed-d8nh18h.jpg</to>
   </transition>
   <static>
