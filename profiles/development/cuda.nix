@@ -8,8 +8,6 @@
     cudatoolkit
   ];
 
-  # services.xserver.videoDrivers = [ "nvidia" ];
-
   # systemd.services.nvidia-control-devices = {
   #   wantedBy = [ "multi-user.target" ];
   #   serviceConfig.ExecStart = "${pkgs.linuxPackages.nvidia_x11}/bin/nvidia-smi";
@@ -32,6 +30,7 @@
     enable = true;
     driSupport = true;
     driSupport32Bit = true;
+    extraPackages = with pkgs; [ vaapiIntel ];
   };
 
 }
