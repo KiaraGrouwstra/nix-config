@@ -5,7 +5,7 @@
     nodejs
     yarn
     nodePackages.npm
-    nodePackages.typescript
+    nodePackages.azure-cli
     # nodePackages.webtorrent-cli
     postman
   ];
