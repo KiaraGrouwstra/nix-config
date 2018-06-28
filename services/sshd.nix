@@ -13,7 +13,7 @@
     # Only pubkey auth
     passwordAuthentication = false;
     challengeResponseAuthentication = false;
-    authorizedKeysFiles = [ ".ssh/id_rsa" ];
+    authorizedKeysFiles = [ ".ssh/id_rsa.pub" ];
 
     listenAddresses = [
       { addr = "0.0.0.0"; port = 22; }
