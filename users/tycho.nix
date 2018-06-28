@@ -12,7 +12,6 @@ in
     uid = 1000;
     home = "/home/tycho";
     description = "Tycho Grouwstra <tychogrouwstra@gmail.com>";
-    openssh.authorizedKeys.keys = secrets.sshKeys;
     hashedPassword = secrets.hashedPassword;
 
     shell = pkgs.fish;
