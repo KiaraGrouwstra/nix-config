@@ -3,6 +3,6 @@
 {
   imports = [
     ./locate.nix
-    # ./sshd.nix
+    ./sshd.nix
   ];
 }
