@@ -4,6 +4,7 @@
 
   environment.systemPackages = with pkgs; [
     firefox-devedition-bin
+    google-chrome
     # chromium
     # tor-browser-bundle
   ];
