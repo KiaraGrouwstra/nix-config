@@ -1,9 +1,12 @@
 { pkgs, ... }:
 
+let
+  master = import ../../master.nix;
+in
 {
-  environment.systemPackages = with pkgs; [
-    go
-    dotnet-sdk
-    scala
+  environment.systemPackages = with master; [
+    master.go
+    master.dotnet-sdk
+    master.scala
   ];
 }

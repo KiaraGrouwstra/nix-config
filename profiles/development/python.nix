@@ -1,16 +1,17 @@
 { pkgs, ... }:
 
 let
+  master = import ../../master.nix;
   my-python-packages = python-packages: with python-packages; [
     pandas
     requests
     tensorflow
     tensorflow-tensorboard
   ]; 
-  python-with-my-packages = pkgs.python3.withPackages my-python-packages;
+  python-with-my-packages = master.python3.withPackages my-python-packages;
 in
 {
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with master; [
     python
     conda  # no conda executable exposed?
   ];

@@ -1,12 +1,14 @@
 { pkgs, ... }:
 
-let secrets = import ../../secrets.nix;
+let
+  master = import ../../master.nix;
+  secrets = import ../../secrets.nix;
 in
 rec {
 
   # boot.blacklistedKernelModules = [ "i915" ];
 
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with master; [
     gparted
   ];
 

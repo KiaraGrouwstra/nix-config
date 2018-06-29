@@ -1,8 +1,11 @@
 { pkgs, ... }:
 
+let
+  master = import ../../master.nix;
+in
 {
 
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with master; [
     tdesktop  # telegram
       # - theme: set manually at Telegram -> settings -> Chat background -> Choose from file -> /nix/store/*-adapta-gtk-theme-*/share/themes/Adapta-Nokto/telegram/
       # - plaintext config: https://github.com/telegramdesktop/tdesktop/issues/4879

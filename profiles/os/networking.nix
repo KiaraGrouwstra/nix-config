@@ -1,11 +1,13 @@
 # https://github.com/ghuntley/dotfiles-nixos/tree/master/machines
 { pkgs, ... }:
 
-let secrets = import ../../secrets.nix;
+let
+  master = import ../../master.nix;
+  secrets = import ../../secrets.nix;
 in
 rec {
 
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with master; [
     kubernetes
   ];
 

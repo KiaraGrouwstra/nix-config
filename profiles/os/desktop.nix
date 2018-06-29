@@ -1,8 +1,11 @@
 { pkgs, ... }:
 
+let
+  master = import ../../master.nix;
+in
 {
 
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with master; [
     wmctrl
   ];
 
@@ -11,7 +14,7 @@
     enable = true;
     # enableCtrlAltBackspace = true;
     layout = "us";
-    videoDrivers = [ "ati" "cirrus" "intel" "vesa" "vmware" "modesetting" ]; # "nvidia" "nvidiaBeta"
+    videoDrivers = [ "intel" "nvidiaBeta" "nvidia" "ati" "cirrus" "vesa" "vmware" "modesetting" ];
 
     # check current versions: nix-store -q --references /run/current-system/sw
     # try build: nix-build -A gnome3

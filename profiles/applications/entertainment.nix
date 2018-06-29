@@ -1,5 +1,8 @@
 { pkgs, ... }:
 
+let
+  master = import ../../master.nix;
+in
 {
 
   imports = [
@@ -8,7 +11,7 @@
     ./games.nix
   ];
 
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with master; [
     webtorrent_desktop
   ];
 

@@ -1,5 +1,8 @@
 { config, lib, pkgs, ... }:
 
+let
+  master = import ../../master.nix;
+in
 {
   imports = [
     ./haskell.nix
@@ -13,7 +16,7 @@
   ];
 
   # install development packages
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with master; [
     gcc
     gnumake
     binutils-unwrapped

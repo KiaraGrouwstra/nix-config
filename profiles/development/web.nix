@@ -4,12 +4,12 @@ let
   master = import ../../master.nix;
 in
 {
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with master; [
     nodejs
     yarn
     nodePackages.npm
     nodePackages.azure-cli
-    master.nodePackages.webtorrent-cli
+    # nodePackages.webtorrent-cli
     # postman
   ];
 }

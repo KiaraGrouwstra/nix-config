@@ -1,7 +1,10 @@
 { pkgs, ... }:
 
+let
+  master = import ../../master.nix;
+in
 {
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with master; [
     ctags
     cabal2nix
     cabal-install
@@ -12,7 +15,7 @@
     # haskell.compiler.ghc-8.4.2
     # ghc-8.4.3
     # ghc-8.5
-  ] ++ (with pkgs.haskellPackages; [
+  ] ++ (with master.haskellPackages; [
 
     # # libraries
     # alex

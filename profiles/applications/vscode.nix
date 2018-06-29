@@ -1,6 +1,7 @@
 { pkgs, ... }:
 
 let
+  master = import ../../master.nix;
   overlay = self: super: {
     vscode-with-extensions = super.vscode-with-extensions.override {
       # code --list-extensions --show-versions
@@ -67,7 +68,7 @@ in
 
   nixpkgs.overlays = [ overlay ];
 
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with master; [
     vscode
     vscode-with-extensions
   ];

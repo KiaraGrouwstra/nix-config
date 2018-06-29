@@ -1,12 +1,15 @@
 { pkgs, ... }:
 
+let
+  master = import ../../master.nix;
+in
 {
 
   imports = [
     ./docker.nix
   ];
 
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with master; [
     # kvm
     # qemu
     # vagrant

@@ -1,8 +1,11 @@
 { pkgs, ... }:
 
+let
+  master = import ../../master.nix;
+in
 {
 
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with master; [
     firefox-devedition-bin
     google-chrome
     # chromium

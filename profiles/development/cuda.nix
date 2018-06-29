@@ -1,5 +1,8 @@
 { pkgs, ... }:
 
+let
+  master = import ../../master.nix;
+in
 {
 
   nixpkgs.config.allowUnfree = true;
