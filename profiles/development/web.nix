@@ -2,8 +2,7 @@
 
 let
   newPkgs = import (fetchTarball {
-    # 2018-05-25?
-    url = "https://github.com/NixOS/nixpkgs/archive/696c6bed4e8e2d9fd9b956dea7e5d49531e9d13f.tar.gz";
+    url = "https://github.com/NixOS/nixpkgs/archive/dca7e24a11940477f6a3568fc49bade96ca59514.tar.gz";
     sha256 = "1v3yrpj542niyxp0h3kffsdjwlrkvj0mg4ljb85d142gyn3sdzd4";
   }) {
     config.allowUnfree = true;
