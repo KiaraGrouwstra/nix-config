@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
 
@@ -21,7 +21,7 @@
       cd /etc
       mkdir -p ./OpenCL/vendors
       cd ./OpenCL/vendors
-#      echo '${pkgs.linuxPackages.nvidia_x11}' > nvidia.icd
+      # echo '${pkgs.linuxPackages.nvidia_x11}' > nvidia.icd
     '';
   };
 

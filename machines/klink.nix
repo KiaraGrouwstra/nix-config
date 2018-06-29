@@ -1,12 +1,11 @@
 # https://github.com/ghuntley/dotfiles-nixos/tree/master/machines
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-  imports =
-    [
-      ../profiles/os/client.nix
-      ../profiles/os/tychotop.nix
-    ];
+  imports = [
+    ../profiles/os/client.nix
+    ../profiles/os/tychotop.nix
+  ];
 
   # Speed up development at the cost of possible build race conditions
   nix.buildCores = 4;

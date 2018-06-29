@@ -1,5 +1,5 @@
 # https://github.com/ghuntley/dotfiles-nixos/tree/master/machines
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 let secrets = import ../../secrets.nix;
 in

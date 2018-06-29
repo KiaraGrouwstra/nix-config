@@ -1,6 +1,6 @@
 # https://github.com/ghuntley/dotfiles-nixos/blob/master/users/ghuntley.nix
 
-{ config, lib, pkgs, ... }:
+{ lib, pkgs, ... }: # config, 
 with lib;
 
 let secrets = import ../secrets.nix;
