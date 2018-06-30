@@ -8,12 +8,11 @@ in
     ctags
     cabal2nix
     cabal-install
-    stack
+    # stack
 
     ghc
     haskell.compiler.ghc822
     haskell.compiler.ghc843
-    # ghc-85
   ] ++ (with haskellPackages; [
 
     # # libraries
