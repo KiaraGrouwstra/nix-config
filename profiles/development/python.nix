@@ -2,15 +2,18 @@
 
 let
   master = import ../../master.nix;
-  torrench = import ./python/torrench/default.nix;
+  # torrench = import ./python/torrench/default.nix;
   my-python-packages = python-packages: with python-packages; [
-    pip  #  exe?
+    pip
     setuptools
     pandas
     requests
     tensorflow
     # tensorflow-tensorboard
-    torrench  # missing
+
+    pyperclip
+    tabulate
+    # torrench  # missing
 
     # build:
     # pypi2nix -V 3.6
