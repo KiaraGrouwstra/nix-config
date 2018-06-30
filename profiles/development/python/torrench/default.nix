@@ -1,4 +1,5 @@
-{ stdenv, fetchFromGitHub, buildPythonApplication
+# { stdenv, fetchFromGitHub, buildPythonApplication
+{ fetchFromGitHub, buildPythonApplication
 , colorama
 }:
 
@@ -17,11 +18,13 @@ buildPythonApplication rec {
 
   # doCheck = false;
 
-  meta = with stdenv.lib; {
+  # meta = with stdenv.lib; {
+  meta = {
     homepage = https://github.com/kryptxy/torrench;
     description = "Command-line torrent search program (cross-platform)";
-    license = licenses.mit;
-    maintainers = with maintainers; [ ma27 ];
+    # license = stdenv.lib.licenses.mit;
+    # maintainers = with maintainers; [ ma27 ];
+    maintainers = [  ];
   };
 }
 
