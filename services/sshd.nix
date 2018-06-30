@@ -16,5 +16,9 @@
     listenAddresses = [
       { addr = "0.0.0.0"; port = 22; }
     ];
+
+    # usage:
+    # ssh -R tycho01:22:localhost:22 serveo.net
+    # ssh -J serveo.net tycho@tycho01
   };
 }
