@@ -2,6 +2,9 @@
 
 let
   master = import ../../master.nix;
+  pkgs = import <nixpkgs> {
+    config.allowUnfree = true;
+  };
 in
 {
   imports = [

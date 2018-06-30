@@ -3,7 +3,7 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 {
-  # _module.args.pkgs = import ./master.nix
+  # _module.args.pkgs = import ./master.nix;
 
   imports = [
     # Include the results of the hardware scan.
