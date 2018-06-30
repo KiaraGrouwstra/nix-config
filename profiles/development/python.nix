@@ -13,6 +13,7 @@ let
 
     pyperclip
     tabulate
+    colorama
     # torrench  # missing
 
     # build:
