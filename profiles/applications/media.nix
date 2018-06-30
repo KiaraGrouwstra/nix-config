@@ -6,7 +6,7 @@ in
 {
 
   environment.systemPackages = with master; [
-    # vlc
+    pkgs.vlc
     shotwell
     imagemagick
     gimp

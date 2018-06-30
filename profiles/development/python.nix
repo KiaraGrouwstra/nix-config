@@ -14,6 +14,7 @@ in
   environment.systemPackages = with master; [
     pypi2nix
     python
+    # python3
     conda  # no conda executable exposed?
   ];
 }
