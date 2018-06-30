@@ -17,5 +17,6 @@ in
     python3
     conda  # no conda executable exposed?
     libxml2
+    libxmlxx
   ];
 }
