@@ -4,17 +4,20 @@ let
   master = import ../../master.nix;
   torrench = import ./python/torrench/default.nix;
   my-python-packages = python-packages: with python-packages; [
-    # python36Packages.pip  #  exe?
-    python36Packages.setuptools
+    pip  #  exe?
+    setuptools
     pandas
     requests
     tensorflow
-    tensorflow-tensorboard
+    # tensorflow-tensorboard
     torrench  # missing
 
     # build:
     # pypi2nix -V 3.6
     # nix-shell requirements.nix -A interpreter
+
+    # try from nix package:
+    # nix-shell -p pythonPackages.torrench
 
     # try w/ docker:
     # docker run -it python bash
@@ -33,8 +36,9 @@ in
 {
   environment.systemPackages = with master; [
     pypi2nix
-    python
-    python3
+    # python
+    # python3
+    python-with-my-packages
     conda  # no conda executable exposed?
   ];
 }
