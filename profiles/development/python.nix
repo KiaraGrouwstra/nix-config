@@ -7,6 +7,7 @@ let
     requests
     tensorflow
     tensorflow-tensorboard
+    lxml
   ];
   python-with-my-packages = master.python3.withPackages my-python-packages;
 in
