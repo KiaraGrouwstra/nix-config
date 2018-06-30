@@ -10,7 +10,7 @@ in
     yarn
     nodePackages.npm
     nodePackages.azure-cli
-    # nodePackages.webtorrent-cli
+    nodePackages.webtorrent-cli
     # postman
   ];
 }
