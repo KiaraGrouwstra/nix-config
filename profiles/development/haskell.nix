@@ -23,8 +23,8 @@ in
     # hakyll
 
     # tools
-    #hscope
-    #argon          # code complexity (req: haskell 7.10)
+    # hscope
+    # argon          # code complexity (req: haskell 7.10)
     # codex           # ctags file generator for cabal project dependencies
     # ghc-mod         # ghc-mod is a backend program to enrich editors
     ghcid           # GHCi as a daemon
