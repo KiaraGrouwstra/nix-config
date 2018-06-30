@@ -3,7 +3,8 @@
 let
   master = import ../../master.nix;
   my-python-packages = python-packages: with python-packages; [
-    python36Packages.pip
+    # python36Packages.pip  #  exe?
+    python36Packages.setuptools
     pandas
     requests
     tensorflow
