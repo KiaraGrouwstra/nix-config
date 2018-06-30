@@ -2,7 +2,7 @@
 
 let
   master = import ../../master.nix;
-  # torrench = import ./python/torrench/default.nix;
+  torrench = import ./python/torrench/default.nix;
   my-python-packages = python-packages: with python-packages; [
     pip
     setuptools
@@ -14,7 +14,7 @@ let
     pyperclip
     tabulate
     colorama
-    # torrench  # missing
+    torrench  # missing
 
     # build:
     # pypi2nix -V 3.6

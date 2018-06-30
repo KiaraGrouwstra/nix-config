@@ -1,97 +1,99 @@
-# generated using pypi2nix tool (version: 1.8.1)
-# See more at: https://github.com/garbas/pypi2nix
-#
-# COMMAND:
-#   pypi2nix -V 3.6
-#
-
-{ pkgs ? import <nixpkgs> {}
+{ stdenv, fetchFromGitHub, buildPythonApplication
+, colorama
 }:
 
-let
-  deps = (with pkgs; [ pkgs.libxml2 pkgs.libxmlxx pkgs.libxmlxx3 pkgs.libxslt makeWrapper ]);
+buildPythonApplication rec {
+  pname = "torrench";
+  version = "1.0.61";
 
-  inherit (pkgs) makeWrapper;
-  inherit (pkgs.stdenv.lib) fix' extends inNixShell;
-
-  pythonPackages =
-  import "${toString pkgs.path}/pkgs/top-level/python-packages.nix" {
-    inherit pkgs;
-    inherit (pkgs) stdenv;
-    python = pkgs.python36;
-    # patching pip so it does not try to remove files when running nix-shell
-    overrides =
-      self: super: {
-        bootstrapped-pip = super.bootstrapped-pip.overrideDerivation (old: {
-          patchPhase = old.patchPhase + ''
-            sed -i               -e "s|paths_to_remove.remove(auto_confirm)|#paths_to_remove.remove(auto_confirm)|"                -e "s|self.uninstalled = paths_to_remove|#self.uninstalled = paths_to_remove|"                  $out/${pkgs.python35.sitePackages}/pip/req/req_install.py
-          '';
-        });
-      };
+  src = fetchFromGitHub {
+    owner = "kryptxy";
+    repo = "${pname}";
+    rev = "v${version}";
+    sha256 = "1lsg0g9lnpj2nidggm16b7jm4xzhg0dgy81crfzny62hah1zk0pj";
   };
 
-  commonBuildInputs = [];
-  commonDoCheck = false;
+  propagatedBuildInputs = [ colorama ];
 
-  withPackages = pkgs':
-    let
-      pkgs = builtins.removeAttrs pkgs' ["__unfix__"];
-      interpreter = pythonPackages.buildPythonPackage {
-        name = "python36-interpreter";
-        buildInputs = deps ++ 
-(builtins.attrValues 
-pkgs);
-        buildCommand = ''
-          mkdir -p $out/bin
-          ln -s ${pythonPackages.python.interpreter}               $out/bin/${pythonPackages.python.executable}
-          for dep in ${builtins.concatStringsSep " "               (builtins.attrValues pkgs)}; do
-            if [ -d "$dep/bin" ]; then
-              for prog in "$dep/bin/"*; do
-                if [ -f $prog ]; then
-                  ln -s $prog $out/bin/`basename $prog`
-                fi
-              done
-            fi
-          done
-          for prog in "$out/bin/"*; do
-            wrapProgram "$prog" --prefix PYTHONPATH : "$PYTHONPATH"
-          done
-          pushd $out/bin
-          ln -s ${pythonPackages.python.executable} python
-          ln -s ${pythonPackages.python.executable}               python3
-          popd
-        '';
-        passthru.interpreter = pythonPackages.python;
-      };
-    in {
-      __old = pythonPackages;
-      inherit interpreter;
-      mkDerivation = pythonPackages.buildPythonPackage;
-      packages = pkgs;
-      overrideDerivation = drv: f:
-        pythonPackages.buildPythonPackage (drv.drvAttrs // f drv.drvAttrs //                                            { meta = drv.meta; });
-      withPackages = pkgs'':
-        withPackages (pkgs // pkgs'');
-    };
+  # doCheck = false;
 
-  python = withPackages {};
-
-  generated = self: {
-
+  meta = with stdenv.lib; {
+    homepage = https://github.com/kryptxy/torrench;
+    description = "Command-line torrent search program (cross-platform)";
+    license = licenses.mit;
+    maintainers = with maintainers; [ ma27 ];
   };
-  localOverridesFile = ./requirements_override.nix;
-  overrides = import localOverridesFile { inherit pkgs python; };
-  commonOverrides = [
+}
 
-  ];
-  allOverrides =
-    (if (builtins.pathExists localOverridesFile)
-     then [overrides] else [] ) ++ commonOverrides;
+# { pkgs ? import <nixpkgs> {} }:
 
-in python.withPackages
-   (fix' (pkgs.lib.fold
-            extends
-            generated
-            allOverrides
-         )
-   )
+# let
+#   deps = (with pkgs; [ pkgs.libxml2 pkgs.libxmlxx pkgs.libxmlxx3 pkgs.libxslt makeWrapper ]);
+
+#   inherit (pkgs) makeWrapper;
+#   inherit (pkgs.stdenv.lib) fix' extends inNixShell;
+
+#   pythonPackages =
+#   import "${toString pkgs.path}/pkgs/top-level/python-packages.nix" {
+#     inherit pkgs;
+#     inherit (pkgs) stdenv;
+#     python = pkgs.python36;
+#     # patching pip so it does not try to remove files when running nix-shell
+#     overrides =
+#       self: super: {
+#         bootstrapped-pip = super.bootstrapped-pip.overrideDerivation (old: {
+#           patchPhase = old.patchPhase + ''
+#             sed -i               -e "s|paths_to_remove.remove(auto_confirm)|#paths_to_remove.remove(auto_confirm)|"                -e "s|self.uninstalled = paths_to_remove|#self.uninstalled = paths_to_remove|"                  $out/${pkgs.python35.sitePackages}/pip/req/req_install.py
+#           '';
+#         });
+#       };
+#   };
+
+#   withPackages = pkgs':
+#     let
+#       pkgs = builtins.removeAttrs pkgs' ["__unfix__"];
+#       interpreter = pythonPackages.buildPythonPackage {
+#         name = "python36-interpreter";
+#         buildInputs = deps ++ 
+# (builtins.attrValues 
+# pkgs);
+#         buildCommand = ''
+#           mkdir -p $out/bin
+#           ln -s ${pythonPackages.python.interpreter}               $out/bin/${pythonPackages.python.executable}
+#           for dep in ${builtins.concatStringsSep " "               (builtins.attrValues pkgs)}; do
+#             if [ -d "$dep/bin" ]; then
+#               for prog in "$dep/bin/"*; do
+#                 if [ -f $prog ]; then
+#                   ln -s $prog $out/bin/`basename $prog`
+#                 fi
+#               done
+#             fi
+#           done
+#           for prog in "$out/bin/"*; do
+#             wrapProgram "$prog" --prefix PYTHONPATH : "$PYTHONPATH"
+#           done
+#           pushd $out/bin
+#           ln -s ${pythonPackages.python.executable} python
+#           ln -s ${pythonPackages.python.executable}               python3
+#           popd
+#         '';
+#         passthru.interpreter = pythonPackages.python;
+#       };
+#     in {
+#       __old = pythonPackages;
+#       inherit interpreter;
+#       mkDerivation = pythonPackages.buildPythonPackage;
+#       packages = pkgs;
+#       overrideDerivation = drv: f:
+#         pythonPackages.buildPythonPackage (drv.drvAttrs // f drv.drvAttrs //                                            { meta = drv.meta; });
+#       withPackages = pkgs'':
+#         withPackages (pkgs // pkgs'');
+#     };
+
+#   python = withPackages {};
+
+# in python.withPackages
+#    (fix' (pkgs.lib.fold
+#             extends
+#          )
+#    )
