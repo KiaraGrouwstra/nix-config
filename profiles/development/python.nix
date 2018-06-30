@@ -3,6 +3,7 @@
 let
   master = import ../../master.nix;
   my-python-packages = python-packages: with python-packages; [
+    pip
     pandas
     requests
     tensorflow
