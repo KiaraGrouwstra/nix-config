@@ -11,6 +11,6 @@ in
     nodePackages.npm
     nodePackages.azure-cli
     nodePackages.webtorrent-cli
-    # postman
+    pkgs.postman
   ];
 }
