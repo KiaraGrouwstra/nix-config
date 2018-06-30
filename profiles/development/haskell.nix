@@ -15,7 +15,7 @@ in
     # haskell.compiler.ghc-8.4.2
     # ghc-8.4.3
     # ghc-8.5
-  ] ++ (with master.haskellPackages; [
+  ] ++ (with haskellPackages; [
 
     # # libraries
     # alex

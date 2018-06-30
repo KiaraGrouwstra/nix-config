@@ -7,7 +7,6 @@ let
     requests
     tensorflow
     tensorflow-tensorboard
-    lxml
   ];
   python-with-my-packages = master.python3.withPackages my-python-packages;
 in
@@ -17,10 +16,5 @@ in
     python
     python3
     conda  # no conda executable exposed?
-
-    # stuff I see to need to build torrench
-    libxml2
-    libxmlxx
-    libxslt
   ];
 }
