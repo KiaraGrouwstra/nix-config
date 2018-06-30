@@ -6,6 +6,7 @@ in
 {
   environment.systemPackages = with master; [
     nodejs
+    node2nix
     yarn
     nodePackages.npm
     nodePackages.azure-cli
