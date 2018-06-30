@@ -12,8 +12,7 @@ in
 
     ghc
     haskell.compiler.ghc822
-    # haskell.compiler.ghc-8.4.2
-    # ghc-8.4.3
+    haskell.compiler.ghc843
     # ghc-85
   ] ++ (with haskellPackages; [
 
