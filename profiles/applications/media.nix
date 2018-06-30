@@ -10,7 +10,7 @@ in
     shotwell
     imagemagick
     gimp
-    # obs-studio
+    pkgs.obs-studio
   ];
 
 }
