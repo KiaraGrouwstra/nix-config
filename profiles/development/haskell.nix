@@ -8,7 +8,7 @@ in
     ctags
     cabal2nix
     cabal-install
-    # stack
+    stack
 
     ghc
     haskell.compiler.ghc822
