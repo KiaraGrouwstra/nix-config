@@ -6,11 +6,11 @@ in
 {
 
   environment.systemPackages = with master; [
-    # pkgs.vlc
+    pkgs.vlc
     shotwell
     imagemagick
     gimp
-    # pkgs.obs-studio
+    pkgs.obs-studio
   ];
 
 }
