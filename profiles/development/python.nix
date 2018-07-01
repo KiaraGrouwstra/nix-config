@@ -8,6 +8,7 @@ let
     setuptools
     pandas
     requests
+    # pkgs.python36Packages.flask
     tensorflow
     # tensorflow-tensorboard
 

@@ -1,10 +1,10 @@
-# nix-prefetch-url --unpack REV
+# nix-prefetch-url --unpack URL
 let
-rev = "e5b02664aa1fcf0b6efacd75d8d812a82feee0ed";
+rev = "14a9ca27e69e33ac8ffb708de08883f8079f954a";
 in
 import (fetchTarball {
   url = "https://github.com/NixOS/nixpkgs/archive/${rev}.tar.gz";
-  sha256 = "1fhfwbn16rvlzxp2y7118j646pzzfj974qcnqh3qwppkyqp1g5q6";
+  sha256 = "1grsq8mcpl88v6kz8dp0vsybr0wzfg4pvhamj42dpd3vgr93l2ib";
 }) {
 # import /home/tycho/Desktop/nixpkgs {
 # import <nixpkgs> {

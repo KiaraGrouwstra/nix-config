@@ -11,7 +11,7 @@ in
     stack
 
     ghc
-    haskell.compiler.ghc822
+    # haskell.compiler.ghc822
     haskell.compiler.ghc843
   ] ++ (with haskellPackages; [
 
@@ -19,6 +19,7 @@ in
     QuickCheck      # testing, dep for some of the below
     exceptions      # dep
     process_1_6_3_0 # dep
+    # cabal-helper    # dep  # https://github.com/NixOS/nixpkgs/issues/32631
     alex
     happy
     hakyll
@@ -27,7 +28,7 @@ in
     # hscope
     # argon          # code complexity (req: haskell 7.10)
     # codex           # ctags file generator for cabal project dependencies
-    # ghc-mod         # ghc-mod is a backend program to enrich editors
+    # ghc-mod         # ghc-mod is a backend program to enrich editors  # https://github.com/NixOS/nixpkgs/issues/32969
     ghcid           # GHCi as a daemon
     # hasktags        # Produces ctags "tags" and etags "TAGS" files for Haskell programs 
     hlint           # linter
