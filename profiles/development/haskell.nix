@@ -32,7 +32,7 @@ in
     hpack           # yaml based package format
     hspec           # testing framework
     intero          # IDE tooltips
-    # pointfree       # http://pointfree.io/
+    pointfree       # http://pointfree.io/
     # pointful        # https://github.com/23Skidoo/pointful
     stylish-haskell # pretty printer
     tasty           # testing framework
