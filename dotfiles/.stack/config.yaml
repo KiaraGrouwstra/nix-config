@@ -27,7 +27,7 @@ nix:
   # available in the nix-shell at build time (with `stack
   # build`) and run time (with `stack exec`).
   packages: [zlib.dev, zlib.out]
-  
+
   # Unset by default. You cannot set this option if `packages:`
   # is already present and not empty.
   # shell-file: /home/tycho/.stack/shell.nix
