@@ -18,6 +18,7 @@ in
     # libraries
     QuickCheck      # testing, dep for some of the below
     exceptions      # dep
+    process_1_6_3_0 # dep
     alex
     happy
     hakyll
