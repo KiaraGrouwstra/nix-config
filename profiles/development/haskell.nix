@@ -15,10 +15,10 @@ in
     haskell.compiler.ghc843
   ] ++ (with haskellPackages; [
 
-    # # libraries
-    # alex
-    # happy
-    # hakyll
+    # libraries
+    alex
+    happy
+    hakyll
 
     # tools
     # hscope
