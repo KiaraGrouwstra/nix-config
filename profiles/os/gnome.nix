@@ -13,6 +13,7 @@ in
   services.gnome3.chrome-gnome-shell.enable = true;
 
   # `dconf dump /`
+  # `dconf watch /`
   # installed: ~/.local/share/app-info/xmls/extensions-web.xml
   # use `dconf watch /` then change stuff in gnome tweak tool
   services.xserver.desktopManager.gnome3.extraGSettingsOverrides = ''
@@ -32,17 +33,25 @@ in
 
     [org/gnome/shell]
     app-picker-view=uint32 1
-    enabled-extensions=['windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'alternate-tab@gnome-shell-extensions.gcampax.github.com']
-    favorite-apps=['org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'firefox.desktop', 'telegram-desktop.desktop', 'gitkraken.desktop', 'code.desktop']
+    enabled-extensions=['windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'alternate-tab@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com']
+    had-bluetooth-devices-setup=false
+    favorite-apps=['org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'firefox.desktop', 'telegram-desktop.desktop', 'gitkraken.desktop', 'code.desktop', 'webtorrent-desktop.desktop']
+
+    [org/gnome/shell/extensions/user-theme]
+    name='Adapta-Nokto'
 
     [org/gnome/shell/window-switcher]
     app-icon-mode='both'
+
+    [org/gnome/baobab/ui]
+    window-state=87168
+    window-size=(960, 600)
 
     [org/gnome/gedit/preferences/ui]
     show-tabs-mode='auto'
 
     [org/gnome/gedit/plugins/filebrowser]
-    virtual-root='file:///home/tycho/Desktop/nix'
+    virtual-root='file:///home/tycho/Desktop'
     tree-view=true
     root='file:///'
 
@@ -50,7 +59,7 @@ in
     active-plugins=['time', 'modelines', 'docinfo', 'filebrowser', 'spell']
 
     [org/gnome/gedit/state/window]
-    size=(714, 834)
+    size=(819, 755)
     state=87168
     bottom-panel-size=140
     side-panel-size=200
@@ -62,8 +71,8 @@ in
     search-filter-time-type='last_modified'
 
     [org/gnome/nautilus/window-state]
-    sidebar-width=177
-    geometry='870x416+798+334'
+    sidebar-width=161
+    geometry='620x280+325+245'
     maximized=false
 
     [org/gnome/photos]
@@ -84,13 +93,16 @@ in
     icon-theme='Paper-Mono-Dark'
 
     [org/gnome/desktop/notifications]
-    application-children=['firefox', 'gnome-tweak-tool']
+    application-children=['firefox', 'gnome-tweak-tool', 'org-gnome-nautilus']
 
     [org/gnome/desktop/notifications/application/gnome-tweak-tool]
     application-id='gnome-tweak-tool.desktop'
 
     [org/gnome/desktop/notifications/application/firefox]
     application-id='firefox.desktop'
+
+    [org/gnome/desktop/notifications/application/org-gnome-nautilus]
+    application-id='org.gnome.Nautilus.desktop'
 
     [org/gnome/desktop/app-folders]
     folder-children=['Utilities', 'Sundry', 'YaST']
@@ -104,7 +116,7 @@ in
     [org/gnome/desktop/app-folders/folders/Sundry]
     translate=true
     categories=['X-GNOME-Sundry']
-    apps=['alacarte.desktop', 'authconfig.desktop', 'ca.desrt.dconf-editor.desktop', 'fedora-release-notes.desktop', 'firewall-config.desktop', 'flash-player-properties.desktop', 'gconf-editor.desktop', 'gnome-abrt.desktop', 'gnome-power-statistics.desktop','ibus-setup-anthy.desktop', 'ibus-setup.desktop', 'ibus-setup-hangul.desktop', 'ibus-setup-libbopomofo.desktop', 'ibus-setup-libpinyin.desktop', 'ibus-setup-m17n.desktop', 'ibus-setup-typing-booster.desktop', 'im-chooser.desktop', 'itweb-settings.desktop', 'jhbuild.desktop', 'javaws.desktop', 'java-1.7.0-openjdk-jconsole.desktop', 'java-1.7.0-openjdk-policytool.desktop', 'log4j-chainsaw.desktop', 'log4j-logfactor5.desktop', 'nm-connection-editor.desktop', 'orca.desktop', 'setroubleshoot.desktop', 'system-config-date.desktop', 'system-config-firewall.desktop', 'system-config-keyboard.desktop', 'system-config-language.desktop', 'system-config-printer.desktop', 'system-config-users.desktop', 'vino-preferences.desktop']
+    apps=['alacarte.desktop', 'authconfig.desktop', 'ca.desrt.dconf-editor.desktop', 'fedora-release-notes.desktop', 'firewall-config.desktop', 'flash-player-properties.desktop', 'gconf-editor.desktop', 'gnome-abrt.desktop', 'gnome-power-statistics.desktop', 'ibus-setup-anthy.desktop', 'ibus-setup.desktop', 'ibus-setup-hangul.desktop', 'ibus-setup-libbopomofo.desktop', 'ibus-setup-libpinyin.desktop', 'ibus-setup-m17n.desktop', 'ibus-setup-typing-booster.desktop', 'im-chooser.desktop', 'itweb-settings.desktop', 'jhbuild.desktop', 'javaws.desktop', 'java-1.7.0-openjdk-jconsole.desktop', 'java-1.7.0-openjdk-policytool.desktop', 'log4j-chainsaw.desktop', 'log4j-logfactor5.desktop', 'nm-connection-editor.desktop', 'orca.desktop', 'setroubleshoot.desktop', 'system-config-date.desktop', 'system-config-firewall.desktop', 'system-config-keyboard.desktop', 'system-config-language.desktop', 'system-config-printer.desktop', 'system-config-users.desktop', 'vino-preferences.desktop']
     name='X-GNOME-Sundry.directory'
 
     [org/gnome/desktop/app-folders/folders/YaST]
@@ -153,18 +165,30 @@ in
     schema-version=uint32 3
 
     [org/gnome/software]
-    check-timestamp=int64 1529832528
+    check-timestamp=int64 1530431353
 
     [org/gnome/Totem]
     subtitle-encoding='UTF-8'
     active-plugins=['apple-trailers', 'recent', 'screenshot', 'screensaver', 'save-file', 'autoload-subtitles', 'movie-properties', 'media_player_keys', 'skipto', 'vimeo', 'variable-rate']
 
+    [org/gnome/gnome-system-monitor]
+    show-dependencies=false
+    current-tab='disks'
+    cpu-colors=[(uint32 0, '#FF6E00'), (1, '#CB0C29'), (2, '#49A835'), (3, '#2D7DB3'),(4, '#f25915e815e8'), (5, '#f25915e815e8'), (6, '#f25915e815e8'), (7, '#f25915e815e8')]
+    maximized=false
+    window-state=(1049, 859, 229, 131)
+    show-whose-processes='user'
+
+    [org/gnome/gnome-system-monitor/disktreenew]
+    col-6-visible=true
+    col-6-width=0
+
     [org/gtk/settings/file-chooser]
     sort-column='name'
     sidebar-width=174
-    window-position=(2278, 47)
-    show-size-column=false
-    show-hidden=true
+    window-position=(678, 45)
+    show-size-column=true
+    show-hidden=false
     window-size=(1203, 936)
     sort-directories-first=false
     date-format='regular'
@@ -187,10 +211,12 @@ in
     display-photo-comments=false
 
     [org/yorba/shotwell/preferences/window]
+    direct-maximize=false
+    direct-height=768
+    direct-width=1024
     library-height=768
-    library-maximize=false
     library-width=1024
-
+    library-maximize=false
   '';
 
 }
