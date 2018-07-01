@@ -17,6 +17,7 @@ in
 
     # libraries
     QuickCheck      # testing, dep for some of the below
+    exceptions      # dep
     alex
     happy
     hakyll
