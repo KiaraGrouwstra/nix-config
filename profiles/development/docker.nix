@@ -7,6 +7,7 @@ in
   environment.systemPackages = with master; [
     docker
     skopeo  # skopeo inspect docker://docker.io/nixos/nix:1.11 | jq -r '.Digest'
+    jq
   ];
 
   virtualisation = {
