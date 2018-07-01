@@ -16,6 +16,7 @@ in
   ] ++ (with haskellPackages; [
 
     # libraries
+    QuickCheck      # testing, dep for some of the below
     alex
     happy
     hakyll
