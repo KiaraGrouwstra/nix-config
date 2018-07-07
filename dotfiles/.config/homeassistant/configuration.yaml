@@ -1,0 +1,579 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: 51.95
+  longitude: 4.45
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 0
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: UTC
+  # Customization file
+  customize: !include customize.yaml
+
+# Show links to resources in log and frontend
+# introduction:
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+http:
+  # Secrets are defined in the file secrets.yaml
+  api_password: !secret http_password
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+  base_url: tycho01.duckdns.org:8123
+  # ssl_certificate: /ssl/fullchain.pem
+  # ssl_key: /ssl/privkey.pem
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+# voice assistant that runs on the Raspberry Pi 3 and x86 platforms
+snips:
+
+# enable Google DialogFlow
+# https://github.com/home-assistant/home-assistant/blob/master/homeassistant/components/dialogflow.py
+# add Rasa component?
+dialogflow:
+
+# weather:
+  # - platform: yweather
+  # - platform: buienradar
+  #   name: 'rotterdam'
+  #   # Force 'Meetstation Rotterdam' to be used:
+  #   latitude: 51.95
+  #   longitude: 4.45
+  #   forecast: True
+  # - platform: darksky
+  #   name: "Dark Sky Weather"
+  #   api_key: !secret dark_sky_key
+  #   update_interval:
+  #     minutes: 10
+  #   monitored_conditions:
+  #     - summary
+  #     - hourly_summary
+  #     - temperature
+  #     - temperature_max
+  #     - temperature_min
+
+# sensors
+sensor:
+
+  # misc
+
+  - platform: haveibeenpwned
+    email: 
+      - tychogrouwstra@gmail.com
+      - tycho.grouwstra@unilever.com
+
+  - platform: imap
+    server: imap.gmail.com
+    port: 993
+    username: tychogrouwstra@gmail.com
+    password: !secret gmail
+
+  # useful if you have a device that only reports its state via email
+  - platform: imap_email_content
+    server: imap.gmail.com
+    port: 993
+    username: tychogrouwstra@gmail.com
+    password: !secret gmail
+    senders:
+      - olavgrouwstra@gmail.com
+
+  - platform: iss
+
+  # - name: NOTIFIER_NAME
+  #   platform: xmpp
+  #   sender: YOUR_JID
+  #   password: YOUR_JABBER_ACCOUNT_PASSWORD
+  #   recipient: YOUR_RECIPIENT
+
+  # - platform: linux_battery
+  #   system: linux
+  #   name: linux battery
+
+  # - platform: linux_battery
+  #   system: android
+  #   name: android battery
+
+  - platform: nederlandse_spoorwegen
+    email: tychogrouwstra@gmail.com
+    password: !secret ns
+    routes:
+      - name: Rotterdam-Amsterdam
+        from: Rtd
+        to: Asd
+
+  # - platform: postnl
+  #   username: tycho01
+  #   password: !secret postnl
+    
+  # - platform: gtfs
+  #   origin: STOP_ID
+  #   destination: STOP_ID
+  #   data: DATA_SOURCE
+
+  # - platform: steam_online
+  #   api_key: YOUR_API_KEY
+  #   accounts:
+  #     - tycho01
+
+  - platform: twitch
+    channels:
+      - tycho01
+
+  # - platform: uber
+  #   start_latitude: 37.8116380
+  #   start_longitude: -122.2648050
+  #   end_latitude: 37.7768520
+  #   end_longitude: -122.4155500
+  #   server_token: 'BeAPPTDsWZSHLf7fd9OWjZkIezweRw18Q8NltY27'
+  #   product_ids:
+  #     - '04a497f5-380d-47f2-bf1b-ad4cfdcb51f2'
+
+  # - platform: xbox_live
+  #   api_key: YOUR_API_KEY
+  #   xuid:
+  #     - tycho01
+
+  - platform: worldclock
+    time_zone: Europe/Amsterdam
+
+  - platform: worldclock
+    time_zone: Asia/Shanghai
+
+  - platform: worldclock
+    time_zone: America/Los_Angeles
+
+  - platform: scrape
+    resource: https://www.home-assistant.io
+    name: Release
+    select: ".current-version h1"
+    value_template: '{{ value.split(":")[1] }}'
+
+  # - platform: google_wifi
+
+  # - platform: google_travel_time
+  #   name: Phone To Home
+  #   api_key: XXXX_XXXXX_XXXXX
+  #   origin: device_tracker.mobile_phone
+  #   destination: zone.home
+  
+  # - platform: sql
+  #   db_url: mysql://user:password@localhost/hass
+  #   queries:
+  #     - name: HASS DB size
+  #       query: 'SELECT table_schema "database", Round(Sum(data_length + index_length) / 1024, 1) "value" FROM information_schema.tables WHERE table_schema="hass" GROUP BY table_schema;'
+  #       column: 'value'
+  #       unit_of_measurement: kB
+
+  # - platform: fitbit
+  #   clock_format: 12H
+  #   monitored_resources:
+  #     - "body/weight"
+  #     - activities/activityCalories
+  #     - activities/calories
+  #     - activities/caloriesBMR
+  #     - activities/distance
+  #     - activities/elevation
+  #     - activities/floors
+  #     - activities/heart
+  #     - activities/minutesFairlyActive
+  #     - activities/minutesLightlyActive
+  #     - activities/minutesSedentary
+  #     - activities/minutesVeryActive
+  #     - activities/steps
+  #     - activities/tracker/activityCalories
+  #     - activities/tracker/calories
+  #     - activities/tracker/distance
+  #     - activities/tracker/elevation
+  #     - activities/tracker/floors
+  #     - activities/tracker/minutesFairlyActive
+  #     - activities/tracker/minutesLightlyActive
+  #     - activities/tracker/minutesSedentary
+  #     - activities/tracker/minutesVeryActive
+  #     - activities/tracker/steps
+  #     - body/bmi
+  #     - body/fat
+  #     - body/weight
+  #     - devices/battery
+  #     - sleep/awakeningsCount
+  #     - sleep/efficiency
+  #     - sleep/minutesAfterWakeup
+  #     - sleep/minutesAsleep
+  #     - sleep/minutesAwake
+  #     - sleep/minutesToFallAsleep
+  #     - sleep/startTime
+  #     - sleep/timeInBed
+
+
+  # weather
+  - platform: yr
+  - platform: forecast
+  - platform: yweather
+    monitored_conditions:
+      - weather
+      - weather_current
+      - temp_min
+      - temp_max
+      - wind_speed
+      - pressure
+      - visibility
+      - humidity
+      - temperature
+  # - platform: buienradar
+  #   name: 'rotterdam'
+  #   # Force 'Meetstation Rotterdam' to be used:
+  #   latitude: 51.95
+  #   longitude: 4.45
+  #   monitored_conditions:
+  #     # general
+  #     - stationname
+  #     - humidity
+  #     - temperature
+  #     - groundtemperature
+  #     - windspeed
+  #     - windforce
+  #     - winddirection
+  #     - windazimuth
+  #     - pressure
+  #     - visibility
+  #     - windgust
+  #     - precipitation
+  #     - irradiance
+  #     - precipitation_forecast_average
+  #     - precipitation_forecast_total
+  #     # current condition:
+  #     - condition
+  #     - conditioncode
+  #     - conditiondetailed
+  #     - conditionexact
+  #     - symbol
+  #     # conditions for forecasted data:
+  #     - symbol_1d
+  #     - symbol_2d
+  #     - symbol_3d
+  #     - symbol_4d
+  #     - symbol_5d
+  #     - temperature_1d
+  #     - temperature_2d
+  #     - temperature_3d
+  #     - temperature_4d
+  #     - temperature_5d
+  #     - rainchance_1d
+  #     - rainchance_2d
+  #     - rainchance_3d
+  #     - rainchance_4d
+  #     - rainchance_5d
+  #     - sunchance_1d
+  #     - sunchance_2d
+  #     - sunchance_3d
+  #     - sunchance_4d
+  #     - sunchance_5d
+  #     - rain_1d
+  #     - rain_2d
+  #     - rain_3d
+  #     - rain_4d
+  #     - rain_5d
+
+  # finance
+  - platform: bitcoin
+    display_options:
+      - exchangerate
+      - trade_volume_btc
+  # - platform: blockchain
+  #   addresses:
+  #     - '1BMsHFczb2vY1BMDvFGWgGU8mkWVm5fupp'
+  - platform: coinmarketcap
+    currency_id: 1
+    display_currency: USD
+    display_currency_decimals: 2
+  - platform: openexchangerates
+    api_key: !secret openexchangerates
+    quote: EUR
+
+
+camera:
+  - platform: generic
+    still_image_url: http://194.218.96.92/jpg/image.jpg
+
+
+# downloader:
+#   download_dir: downloads
+
+# microsoft_face:
+#   api_key: YOUR_API_KEY
+#   azure_region: eastus2
+
+# remember_the_milk:
+#   - name: your_rtm_account
+#     api_key: <your secret api key goes here>
+#     shared_secret: <your secret shared secret goes here>
+
+shopping_list:
+
+# media_player:
+  # - platform: vlc
+  #  Google Play Music Desktop Player
+  # - platform: gpmdp
+  #   host: IP_ADDRESS
+  # - platform: spotify
+  #   client_id: <your client id>
+  #   client_secret: <your client secret>
+  #   aliases:
+  #       abc123def456: 'Living Room'
+  #       9183abas000: 'Bed Room'
+
+calendar:
+  # - platform: todoist
+  #   token: !secret todoist_token
+  #   custom_projects:
+  #     - name: 'All Projects'
+  #     - name: 'Due Today'
+  #       due_date_days: 0
+  #     - name: 'Due This Week'
+  #       due_date_days: 7
+  #     - name: 'Math Homework'
+  #       labels:
+  #         - Homework
+  #       include_projects:
+  #         - Mathematical Structures II
+  #         - Calculus II
+
+notify:
+
+  # - name: telegram_notifier
+  #   platform: telegram
+  #   chat_id: CHAT_ID_2
+
+  # - name: facebook_notifier
+  #   platform: facebook
+  #   page_access_token: FACEBOOK_PAGE_ACCESS_TOKEN
+
+  # - name: NOTIFIER_NAME
+  #   platform: slack
+  #   api_key: ABCDEFGHJKLMNOPQRSTUVXYZ
+  #   default_channel: '#general'
+  
+  # - name: NOTIFIER_NAME
+  #   platform: smtp
+  #   server: smtp.gmail.com
+  #   port: 587
+  #   timeout: 15
+  #   sender: john@gmail.com
+  #   encryption: starttls
+  #   username: john@gmail.com
+  #   password: thePassword
+  #   recipient:
+  #     - james@gmail.com
+  #     - bob@gmail.com
+  #   sender_name: My Home Assistant
+
+  # - name: NOTIFIER_NAME
+  #   platform: twitter
+  #   consumer_key: ABCDEFGHJKLMNOPQRSTUVXYZ
+  #   consumer_secret: ABCDEFGHJKLMNOPQRSTUVXYZ
+  #   access_token: ABCDEFGHJKLMNOPQRSTUVXYZ
+  #   access_token_secret: ABCDEFGHJKLMNOPQRSTUVXYZ
+
+# wirelesstag:
+#   username: you@example.com
+#   password: secret
+
+zone:
+  - name: School
+    latitude: 32.8773367
+    longitude: -117.2494053
+    radius: 250
+    icon: mdi:school
+
+  - name: Work
+    latitude: 32.8753367
+    longitude: -117.2474053
+
+  # This will override the default home zone
+  - name: Home
+    latitude: 32.8793367
+    longitude: -117.2474053
+    radius: 100
+    icon: mdi:account-multiple
+
+# device_tracker:
+
+  # - platform: google_maps
+  #   username: YOUR_USERNAME
+  #   password: YOUR_PASSWORD
+
+  # - platform: ddwrt
+  #   host: ROUTER_IP_ADDRESS
+  #   username: YOUR_ADMIN_USERNAME
+  #   password: YOUR_ADMIN_PASSWORD
+
+  # - platform: nmap_tracker
+  #   hosts:
+  #     - "192.168.1.0/24"
+  #     - "10.0.0.2"
+  #     - "10.0.0.15"
+  #   home_interval: 10
+  #   exclude:
+  #    - "192.168.1.12"
+  #    - "192.168.1.13"
+
+
+
+# Text to speech
+# tts:
+#   - platform: google
+#     language: 'de'
+#   - platform: microsoft
+#     api_key: XXXXXXXXX
+#     language: en-gb
+#     gender: Male
+#     type: George, Apollo
+#     rate: 20
+#     volume: -50
+#     pitch: high
+#     contour: (0, 0) (100, 100)
+
+
+# ifttt:
+#   key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+# Cloud
+cloud:
+  google_actions:
+    filter:
+      # include_entities:
+      #   - light.kitchen
+      #   - light.kitchen_left
+      # include_domains:
+      #   - switch
+      exclude_entities: []
+        # - switch.outside
+    entity_config:
+      homeassistant.restart:
+        name: restart hass
+        aliases:
+         - restart home assistant
+        # room: living room
+
+
+# alarm_control_panel:
+#   - platform: ifttt
+#     name: YOUR_ALARM_NAME
+#     code: YOUR_ALARM_CODE
+#     event_arm_away: YOUR_ARM_AWAY_EVENT
+#     event_arm_home: YOUR_ARM_HOME_EVENT
+#     event_arm_night: YOUR_ARM_NIGHT_EVENT
+#     event_disarm: YOUR_DISARM_EVENT
+
+# Google Cast devices like Android TVs and Chromecasts
+cast:
+  media_player:
+  - host: 192.168.1.10
+
+# google:
+#   client_id: YOUR_CLIENT_ID
+#   client_secret: YOUR_CLIENT_SECRET
+
+
+# google_assistant:
+#   project_id: someproject-2d0b8
+#   client_id: [long URL safe random string]
+#   access_token: [a different long URL safe random string]
+#   agent_user_id: [a string to identify user]
+#   api_key: [a Homegraph API Key generated for the Google Actions project]
+#   exposed_domains:
+#     - switch
+#     - light
+#     - group
+#   entity_config:
+#     switch.kitchen:
+#       name: Custom Name for Google Assistant
+#       aliases:
+#         - bright lights
+#         - entry lights
+#     light.living_room:
+#       expose: false
+#       room: living room
+
+# telegram_bot:
+#   - platform: webhooks
+#     api_key: telegram api key
+#     parse_mode: html
+#     allowed_chat_ids:
+#       - 12345
+#       - 67890
+#   - platform: polling
+#     api_key: ABCDEFGHJKLMNOPQRSTUVXYZ
+#     allowed_chat_ids:
+#       - CHAT_ID_1
+#       - CHAT_ID_2
+#       - CHAT_ID_3
+
+binary_sensor:
+  - platform: workday
+    country: DE
+    workdays: [mon, tue, wed, thu, fri]
+
+conversation:
+  intents:
+    LivingRoomTemperature:
+     - What is the temperature in the living room
+
+intent_script:
+  LivingRoomTemperature:
+    speech:
+      text: It is currently {{ states.sensor.temperature }} degrees in the living room.
+  GetTemperature:  # Intent type
+    speech:
+      text: We have {{ states.sensor.temperature }} degrees
+    action:
+      service: notify.notify
+      data_template:
+        message: Hello from an intent!
+
+
+# image_processing:
+#   - platform: opencv
+#     name: Front Door Faces
+#     source:
+#       - entity_id: camera.front_door
+#     classifier:
+#       mom: /path/to/classifier.xml
+

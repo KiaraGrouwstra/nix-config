@@ -1,0 +1,16 @@
+- cal_id: "*****@group.calendar.google.com"
+  entities:
+  - device_id: test_everything
+    name: Give me everything
+    track: true
+- cal_id: "*****@group.calendar.google.com"
+  entities:
+  - device_id: test_important
+    name: Important Stuff
+    track: true
+    search: "#Important"
+    offset: "!!"
+  - device_id: test_unimportant
+    name: UnImportant Stuff
+    track: true
+    search: "#UnImportant"

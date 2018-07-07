@@ -124,7 +124,11 @@ in
     categories=['X-SuSE-YaST']
     name='suse-yast.directory'
 
+    [org/gnome/desktop/session]
+    idle-delay=3600
+
     [org/gnome/desktop/screensaver]
+    lock-delay=1800
     picture-uri='file:///home/tycho/.local/share/shotwell/wallpaper/wallpaper.xml'
     picture-options='zoom'
 

@@ -5,7 +5,7 @@ let
 in
 {
   environment.systemPackages = with master; [
-    home-assistant
+    # home-assistant
     # hue-cli
   ];
 }

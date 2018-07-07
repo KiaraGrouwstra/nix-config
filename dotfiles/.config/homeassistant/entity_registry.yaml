@@ -1,0 +1,8 @@
+climate.downstairs_virtual:
+  platform: nest
+  unique_id: EPoMyWkpNyoYu3pGlmGxabcdefghijkl
+  name: Downstairs thermostat
+light.study_ceiling:
+  platform: hue
+  unique_id: f0:fe:6b:00:14:00:00:00-00
+  disabled_by: user
