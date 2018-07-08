@@ -23,6 +23,7 @@ in
     alex
     happy
     hakyll
+    c2hs
 
     # tools
     # hscope
