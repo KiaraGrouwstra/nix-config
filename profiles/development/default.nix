@@ -21,6 +21,7 @@ in
     gnumake
     binutils-unwrapped
     zlib
+    protobuf
   ];
 
   # custom packages
