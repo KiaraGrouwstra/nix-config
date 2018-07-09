@@ -26,7 +26,8 @@ nix:
   # Empty by default. The list of packages you want to be
   # available in the nix-shell at build time (with `stack
   # build`) and run time (with `stack exec`).
-  packages: [zlib.dev, zlib.out]
+  # packages: [zlib.dev, zlib.out]
+  packages: []
 
   # Unset by default. You cannot set this option if `packages:`
   # is already present and not empty.

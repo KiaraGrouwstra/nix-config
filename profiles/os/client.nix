@@ -16,6 +16,7 @@ rec {
   services.xserver.libinput.enable = true;
 
   # sound
+  # fix manually: settings -> sound -> input -> enable input, fix volume
   sound.enable = true;
   hardware = {
     pulseaudio.enable = true;

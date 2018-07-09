@@ -42,7 +42,5 @@ in
     stylish-haskell # pretty printer
     tasty           # testing framework
     weeder          # dead code detection
-
-    typedflow
   ]);
 }

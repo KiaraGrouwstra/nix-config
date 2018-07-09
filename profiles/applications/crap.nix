@@ -9,6 +9,7 @@ in
     lolcat
     figlet
     beep
+    ncdu
 
     # password managers
     # pkgs.1password
