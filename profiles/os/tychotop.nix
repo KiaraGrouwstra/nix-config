@@ -8,6 +8,16 @@ let
 in
 rec {
 
+  # when disk is full:
+  # nix-collect-garbage -d
+  # nix-store --gc
+  # nix-store --optimise
+  # nix-env --delete-generations
+  # ls -shSa /nix/store/
+  # sudo du -h /nix/store/ | grep -P '^[0-9\.]+G'
+  # ncdu
+  # baobab
+
   imports = [
     # ESSENTIALS
     ./default.nix

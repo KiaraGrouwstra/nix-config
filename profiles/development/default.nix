@@ -2,6 +2,7 @@
 
 let
   master = import ../../master.nix;
+  nvidiaDocker = import ./nvidia-docker/default.nix;
 in
 {
   imports = [
@@ -22,6 +23,7 @@ in
     binutils-unwrapped
     zlib
     protobuf
+    nvidiaDocker
   ];
 
   # custom packages

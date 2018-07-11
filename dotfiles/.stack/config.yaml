@@ -48,4 +48,4 @@ nix:
   # stack build again with nix support activated.
   # This creates a `nix-gc-symlinks` directory in the project `.stack-work`.
   # To revert that, just delete this `nix-gc-symlinks` directory.
-  add-gc-roots: false
+  add-gc-roots: true
