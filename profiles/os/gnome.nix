@@ -132,6 +132,14 @@ in
     picture-uri='file:///home/tycho/.local/share/shotwell/wallpaper/wallpaper.xml'
     picture-options='zoom'
 
+    [org/gnome/desktop/peripherals/touchpad]
+    speed=1.0
+    tap-to-click=true
+    edge-scrolling-enabled=true
+    two-finger-scrolling-enabled=false
+    two-finger-scrolling-enabled=true
+    edge-scrolling-enabled=false
+
     [org/gnome/desktop/peripherals/mouse]
     speed=-0.11029411764705888
 
