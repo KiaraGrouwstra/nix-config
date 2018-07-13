@@ -24,6 +24,7 @@ in
     zlib
     protobuf
     nvidiaDocker
+    snappy
   ];
 
   # custom packages
