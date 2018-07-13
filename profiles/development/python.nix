@@ -9,8 +9,11 @@ let
     pandas
     requests
     # pkgs.python36Packages.flask
-    tensorflow
+    # tensorflow
     # tensorflow-tensorboard
+    tensorflowWithoutCuda
+    # nix-store --add-fixed sha256 /run/media/tycho/Drogon/dl/cuda/cudnn-9.1-linux-x64-v7.1.tgz
+    # tensorflowWithCuda
 
     # build:
     # pypi2nix -V 3.6
