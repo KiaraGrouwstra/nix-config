@@ -67,3 +67,4 @@ x-content/audio-player=vlc.desktop;
 video/x-flv=vlc.desktop;
 
 [Added Associations]
+image/png=gimp.desktop;
