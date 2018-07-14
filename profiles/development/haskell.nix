@@ -2,6 +2,7 @@
 
 let
   master = import ../../master.nix;
+  # tfHs = import /home/tycho/Desktop/haskell/shell.nix;
 in
 {
   environment.systemPackages = with master; [
@@ -42,5 +43,7 @@ in
     stylish-haskell # pretty printer
     tasty           # testing framework
     weeder          # dead code detection
+
+    # tfHs
   ]);
 }
