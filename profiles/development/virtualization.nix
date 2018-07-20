@@ -10,14 +10,18 @@ in
   ];
 
   environment.systemPackages = with master; [
+    virtualbox
     # kvm
     # qemu
     # vagrant
     # virtmanager
   ];
 
-  # virtualisation.libvirtd = {
-  #   enable = true;
-  #   onShutdown = "shutdown";
-  # };
+  virtualisation = {
+    virtualbox.host.enable = true;
+    # libvirtd = {
+    #   enable = true;
+    #   onShutdown = "shutdown";
+    # };
+  };
 }
