@@ -29,21 +29,6 @@ in
     # xkbVariant = "colemak";  # this seems to work only during login, before entering the desktop
     xkbOptions = "caps:backspace"; # compose:caps,menu:ralt
 
-    # TODO: try window managers
-    windowManager = {
-      # i3
-      i3.enable = true;
-      i3.package = pkgs.i3-gaps;
-      default = "i3";
-
-      # awesome
-
-      # # xmonad
-      # xmonad.enable = true;
-      # xmonad.enableContribAndExtras = true;
-      # default = "xmonad";
-    };
-
   };
 
 }

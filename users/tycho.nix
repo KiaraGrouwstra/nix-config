@@ -22,7 +22,7 @@ in
       # "libvirtd"
       "networkmanager"
       "users"
-      # "vboxusers"
+      "vboxusers"
       "video"
       "wheel"
     ];
