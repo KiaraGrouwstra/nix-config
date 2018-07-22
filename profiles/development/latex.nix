@@ -5,7 +5,7 @@ let
 in
 {
   environment.systemPackages = with master; [
-    # pandoc
+    pandoc
     calibre
     texlive.combined.scheme-basic
   ];
