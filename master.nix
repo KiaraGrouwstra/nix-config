@@ -1,6 +1,6 @@
 # nix-prefetch-url --unpack URL
 let
-rev = "14a9ca27e69e33ac8ffb708de08883f8079f954a";
+rev = "b21994d4ac9c2c8d372bf011668401ee31972c0b";
 in
 import (fetchTarball {
   url = "https://github.com/NixOS/nixpkgs/archive/${rev}.tar.gz";
