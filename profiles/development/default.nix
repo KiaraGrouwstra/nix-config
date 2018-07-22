@@ -25,6 +25,7 @@ in
     protobuf
     nvidiaDocker
     snappy
+    nix-generate-from-cpan
   ];
 
   # custom packages
