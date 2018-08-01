@@ -1,14 +1,7 @@
 [Default Applications]
-
 text/plain=org.gnome.gedit.desktop;
 inode/directory=nautilus.desktop
 terminal=gnome-terminal
-# office.tasks=evolution -c tasks
-# office.calendar=evolution -c calendar
-# image/jpeg=
-
-# firefox
-
 x-scheme-handler/http=firefox.desktop
 text/html=firefox.desktop
 text/xml=firefox.desktop
@@ -16,9 +9,6 @@ application/xhtml+xml=firefox.desktop
 application/vnd.mozilla.xul+xml=firefox.desktop
 x-scheme-handler/https=firefox.desktop
 x-scheme-handler/ftp=firefox.desktop
-
-# vlc
-
 video/dv=vlc.desktop;
 video/mpeg=vlc.desktop;
 video/x-mpeg=vlc.desktop;
@@ -68,3 +58,4 @@ video/x-flv=vlc.desktop;
 
 [Added Associations]
 image/png=gimp.desktop;
+application/pdf=evince.desktop;calibre.desktop;firefox.desktop;
