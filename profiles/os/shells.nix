@@ -12,8 +12,6 @@ in
   environment.systemPackages = with master; [
     zsh
     oh-my-zsh
-    fish
-    # oh-my-fish  # https://github.com/NixOS/nixpkgs/pull/42458
   ];
 
   fonts.fonts = with master; [
@@ -23,7 +21,6 @@ in
   programs = {
 
     bash.enableCompletion = true;
-    fish.enable = true;
     zsh = {
       enable = true;
       enableAutosuggestions = true;

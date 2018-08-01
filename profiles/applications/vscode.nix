@@ -34,12 +34,6 @@ let
             sha256 = "0zd0n9f5z1f0ckzfjr38xw2zzmcxg1gjrava7yahg5cvdcw6l35b";
           }
           {
-            name = "fish-vscode";
-            publisher = "skyapps";
-            version = "0.2.0";
-            sha256 = "148r186y3h7n84fcyh6wa2qwl2q3pfi8aykwkc9dhfj3kwfcm5rb";
-          }
-          {
             name = "scala-lsp";
             publisher = "dragos";
             version = "0.2.3";
