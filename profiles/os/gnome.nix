@@ -8,6 +8,7 @@ in
   environment.systemPackages = with master; [
     gnome-shell-dash-to-dock
     chrome-gnome-shell
+    gnomeExtensions.system-monitor
   ];
 
   services.gnome3.chrome-gnome-shell.enable = true;

@@ -55,6 +55,7 @@ x-content/video-dvd=vlc.desktop;
 x-content/audio-cdda=vlc.desktop;
 x-content/audio-player=vlc.desktop;
 video/x-flv=vlc.desktop;
+font/otf=org.gnome.font-viewer.desktop;
 
 [Added Associations]
 image/png=gimp.desktop;
