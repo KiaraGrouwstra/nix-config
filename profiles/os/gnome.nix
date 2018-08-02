@@ -6,8 +6,8 @@ in
 {
 
   environment.systemPackages = with master; [
-    gnome-shell-dash-to-dock
     chrome-gnome-shell
+    gnomeExtensions.dash-to-dock
     gnomeExtensions.system-monitor
   ];
 
