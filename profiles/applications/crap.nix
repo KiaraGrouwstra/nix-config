@@ -10,7 +10,10 @@ in
     figlet
     beep
     tldr
+
+    # nix / disk
     ncdu
+    nix-du
 
     # password managers
     # pkgs.1password
