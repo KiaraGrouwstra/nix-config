@@ -75,6 +75,7 @@ rec {
         # pinyin
 
         # add:
+        rime  # pinyin
         mozc  # japanese
         # hangul  # korean
       ];
