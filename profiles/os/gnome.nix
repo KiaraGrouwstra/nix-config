@@ -5,10 +5,10 @@ let
 in
 {
 
-  environment.systemPackages = with master; [
+  environment.systemPackages = with master.gnomeExtensions; [
     gnome-shell-dash-to-dock
     chrome-gnome-shell
-    gnomeExtensions.system-monitor
+    system-monitor
   ];
 
   services.gnome3.chrome-gnome-shell.enable = true;
