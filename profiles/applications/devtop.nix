@@ -12,6 +12,7 @@ rec {
   ];
 
   environment.systemPackages = with master; [
+    dpkg
     gitkraken
     # idea-ultimate
   ];
