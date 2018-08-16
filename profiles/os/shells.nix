@@ -13,6 +13,7 @@ in
     zsh
     oh-my-zsh
     fish
+    # bass: fisher edc/bass
     # oh-my-fish  # https://github.com/NixOS/nixpkgs/pull/42458
   ];
 

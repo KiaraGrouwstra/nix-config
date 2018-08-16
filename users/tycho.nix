@@ -14,7 +14,7 @@ in
     description = "Tycho Grouwstra <tychogrouwstra@gmail.com>";
     hashedPassword = secrets.hashedPassword;
 
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
 
     extraGroups = [
       "audio"
