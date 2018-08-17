@@ -18,7 +18,8 @@ in
   ] ++ (with nodePackages; [
     npm
     node2nix
+    node-gyp-build
     azure-cli
-    webtorrent-cli
+    # webtorrent-cli  # error: node-gyp-build
   ]);
 }
