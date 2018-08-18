@@ -1,8 +1,8 @@
 {
 
   _module.args.pkgs = import (fetchTarball {
-      url = "https://github.com/NixOS/nixpkgs/archive/7098b0fcdfd7fa4b82c036d8116b60b78f497316.tar.gz";
-      sha256 = "0df0y4vd10a56352q5isf0xnajimf53pn8rqm3b4kg7bsdya4cbl";
+      url = "https://github.com/NixOS/nixpkgs/archive/322b2043f92b00a74246772349fd03c6c3513a15.tar.gz";
+      sha256 = "0nxmfnbiymp82zrn7fd012dlwxc5mc16qyhns7vpa4q79k4qyf1d";
     }) {};
 
   imports = [
@@ -13,7 +13,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   system.stateVersion = "18.03";
-  nix.buildCores = 4;
 
   users.extraUsers.tycho = {
     isNormalUser = true;
