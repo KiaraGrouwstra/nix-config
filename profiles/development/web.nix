@@ -5,7 +5,9 @@ let
   pkgs = import <nixpkgs> {
     config.allowUnfree = true;
   };
-  webtorrent = import ./web/webtorrent.nix;
+  # webtorrentCli = import ./web/webtorrent-cli.nix {
+  #   inherit (pkgs) fetchurl sources nodeEnv globalBuildInputs;
+  # };
 in
 {
   imports = [
@@ -20,7 +22,6 @@ in
     npm
     node2nix
     azure-cli
-    # webtorrent-cli
-    # webtorrent
+    # webtorrentCli   # webtorrent-cli
   ]);
 }
