@@ -12,6 +12,7 @@ in
     gimp
     pkgs.obs-studio
     mpd
+    ympd
     cantata
   ];
 
