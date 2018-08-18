@@ -11,6 +11,7 @@ in
     imagemagick
     gimp
     pkgs.obs-studio
+    cantata
   ];
 
 }
