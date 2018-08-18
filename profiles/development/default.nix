@@ -6,14 +6,14 @@ let
 in
 {
   imports = [
-    ./haskell.nix
-    ./python.nix
-    ./ruby.nix
-    ./web.nix
-    ./servers.nix
-    ./compilers.nix
-    ./latex.nix
-    ./mathematics.nix
+    # ./haskell.nix
+    # ./python.nix
+    # ./ruby.nix
+    # ./web.nix
+    # ./servers.nix
+    # ./compilers.nix
+    # ./latex.nix
+    # ./mathematics.nix
   ];
 
   # install development packages
@@ -23,7 +23,7 @@ in
     binutils-unwrapped
     zlib
     protobuf
-    nvidiaDocker
+    # nvidiaDocker
     snappy
     nix-generate-from-cpan
   ];
