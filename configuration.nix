@@ -7,20 +7,19 @@
 
   imports = [
     ./hardware-configuration.nix
-    ./configuration-common.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   system.stateVersion = "18.03";
-  security.sudo.enable = true;
   nix.buildCores = 4;
 
-  services.xserver = {
-    enable = true;
-    desktopManager.gnome3.enable = true;
-    displayManager.gdm.enable = true;
+  users.extraUsers.tycho = {
+    isNormalUser = true;
+    uid = 1000;
+    home = "/home/tycho";
+    extraGroups = ["users" "wheel"];
   };
 
 }
