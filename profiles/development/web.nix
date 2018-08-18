@@ -22,6 +22,7 @@ in
     npm
     node2nix
     azure-cli
-    # webtorrentCli   # webtorrent-cli
+    # webtorrentCli
+    # webtorrent-cli
   ]);
 }

@@ -23,7 +23,7 @@ in
     binutils-unwrapped
     zlib
     protobuf
-    # nvidiaDocker
+    nvidiaDocker
     snappy
     nix-generate-from-cpan
   ];
