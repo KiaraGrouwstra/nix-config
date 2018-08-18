@@ -8,7 +8,10 @@ let
 in
 rec {
 
-  # when disk is full:
+  # when disk is full / no drive space left:
+  # https://nixos.wiki/wiki/Garbage_Collection
+  # sudo rm -r /tmp/*
+  # sudo nautilus /nix/var/nix/profiles/system-profiles/
   # sudo nix-collect-garbage -d
   # nix-store --gc
   # nix-store --optimise
