@@ -11,7 +11,7 @@ in
     ./ruby.nix
     # ./web.nix
     # ./servers.nix
-    # ./compilers.nix
+    ./compilers.nix
     ./latex.nix
     ./mathematics.nix
   ];
