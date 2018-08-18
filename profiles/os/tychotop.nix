@@ -23,7 +23,7 @@ rec {
     ./default.nix
     ./desktop.nix
     ./networking.nix
-    # ../development/cuda.nix
+    ../development/cuda.nix
 
     # PERSONALIZATION
     ./shells.nix
@@ -36,10 +36,10 @@ rec {
 
     # APPLICATIONS
     ../applications/browsers.nix
-    # ../applications/entertainment.nix
-    # ../applications/office.nix
+    ../applications/entertainment.nix
+    ../applications/office.nix
     # ../applications/homeautomation.nix
-    # ../development/virtualization.nix
+    ../development/virtualization.nix
   ];
 
 
