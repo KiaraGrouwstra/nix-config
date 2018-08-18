@@ -10,7 +10,7 @@ in
     gnomeExtensions.dash-to-dock
     gnomeExtensions.system-monitor
     # gnomeExtensions.topicons-plus
-    # gnomeExtensions.appindicator
+    gnomeExtensions.appindicator
   ];
 
   services.gnome3.chrome-gnome-shell.enable = true;
