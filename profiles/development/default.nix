@@ -12,7 +12,7 @@ in
     # ./web.nix
     # ./servers.nix
     # ./compilers.nix
-    # ./latex.nix
+    ./latex.nix
     # ./mathematics.nix
   ];
 
