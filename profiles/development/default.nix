@@ -10,7 +10,7 @@ in
     # ./python.nix
     ./ruby.nix
     # ./web.nix
-    # ./servers.nix
+    ./servers.nix
     ./compilers.nix
     ./latex.nix
     ./mathematics.nix
