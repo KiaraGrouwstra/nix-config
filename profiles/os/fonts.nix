@@ -8,7 +8,7 @@ in
   fonts = {
     enableFontDir = true;
     enableGhostscriptFonts = true;
-    fonts = with pkgs; [
+    fonts = with master; [
       powerline-fonts  # used in oh-my-* themes
       corefonts  # Micrsoft free fonts
       inconsolata  # monospaced
