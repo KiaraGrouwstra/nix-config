@@ -9,7 +9,7 @@ in
     chrome-gnome-shell
     gnomeExtensions.dash-to-dock
     gnomeExtensions.system-monitor
-    # gnomeExtensions.topicons-plus
+    gnomeExtensions.topicons-plus
     gnomeExtensions.appindicator
   ];
 
