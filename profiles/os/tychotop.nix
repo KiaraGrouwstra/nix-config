@@ -9,7 +9,7 @@ in
 rec {
 
   # when disk is full:
-  # nix-collect-garbage -d
+  # sudo nix-collect-garbage -d
   # nix-store --gc
   # nix-store --optimise
   # nix-env --delete-generations

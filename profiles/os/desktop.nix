@@ -7,6 +7,7 @@ in
 
   environment.systemPackages = with master; [
     wmctrl
+    wine
   ];
 
   # X11 windowing system
