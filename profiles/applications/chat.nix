@@ -12,6 +12,7 @@ in
       # - use system fonts: https://github.com/telegramdesktop/tdesktop/issues/90
       # - CJK fonts: https://github.com/telegramdesktop/tdesktop/issues/3575
     slack
+    weechat
     # zoom-us
   ];
 
