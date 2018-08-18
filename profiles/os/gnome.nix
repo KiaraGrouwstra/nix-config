@@ -36,9 +36,18 @@ in
 
     [org/gnome/shell]
     app-picker-view=uint32 1
-    enabled-extensions=['windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'alternate-tab@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com']
+    enabled-extensions=['windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'alternate-tab@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'dash-to-dock@micxgx.gmail.com', 'TopIcons@phocean.net']
     had-bluetooth-devices-setup=false
     favorite-apps=['org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'firefox.desktop', 'telegram-desktop.desktop', 'gitkraken.desktop', 'code.desktop', 'webtorrent-desktop.desktop']
+
+    [org/gnome/shell/extensions/dash-to-dock]
+    multi-monitor=false
+    height-fraction=0.9
+    icon-size-fixed=true
+    dash-max-icon-size=64
+
+    [org/gnome/shell/extensions/topicons]
+    tray-pos='right'
 
     [org/gnome/shell/extensions/user-theme]
     name='Adapta-Nokto'
@@ -128,7 +137,7 @@ in
     name='suse-yast.directory'
 
     [org/gnome/desktop/session]
-    idle-delay=3600
+    idle-delay=uint32 3600
 
     [org/gnome/desktop/screensaver]
     lock-delay=1800
