@@ -11,7 +11,7 @@ in
       # - plaintext config: https://github.com/telegramdesktop/tdesktop/issues/4879
       # - use system fonts: https://github.com/telegramdesktop/tdesktop/issues/90
       # - CJK fonts: https://github.com/telegramdesktop/tdesktop/issues/3575
-    # slack
+    slack
     # zoom-us
   ];
 
