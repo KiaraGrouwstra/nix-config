@@ -5,6 +5,7 @@ let
   pkgs = import <nixpkgs> {
     config.allowUnfree = true;
   };
+  webtorrent = import ./web/webtorrent.nix;
 in
 {
   imports = [
@@ -20,5 +21,6 @@ in
     node2nix
     azure-cli
     # webtorrent-cli
+    # webtorrent
   ]);
 }
