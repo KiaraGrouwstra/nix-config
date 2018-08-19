@@ -8,7 +8,7 @@ in
     # ./haskell.nix
     ./python.nix
     ./ruby.nix
-    # ./web.nix
+    ./web.nix
     ./servers.nix
     ./compilers.nix
     ./latex.nix
