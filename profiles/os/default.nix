@@ -18,8 +18,6 @@ in
     tmux
   ];
 
-  virtualisation.docker.enable = true;
-
   users.mutableUsers = false;
 
 }

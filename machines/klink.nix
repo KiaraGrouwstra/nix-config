@@ -12,6 +12,12 @@
 
   networking.hostName = "klink";
 
+  fileSystems."/drogon" =
+  { device = "/dev/sda4";
+    fsType = "ext4";
+    options = [ "nofail" ];
+  };
+
   # https://askubuntu.com/questions/742946/how-to-find-the-hwdb-header-of-a-general-input-device#743291
   # services.udev.extraHwdb = ''
   #   # klink MSI keyboard

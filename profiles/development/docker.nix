@@ -19,7 +19,7 @@ in
     docker = {
       enable = true;
       storageDriver = "overlay";
-      extraOptions = '' --data-root "/run/media/tycho/Drogon/root/var/lib/docker" '';
+      extraOptions = '' --data-root "/drogon/root/var/lib/docker" '';
     };
   };
 }
