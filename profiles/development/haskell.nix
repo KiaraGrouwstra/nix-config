@@ -35,7 +35,7 @@
     hoogle          # type signature search
     hpack           # yaml based package format
     hspec           # testing framework
-    intero          # IDE tooltips
+    # intero          # IDE tooltips
     pointfree       # http://pointfree.io/
     pointful        # https://github.com/23Skidoo/pointful
     stylish-haskell # pretty printer

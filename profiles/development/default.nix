@@ -5,7 +5,7 @@ let
 in
 {
   imports = [
-    # ./haskell.nix
+    ./haskell.nix
     ./python.nix
     ./ruby.nix
     ./web.nix
