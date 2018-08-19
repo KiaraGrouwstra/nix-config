@@ -11,7 +11,7 @@ let
     # pkgs.python36Packages.flask
     tensorflow
     # tensorflow-tensorboard
-    tensorflowWithoutCuda
+    # tensorflowWithoutCuda
     # nix-store --add-fixed sha256 /drogon/dl/cuda/cudnn-9.1-linux-x64-v7.1.tgz
     # tensorflowWithCuda
 
