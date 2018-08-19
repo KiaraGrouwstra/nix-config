@@ -156,7 +156,8 @@ in
     edge-scrolling-enabled=false
 
     [org/gnome/desktop/peripherals/mouse]
-    speed=-0.11029411764705888
+    speed=1.0
+    natural-scroll=true
 
     [org/gnome/desktop/calendar]
     show-weekdate=false
