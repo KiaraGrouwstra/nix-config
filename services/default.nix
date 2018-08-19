@@ -2,6 +2,6 @@
   imports = [
     ./locate.nix
     ./sshd.nix
-    ./flatpak.nix
+    # ./flatpak.nix
   ];
 }
