@@ -24,7 +24,7 @@
     fish.enable = true;
     zsh = {
       enable = true;
-      enableAutosuggestions = true;
+      autosuggestions.enable = true;
       enableCompletion = true;
       syntaxHighlighting.enable = true;
       ohMyZsh = {
