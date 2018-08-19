@@ -2,7 +2,7 @@
 
 let
   master = import ../../master.nix;
-  nvidiaDocker = import ./nvidia-docker/default.nix;
+  # nvidiaDocker = import ./nvidia-docker/default.nix;
 in
 {
   imports = [
