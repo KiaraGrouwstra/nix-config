@@ -60,3 +60,4 @@ font/otf=org.gnome.font-viewer.desktop;
 [Added Associations]
 image/png=gimp.desktop;
 application/pdf=evince.desktop;calibre.desktop;firefox.desktop;
+x-scheme-handler/sms=org.gnome.Shell.Extensions.GSConnect.desktop;
