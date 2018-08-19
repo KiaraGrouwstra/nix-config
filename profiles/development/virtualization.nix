@@ -1,15 +1,12 @@
 { pkgs, ... }:
 
-let
-  master = import ../../master.nix;
-in
 {
 
   imports = [
     ./docker.nix
   ];
 
-  environment.systemPackages = with master; [
+  environment.systemPackages = with pkgs; [
     virtualbox
     # kvm
     # qemu

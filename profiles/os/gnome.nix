@@ -1,11 +1,8 @@
 { pkgs, ... }:
 
-let
-  master = import ../../master.nix;
-in
 {
 
-  environment.systemPackages = with master; [
+  environment.systemPackages = with pkgs; [
     chrome-gnome-shell
     gnomeExtensions.dash-to-dock
     gnomeExtensions.system-monitor

@@ -1,8 +1,5 @@
 { pkgs, ... }:
 
-let
-  master = import ../../master.nix;
-in
 {
 
   fonts = {

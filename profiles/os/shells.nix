@@ -1,15 +1,12 @@
 { pkgs, ... }:
 
-let
-  master = import ../../master.nix;
-in
 {
 
   imports = [
     ../../pkgs/gterm.nix
   ];
 
-  environment.systemPackages = with master; [
+  environment.systemPackages = with pkgs; [
     zsh
     oh-my-zsh
     fish
@@ -17,7 +14,7 @@ in
     # oh-my-fish  # https://github.com/NixOS/nixpkgs/pull/42458
   ];
 
-  fonts.fonts = with master; [
+  fonts.fonts = with pkgs; [
     powerline-fonts  # used in oh-my-* themes
   ];
 

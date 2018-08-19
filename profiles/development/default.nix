@@ -1,23 +1,22 @@
 { config, lib, pkgs, ... }:
 
-let
-  master = import ../../master.nix;
-  # nvidiaDocker = import ./nvidia-docker/default.nix;
-in
+# let
+#   nvidiaDocker = import ./nvidia-docker/default.nix;
+# in
 {
   imports = [
-    ./haskell.nix
-    ./python.nix
-    ./ruby.nix
-    ./web.nix
-    ./servers.nix
-    ./compilers.nix
-    ./latex.nix
-    ./mathematics.nix
+    # ./haskell.nix
+    # ./python.nix
+    # ./ruby.nix
+    # ./web.nix
+    # ./servers.nix
+    # ./compilers.nix
+    # ./latex.nix
+    # ./mathematics.nix
   ];
 
   # install development packages
-  environment.systemPackages = with master; [
+  environment.systemPackages = with pkgs; [
     gcc
     gnumake
     binutils-unwrapped

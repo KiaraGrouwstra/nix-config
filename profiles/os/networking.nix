@@ -2,12 +2,11 @@
 { pkgs, ... }:
 
 let
-  master = import ../../master.nix;
   secrets = import ../../secrets.nix;
 in
 rec {
 
-  environment.systemPackages = with master; [
+  environment.systemPackages = with pkgs; [
     kubernetes
   ];
 

@@ -1,17 +1,13 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
-let
-  master = import ../../master.nix;
-  secrets = import ../secrets.nix;
-in
-rec {
+{
 
   imports = [
     ../development/default.nix
     ./vscode.nix
   ];
 
-  environment.systemPackages = with master; [
+  environment.systemPackages = with pkgs; [
     dpkg
     gitkraken
     # idea-ultimate

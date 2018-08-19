@@ -1,10 +1,7 @@
 { pkgs, ... }:
 
-let
-  master = import ../../master.nix;
-in
 {
-  environment.systemPackages = with master; [
+  environment.systemPackages = with pkgs; [
     pandoc
     calibre
     texlive.combined.scheme-basic

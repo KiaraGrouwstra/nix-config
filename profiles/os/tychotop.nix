@@ -25,22 +25,22 @@ rec {
     # ESSENTIALS
     ./default.nix
     ./desktop.nix
-    ./networking.nix
-    ../development/cuda.nix
+    # ./networking.nix
+    # ../development/cuda.nix
 
     # PERSONALIZATION
     ./shells.nix
     ./theme.nix
     ./fonts.nix
-    ../applications/crap.nix
+    # ../applications/crap.nix
 
     # DEV
     ../applications/devtop.nix
 
     # APPLICATIONS
     ../applications/browsers.nix
-    ../applications/entertainment.nix
-    ../applications/office.nix
+    # ../applications/entertainment.nix
+    # ../applications/office.nix
     # ../applications/homeautomation.nix
     ../development/virtualization.nix
   ];

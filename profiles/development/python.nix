@@ -1,7 +1,6 @@
 { pkgs, ... }:
 
 let
-  master = import ../../master.nix;
   torrench = import ./python/torrench/default.nix;
   my-python-packages = python-packages: with python-packages; [
     pip
@@ -26,7 +25,7 @@ let
   python-with-my-packages = master.python3.withPackages my-python-packages;
 in
 {
-  environment.systemPackages = with master; [
+  environment.systemPackages = with pkgs; [
     pypi2nix
     # python
     # python3

@@ -1,11 +1,8 @@
 { pkgs, ... }:
 
-let
-  master = import ../../master.nix;
-in
 {
 
-  environment.systemPackages = with master; [
+  environment.systemPackages = with pkgs; [
     adapta-gtk-theme
     paper-icon-theme
     # Albatross

@@ -1,15 +1,12 @@
 { pkgs, ... }:
 
-let
-  master = import ../../master.nix;
-in
 {
 
   # search packages:
   # - `nix-env -qaP | grep wget`
   # - `nox wget`
   # - https://github.com/NixOS/nixpkgs/
-  environment.systemPackages = with master; [
+  environment.systemPackages = with pkgs; [
     wget
     git
     vim

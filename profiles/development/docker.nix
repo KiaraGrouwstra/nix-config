@@ -1,10 +1,7 @@
 { pkgs, ... }:
 
-let
-  master = import ../../master.nix;
-in
 {
-  environment.systemPackages = with master; [
+  environment.systemPackages = with pkgs; [
     docker
     skopeo  # skopeo inspect docker://docker.io/nixos/nix:1.11 | jq -r '.Digest'
     jq

@@ -1,7 +1,6 @@
 { pkgs, ... }:
 
 let
-  master = import ../../master.nix;
   pkgs = import <nixpkgs> {
     config.allowUnfree = true;
   };
@@ -14,7 +13,7 @@ in
     # ./web/torrent-search-api/default.nix
   ];
 
-  environment.systemPackages = with master; [
+  environment.systemPackages = with pkgs; [
     nodejs
     yarn
     pkgs.postman
