@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 let
-  nvidiaDocker = import ./nvidia-docker/default.nix;
+  nvidiaDocker = import ./nvidia-docker/default.nix { inherit pkgs; };
 in
 {
   imports = [
@@ -22,7 +22,7 @@ in
     binutils-unwrapped
     zlib
     protobuf
-    # nvidiaDocker
+    nvidiaDocker
     snappy
     nix-generate-from-cpan
   ];
