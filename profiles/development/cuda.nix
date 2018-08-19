@@ -8,7 +8,7 @@ in
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    cudatoolkit
+    # cudatoolkit
     # nix-prefetch-url file://$PWD/cudnn-9.1-linux-x64-v7.tgz
     cudnn
   ];
