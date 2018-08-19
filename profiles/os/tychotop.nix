@@ -26,7 +26,7 @@ rec {
     ./default.nix
     ./desktop.nix
     ./networking.nix
-    # ../development/cuda.nix
+    ../development/cuda.nix
 
     # PERSONALIZATION
     ./shells.nix
