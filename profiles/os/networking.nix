@@ -28,7 +28,7 @@ rec {
     extraHosts = secrets.extraHosts;
     networkmanager = {
       enable = true;
-      useDnsmasq = true;
+      dns = "dnsmasq";
     };
 
     firewall = {
