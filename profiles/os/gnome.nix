@@ -37,7 +37,7 @@ in
     [org/gnome/shell]
     app-picker-view=uint32 1
     enabled-extensions=['windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'alternate-tab@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'dash-to-dock@micxgx.gmail.com', 'TopIcons@phocean.net']
-    had-bluetooth-devices-setup=false
+    had-bluetooth-devices-setup=true
     favorite-apps=['org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'firefox.desktop', 'telegram-desktop.desktop', 'gitkraken.desktop', 'code.desktop', 'webtorrent-desktop.desktop']
 
     [org/gnome/shell/extensions/dash-to-dock]
@@ -212,9 +212,9 @@ in
     sidebar-width=174
     window-position=(678, 45)
     show-size-column=true
-    show-hidden=false
+    show-hidden=true
     window-size=(1203, 936)
-    sort-directories-first=false
+    sort-directories-first=true
     date-format='regular'
     sort-order='ascending'
     location-mode='path-bar'
