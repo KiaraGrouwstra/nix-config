@@ -8,17 +8,17 @@ in
   environment.systemPackages = with master; [
     adapta-gtk-theme
     paper-icon-theme
-    Albatross
+    # Albatross
     arc-theme
-    Blackbird
+    # Blackbird
     clearlooks-phenix
     e17gtk
     elementary-gtk-theme
     gnome-breeze
     greybird
-    gtk-engines
+    # gtk-engines
     theme-jade1
-    theme-jade2
+    # theme-jade2
     materia-theme
     numix-solarized-gtk-theme
     numix-sx-gtk-theme
