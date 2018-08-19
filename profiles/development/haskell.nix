@@ -19,7 +19,6 @@ in
     # libraries
     QuickCheck      # testing, dep for some of the below
     exceptions      # dep
-    # process_1_6_3_0 # dep
     # cabal-helper    # dep  # https://github.com/NixOS/nixpkgs/issues/32631
     alex
     happy

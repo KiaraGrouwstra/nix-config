@@ -38,12 +38,9 @@ with lib;
   };
  
   # automatic updates every day
-  system = {
-    stateVersion = "18.03";
-    autoUpgrade = {
-      enable = true;
-      channel = "https://nixos.org/channels/nixos-unstable";
-    };
+  system.autoUpgrade = {
+    enable = true;
+    channel = "https://nixos.org/channels/nixos-unstable";
   };
 
   # automatic gc
