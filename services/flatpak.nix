@@ -5,5 +5,4 @@
   # flatpak search bustle
   # flatpak install flathub org.freedesktop.Bustle
   # flatpak run org.freedesktop.Bustle
-
 }

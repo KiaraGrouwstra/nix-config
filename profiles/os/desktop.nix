@@ -8,6 +8,7 @@ in
   environment.systemPackages = with master; [
     wmctrl
     wine
+    appimage-run
   ];
 
   # X11 windowing system
