@@ -22,7 +22,7 @@ let
     # nix-shell -p pythonPackages.pip
 
   ];
-  python-with-my-packages = master.python3.withPackages my-python-packages;
+  python-with-my-packages = pkgs.python3.withPackages my-python-packages;
 in
 {
   environment.systemPackages = with pkgs; [

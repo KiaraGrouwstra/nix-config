@@ -2,8 +2,7 @@
 #   nixpkgs.config.allowUnfree = true;
 # };
 
-# with pkgs;
-with import ../../../master.nix;
+with pkgs;
 stdenv.mkDerivation {
   name = "nvidia-docker-1.0.1";
 
