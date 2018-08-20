@@ -102,7 +102,7 @@
     show-battery-percentage=true
     cursor-theme='Paper'
     gtk-theme='Adapta-Nokto'
-    icon-theme='Paper-Mono-Dark'
+    icon-theme='Paper'
 
     [org/gnome/desktop/notifications]
     application-children=['firefox', 'gnome-tweak-tool', 'org-gnome-nautilus']

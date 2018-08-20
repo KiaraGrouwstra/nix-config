@@ -3,7 +3,9 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 {
-  # _module.args.pkgs = import ./master.nix;
+  # _module.args.pkgs = import /drogon/Coding/nix/nixpkgs {
+  #   config.allowUnfree = true;
+  # };
 
   imports = [
     # Include the results of the hardware scan.
