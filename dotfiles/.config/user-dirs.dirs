@@ -6,10 +6,10 @@
 # absolute path. No other format is supported.
 # 
 XDG_DESKTOP_DIR="$HOME/Desktop"
-XDG_DOWNLOAD_DIR="/run/media/tycho/Drogon/dl"
+XDG_DOWNLOAD_DIR="/drogon/dl"
 XDG_TEMPLATES_DIR="$HOME/Templates"
 XDG_PUBLICSHARE_DIR="$HOME/Public"
-XDG_DOCUMENTS_DIR="/run/media/tycho/Drogon/Documents"
+XDG_DOCUMENTS_DIR="/drogon/Documents"
 XDG_MUSIC_DIR="$HOME/Music"
-XDG_PICTURES_DIR="/run/media/tycho/Drogon/Pics"
+XDG_PICTURES_DIR="/drogon/Pics"
 XDG_VIDEOS_DIR="$HOME/Videos"
