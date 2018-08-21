@@ -30,8 +30,11 @@
 
   # https://wiki.archlinux.org/index.php/Keyboard_configuration_in_Xorg
   # https://help.ubuntu.com/community/GtkComposeTable
-  # bugged, fix in new gnome: https://github.com/NixOS/nixpkgs/issues/14318#issuecomment-361121902
-  # services.xserver.xkbVariant = "colemak";
-  # services.xserver.xkbOptions = "caps:backspace"; # compose:caps,menu:ralt
+  # https://nixos.wiki/wiki/Keyboard_Layout_Customization
+  # vi "$(nix-build --no-out-link '<nixpkgs>' -A xorg.xkeyboardconfig)/etc/X11/xkb/rules/base.lst"
+  # xkbModel = "pc104";
+  # v bugged, fix in new gnome: https://github.com/NixOS/nixpkgs/issues/14318#issuecomment-361121902
+  xkbVariant = "colemak";  # this seems to work only during login, before entering the desktop
+  services.xserver.xkbOptions = "caps:backspace"; # compose:caps,menu:ralt
 
 }
