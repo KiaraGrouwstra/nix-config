@@ -6,6 +6,8 @@
     wmctrl
     wine
     appimage-run
+    appimagekit
+    squashfsTools
   ];
 
   # X11 windowing system
