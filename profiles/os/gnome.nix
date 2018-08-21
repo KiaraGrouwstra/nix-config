@@ -166,7 +166,7 @@
 
     [org/gnome/desktop/input-sources]
     sources=[('xkb', 'us')]
-    xkb-options=['terminate:ctrl_alt_bksp']
+    xkb-options=['terminate:ctrl_alt_bksp,caps:swapescape,menu:ralt,home:pageup,pageup:delete,pagedown:pageup,end:pagedown']
 
     [org/gnome/libgnomekbd/preview]
     width=1464

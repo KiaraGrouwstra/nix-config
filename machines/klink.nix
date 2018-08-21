@@ -28,13 +28,16 @@
   #   Caps_Lock = Multi_key
   # '';
 
-  # https://wiki.archlinux.org/index.php/Keyboard_configuration_in_Xorg
-  # https://help.ubuntu.com/community/GtkComposeTable
-  # https://nixos.wiki/wiki/Keyboard_Layout_Customization
-  # vi "$(nix-build --no-out-link '<nixpkgs>' -A xorg.xkeyboardconfig)/etc/X11/xkb/rules/base.lst"
-  # xkbModel = "pc104";
-  # v bugged, fix in new gnome: https://github.com/NixOS/nixpkgs/issues/14318#issuecomment-361121902
-  xkbVariant = "colemak";  # this seems to work only during login, before entering the desktop
-  services.xserver.xkbOptions = "caps:backspace"; # compose:caps,menu:ralt
+  services.xserver = {
+    # https://wiki.archlinux.org/index.php/Keyboard_configuration_in_Xorg
+    # https://help.ubuntu.com/community/GtkComposeTable
+    # https://nixos.wiki/wiki/Keyboard_Layout_Customization
+    # vi "$(nix-build --no-out-link '<nixpkgs>' -A xorg.xkeyboardconfig)/etc/X11/xkb/rules/base.lst"
+    # xkbModel = "pc104";
+    # v bugged, fix in new gnome: https://github.com/NixOS/nixpkgs/issues/14318#issuecomment-361121902
+    xkbVariant = "colemak";  # this seems to work only during login, before entering the desktop
+    # https://github.com/xkbcommon/libxkbcommon/blob/master/test/data/keycodes/evdev-xkbcommon
+    xkbOptions = "terminate:ctrl_alt_bksp,caps:swapescape,menu:ralt,home:pageup,pageup:delete,pagedown:pageup,end:pagedown";
+  };
 
 }
