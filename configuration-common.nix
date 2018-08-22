@@ -79,4 +79,14 @@ with lib;
     enableSSHSupport = true;
   };
 
+  system = "x86_64-linux";
+
+  # Use the systemd-boot EFI boot loader.
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+
+  # NixOS release with which your system is to be compatible,
+  # change only after NixOS release notes say you should.
+  system.stateVersion = "18.03";
+
 }
