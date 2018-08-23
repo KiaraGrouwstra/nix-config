@@ -71,7 +71,7 @@ rec {
   i18n = {
     consoleUseXkbConfig = true;
     inputMethod = {
-      enabled = "uim";
+      enabled = "fcitx";
       uim.toolbar = "gtk"; # gtk-systray
       fcitx.engines = with pkgs.fcitx-engines; [
         # default:
