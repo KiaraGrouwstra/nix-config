@@ -4,8 +4,7 @@ This is the configuration making up my [NixOS](https://nixos.org/) setup.
 
 ## Usage
 ```bash
-nix-build --attr system ./configuration.nix
-sudo ./result/bin/switch-to-configuration switch
+bash run.sh my-comment
 ```
 
 ## References
