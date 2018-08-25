@@ -8,7 +8,7 @@
   ];
 
   virtualisation = {
-    libvirtd.enable = true;
+    # libvirtd.enable = true;
     lxc.enable = true;
     lxc.usernetConfig = ''
       bfo veth lxcbr0 10

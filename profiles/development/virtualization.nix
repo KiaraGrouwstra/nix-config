@@ -12,7 +12,7 @@
     # qemu
     # vagrant
     # virtmanager
-    gnome-boxes
+    # gnome-boxes
   ];
 
   virtualisation = {
