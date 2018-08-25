@@ -15,7 +15,7 @@
     enable = true;
     # enableCtrlAltBackspace = true;
     layout = "us";
-    videoDrivers = [ "intel" "ati" "cirrus" "vesa" "vmware" "modesetting" ];
+    videoDrivers = [ "nvidiaBeta" "intel" "ati" "cirrus" "vesa" "vmware" "modesetting" ];
     # "nvidiaBeta" "nvidia"
 
     # check current versions: nix-store -q --references /run/current-system/sw
