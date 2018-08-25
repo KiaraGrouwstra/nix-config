@@ -46,6 +46,12 @@
     icon-size-fixed=true
     dash-max-icon-size=64
 
+    [org/gnome/shell/extensions/gsconnect]
+    show-battery=true
+    nautilus-integration=true
+    webbrowser-integration=true
+    show-indicators=true
+
     [org/gnome/shell/extensions/topicons]
     tray-pos='right'
 
@@ -105,7 +111,7 @@
     icon-theme='Paper'
 
     [org/gnome/desktop/notifications]
-    application-children=['firefox', 'gnome-tweak-tool', 'org-gnome-nautilus']
+    application-children=['firefox', 'gnome-tweak-tool', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-software', 'org-gnome-tweaks', 'org-gnome-gedit', 'gnome-shell-extension-prefs', 'org-gnome-shell-extensions-gsconnect']
 
     [org/gnome/desktop/notifications/application/gnome-tweak-tool]
     application-id='gnome-tweak-tool.desktop'
@@ -115,6 +121,9 @@
 
     [org/gnome/desktop/notifications/application/org-gnome-nautilus]
     application-id='org.gnome.Nautilus.desktop'
+
+    [org/gnome/desktop/notifications/application/org-gnome-shell-extensions-gsconnect]
+    application-id='org.gnome.Shell.Extensions.GSConnect.desktop'
 
     [org/gnome/desktop/app-folders]
     folder-children=['Utilities', 'Sundry', 'YaST']
