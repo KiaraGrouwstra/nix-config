@@ -12,5 +12,6 @@
     "git.confirmSync": false,
     "git.autofetch": false,
     "update.channel": "none",
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "git.enableSmartCommit": true
 }
