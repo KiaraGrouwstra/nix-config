@@ -80,6 +80,7 @@ rec {
 
         # add:
         rime  # pinyin
+        cloudpinyin
         mozc  # japanese
         # hangul  # korean
       ];
