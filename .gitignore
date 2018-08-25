@@ -2,3 +2,4 @@ private/
 secrets.nix
 dotfiles/.ssh/id_rsa
 result
+*secret*
