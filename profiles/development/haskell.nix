@@ -11,8 +11,11 @@
     stack
 
     ghc
-    # haskell.compiler.ghc822
+    haskell.compiler.ghc822
     haskell.compiler.ghc843
+    haskell.compiler.ghc861
+    haskell.compiler.ghcHEAD
+    haskell.compiler.ghcjs
   ] ++ (with haskellPackages; [
 
     # libraries
