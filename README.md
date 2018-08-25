@@ -5,6 +5,7 @@ This is the configuration making up my [NixOS](https://nixos.org/) setup.
 ## Usage
 ```bash
 bash run.sh my-comment
+sudo nixos-rebuild switch --upgrade
 ```
 
 ## References
