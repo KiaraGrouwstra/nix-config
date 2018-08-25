@@ -40,7 +40,7 @@ with lib;
   # automatic updates every day
   system.autoUpgrade = {
     enable = true;
-    channel = "https://nixos.org/channels/nixos-unstable-small";
+    channel = "https://nixos.org/channels/nixos-unstable";
   };
 
   # automatic gc
