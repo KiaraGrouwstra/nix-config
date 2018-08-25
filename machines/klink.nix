@@ -24,7 +24,7 @@
     # xkbVariant = "colemak";  # this seems to work only during login, before entering the desktop
     # export to /etc/X11/
     exportConfiguration = true;
-    displayManager.sessionCommands = "${pkgs.xorg.xkbcomp}/bin/xkbcomp ${/path/to/layout.xkb} $DISPLAY";
+    displayManager.sessionCommands = "${pkgs.xorg.xkbcomp}/bin/xkbcomp ${../dotfiles/X11/xkb/layout.xkb} $DISPLAY";
   };
 
 }
