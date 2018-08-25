@@ -26,4 +26,7 @@
 
   };
 
+  # DBus is needed for e.g. Gnome GSConnect extension
+  services.dbus.socketActivated = true;
+
 }
