@@ -143,6 +143,10 @@
     lock-delay=1800
     picture-uri='file:///home/tycho/.local/share/shotwell/wallpaper/wallpaper.xml'
     picture-options='zoom'
+    lock-enabled=false
+
+    [org/gnome/desktop/sound]
+    allow-volume-above-100-percent=true
 
     [org/gnome/desktop/peripherals/touchpad]
     speed=1.0
@@ -165,8 +169,12 @@
     picture-options='zoom'
 
     [org/gnome/desktop/input-sources]
-    sources=[('xkb', 'us')]
+    # sources=[('xkb', 'us'), ('xkb', 'us+colemak')]
+    # ^ crashes upon switching back and forth
     xkb-options=['terminate:ctrl_alt_bksp,caps:swapescape,menu:ralt,home:pageup,pageup:delete,pagedown:pageup,end:pagedown']
+
+    [org/gnome/desktop/input-sources/wm/keybindings]
+    switch-input-source=['<Super>space','<Alt>Shift_L']
 
     [org/gnome/libgnomekbd/preview]
     width=1464
