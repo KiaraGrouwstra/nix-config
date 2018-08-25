@@ -1,0 +1,26 @@
+// use file: xkbcomp layout.xkb $DISPLAY
+xkb_keymap {
+	xkb_keycodes  {
+		include "evdev+aliases(qwerty)"
+		// check keycode with xev
+		// <VOL-> = 108;
+	};
+	xkb_types     { include "complete"	};
+	xkb_compat    { include "complete"	};
+	xkb_symbols   {
+		include "pc+us:2+us:3+inet(evdev)"
+		// labels: 
+https://github.com/xkbcommon/libxkbcommon/blob/master/test/data/keycodes/evdev-xkbcommon
+		// check keysym with xev
+		// the label defines the key pressed, the symbols the events sent
+		key.type = "ONE_LEVEL";
+        key <CAPS> { [ Escape ] };
+        key <ESC> { [ Caps_Lock ] };
+        key <RALT> { [ Menu ] };
+        key <INS> { [ Home ] };
+        key <DELE> { [ Prior ] };
+        key <PGUP> { [ Next ] };
+        key <PGDN> { [ End ] };
+	};
+	xkb_geometry  { include "pc(pc104)"	};
+};

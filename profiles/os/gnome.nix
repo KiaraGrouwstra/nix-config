@@ -171,8 +171,6 @@
     [org/gnome/desktop/input-sources]
     # sources=[('xkb', 'us'), ('xkb', 'us+colemak')]
     # ^ crashes upon switching back and forth
-    xkb-options=['terminate:ctrl_alt_bksp,caps:swapescape']
-    # not working: menu:ralt,home:pageup,pageup:delete,pagedown:pageup,end:pagedown
 
     [org/gnome/desktop/input-sources/wm/keybindings]
     switch-input-source=['<Super>space','<Alt>Shift_L']
