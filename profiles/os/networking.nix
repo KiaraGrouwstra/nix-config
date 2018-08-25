@@ -9,6 +9,7 @@ rec {
   environment.systemPackages = with pkgs; [
     kubernetes
     openssl
+    sshfs
   ];
 
   services.dnsmasq = {
