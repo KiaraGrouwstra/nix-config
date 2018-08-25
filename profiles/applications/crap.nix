@@ -7,6 +7,7 @@
     figlet
     beep
     tldr
+    xbindkeys
 
     # nix / disk
     ncdu
