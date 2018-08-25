@@ -10,6 +10,7 @@ rec {
     kubernetes
     openssl
     sshfs
+    sshfs-fuse
   ];
 
   services.dnsmasq = {
