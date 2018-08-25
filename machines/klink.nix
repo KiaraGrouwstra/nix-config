@@ -38,6 +38,7 @@
     xkbVariant = "colemak";  # this seems to work only during login, before entering the desktop
     # https://github.com/xkbcommon/libxkbcommon/blob/master/test/data/keycodes/evdev-xkbcommon
     xkbOptions = "terminate:ctrl_alt_bksp,caps:swapescape,menu:ralt,home:pageup,pageup:delete,pagedown:pageup,end:pagedown";
+    exportConfiguration = true;
   };
 
 }
