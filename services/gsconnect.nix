@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  systemd.user.services.gsconnect = {
+  systemd.services.gsconnect = {
     description = "GSConnect Daemon";
     serviceConfig = {
       #  http://www.man7.org/linux/man-pages/man5/systemd.service.5.html
