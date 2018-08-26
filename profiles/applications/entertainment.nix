@@ -9,7 +9,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    # webtorrent_desktop
+    webtorrent_desktop
   ];
 
 }
