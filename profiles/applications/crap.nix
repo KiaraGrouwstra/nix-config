@@ -8,6 +8,7 @@
     beep
     tldr
     xbindkeys
+    service-wrapper
 
     # nix / disk
     ncdu
