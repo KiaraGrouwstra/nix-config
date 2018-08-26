@@ -247,7 +247,7 @@
 
     [org/gnome/desktop/input-sources]
     show-all-sources=false
-    sources=[('xkb', 'us')]
+    sources=[('xkb', 'us'), ('xkb', 'us+colemak')]
     xkb-options=['terminate:ctrl_alt_bksp']
 
     [org/gnome/control-center]
