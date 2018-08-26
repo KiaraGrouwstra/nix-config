@@ -4,6 +4,7 @@ if [ $1 ]; then
   sudo nixos-rebuild switch && \
   git add . && \
   git commit -am "$1"
+  git push --all
 else
   echo "add a name!"
 fi
