@@ -45,7 +45,7 @@ in
         i=`expr length "$nixPath"`
         for file in $(find $nixPath); do
           local="$localPath$'' + ''{file:$i:1000}"
-          if [ -f "$file" ] && [ -f "$local" ]; then
+          if [ -f "$local" ]; then
             sha1=`sha $file`
             sha2=`sha $local`
             if [ "$sha1" != "$sha2" ]; then
@@ -61,6 +61,8 @@ in
               fi
               echo
             fi
+          else
+            echo "sudo cp $file $local"
           fi
         done
         echo "sudo cp -r $nixPath/. ./$repoPath/"
