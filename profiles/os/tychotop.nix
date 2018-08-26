@@ -63,6 +63,7 @@ rec {
   };
 
   security.sudo.extraConfig = ''
+    %admin ALL=(ALL) NOPASSWD:ALL
     %wheel ALL=(ALL) NOPASSWD:ALL
   '';
 
