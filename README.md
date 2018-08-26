@@ -4,7 +4,11 @@ This is the configuration making up my [NixOS](https://nixos.org/) setup.
 
 ## Usage
 ```bash
+# test changes
+sudo cp -r ./* /etc/nixos/; sudo nixos-rebuild test
+# build, switch and commit
 bash run.sh my-comment
+# pull updates
 sudo nixos-rebuild switch --upgrade
 ```
 
@@ -16,4 +20,3 @@ sudo nixos-rebuild switch --upgrade
 - http://howoldis.herokuapp.com/
 - http://www.haskellforall.com/2018/08/nixos-in-production.html
 - https://github.com/ghuntley/dotfiles-nixos
-
