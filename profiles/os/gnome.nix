@@ -39,7 +39,7 @@
     app-picker-view=uint32 1
     enabled-extensions=['windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com','launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'alternate-tab@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'dash-to-dock@micxgx.gmail.com', 'TopIcons@phocean.net', 'emoji-selector@maestroschan.fr', 'gsconnect@andyholmes.github.io']
     had-bluetooth-devices-setup=true
-    favorite-apps=['org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'firefox.desktop', 'telegram-desktop.desktop', 'gitkraken.desktop', 'code.desktop']
+    favorite-apps=['org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'firefox.desktop', 'telegram-desktop.desktop', 'gitkraken.desktop', 'code.desktop', 'org.gnome.Terminal.desktop', 'webtorrent-desktop.desktop']
 
     [org/gnome/shell/extensions/system-monitor]
     compact-display=false
@@ -98,9 +98,7 @@
     maximized=false
 
     [org/gnome/calculator]
-    target-currency=''
     show-zeroes=false
-    source-currency=''
     show-thousands=false
     button-mode='basic'
     target-units='radian'
