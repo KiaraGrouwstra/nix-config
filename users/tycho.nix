@@ -45,7 +45,9 @@ in
         i=`expr length "$nixPath"`
         for file in $(find $nixPath); do
           local="$localPath$'' + ''{file:$i:1000}"
-          if [ -f "$local" ]; then
+          if [ -d "$file" ] && [ ! -d "$local" ]; then
+            echo "sudo mkdir -p $local"
+          elif [ -f "$file" ] && [ -f "$local" ]; then
             sha1=`sha $file`
             sha2=`sha $local`
             if [ "$sha1" != "$sha2" ]; then
@@ -61,16 +63,16 @@ in
               fi
               echo
             fi
-          else
+          elif [ -f "$file" ] && [ ! -f "$local" ]; then
             echo "sudo cp $file $local"
           fi
         done
         echo "sudo cp -r $nixPath/. ./$repoPath/"
       }
       echo
-      syncFiles "dotfiles" "/home/tycho"
-      syncFiles "public" "/"
-      syncFiles "private" "/"
+      syncFiles "dotfiles" "~"
+      syncFiles "public" ""
+      syncFiles "private" ""
       echo "git status"
       echo
     '');
