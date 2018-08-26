@@ -14,7 +14,7 @@ rec {
   ];
 
   services.dnsmasq = {
-    enable = true;
+    # enable = true;
     servers = [
       # Google
       "8.8.8.8"
