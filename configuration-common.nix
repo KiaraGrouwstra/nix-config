@@ -88,4 +88,7 @@ with lib;
   # change only after NixOS release notes say you should.
   system.stateVersion = "18.03";
 
+  # restrict process info access to owning user
+  security.hideProcessInformation = true;
+
 }
