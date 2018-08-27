@@ -4,6 +4,8 @@ This is the configuration making up my [NixOS](https://nixos.org/) setup.
 
 ## Usage
 ```bash
+# set secrets
+cp secrets.sample.nix secrets.nix
 # test changes
 sudo cp -r ./* /etc/nixos/; sudo nixos-rebuild test
 # build, switch and commit
