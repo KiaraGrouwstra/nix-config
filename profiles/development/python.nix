@@ -31,5 +31,6 @@ in
     # python3
     python-with-my-packages
     conda  # no conda executable exposed?
+    libtensorflow
   ];
 }

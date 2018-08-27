@@ -25,6 +25,7 @@
     # export to /etc/X11/
     exportConfiguration = true;
     displayManager.sessionCommands = "${pkgs.xorg.xkbcomp}/bin/xkbcomp ${../dotfiles/X11/xkb/layout.xkb} $DISPLAY";
+    # xkbDir = "/home/tycho/X11/xkb";
   };
 
 }
