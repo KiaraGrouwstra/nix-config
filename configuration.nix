@@ -3,6 +3,8 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 {
+  # v attribute 'isCross' missing, #44
+  # _module.args.pkgs = import ./master.nix;
   # _module.args.pkgs = import /drogon/Coding/nix/nixpkgs {
   #   config.allowUnfree = true;
   # };
