@@ -11,13 +11,7 @@ with lib;
 
 {
   imports = [
-    # Import default packages.
-    ./profiles/default.nix
-
-    # Import default services.
     ./services/default.nix
-    
-    # Create user accounts 
     ./users/tycho.nix
   ];
 
