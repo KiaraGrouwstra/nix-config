@@ -90,7 +90,7 @@ rec {
 
   services.xserver.desktopManager.gnome3.extraGSettingsOverridePackages = gedit.extraGSettingsOverridePackages;
 
-  services.xserver.displayManager.lightdm.autoLogin = {
+  services.xserver.displayManager.gdm.autoLogin = {
     enable = true;
     user = "tycho";
   };

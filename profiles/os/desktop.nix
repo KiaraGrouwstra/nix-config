@@ -22,7 +22,7 @@
     # try build: nix-build -A gnome3
     # install: nix-env -f . -iA gnome3
     desktopManager.gnome3.enable = true;
-    displayManager.lightdm.enable = true;
+    displayManager.gdm.enable = true;
 
   };
 
