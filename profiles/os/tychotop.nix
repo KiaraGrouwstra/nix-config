@@ -2,9 +2,6 @@
 
 let
   secrets = import ../../secrets.nix;
-  # settings
-  theme = import ./gnome.nix;
-  gedit = import ../../pkgs/gedit.nix { pkgs = pkgs; };
 in
 rec {
 
@@ -88,9 +85,8 @@ rec {
     };
   };
 
-  services.xserver.desktopManager.gnome3.extraGSettingsOverridePackages = gedit.extraGSettingsOverridePackages;
-
-  services.xserver.displayManager.gdm.autoLogin = {
+  # services.xserver.displayManager.sddm.theme = "Adapta-Nokto-Eta";
+  services.xserver.displayManager.sddm.autoLogin = {
     enable = true;
     user = "tycho";
   };

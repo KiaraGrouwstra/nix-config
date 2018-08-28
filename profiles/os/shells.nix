@@ -2,10 +2,6 @@
 
 {
 
-  imports = [
-    ../../pkgs/gterm.nix
-  ];
-
   environment.systemPackages = with pkgs; [
     zsh
     oh-my-zsh
