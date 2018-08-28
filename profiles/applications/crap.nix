@@ -9,6 +9,7 @@
     tldr
     xbindkeys
     service-wrapper
+    kdeconnect
 
     # nix / disk
     ncdu
