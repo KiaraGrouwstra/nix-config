@@ -10,6 +10,7 @@
     xbindkeys
     service-wrapper
     kdeconnect
+    latte-dock
 
     # nix / disk
     ncdu
