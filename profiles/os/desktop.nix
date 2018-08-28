@@ -15,8 +15,8 @@
     enable = true;
     # enableCtrlAltBackspace = true;
     layout = "us";
-    videoDrivers = [ "intel" "ati" "cirrus" "vesa" "vmware" "modesetting" ];
-    # "nvidiaBeta" "nvidia"
+    videoDrivers = [ "nvidia" "intel" "ati" "cirrus" "vesa" "vmware" "modesetting" ];
+    # "nvidiaBeta"
 
     # check current versions: nix-store -q --references /run/current-system/sw
     # try build: nix-build -A wget
