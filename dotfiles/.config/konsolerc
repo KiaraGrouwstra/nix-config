@@ -9,11 +9,13 @@ Width 1920=700
 Favorites=monokai.profile
 
 [MainWindow]
-Height 1080=485
-State=AAAA/wAAAAD9AAAAAAAAB4AAAAPRAAAABAAAAAQAAAAIAAAACPwAAAAA
+Height 1080=255
+State=AAAA/wAAAAD9AAAAAAAAAfEAAADhAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
-Width 1920=1908
-Window-Maximized 1080x1920=true
+Width 1920=497
+
+[Notification Messages]
+CloseAllTabs=true
 
 [Profile Shortcuts]
 CapsLock, CapsLock, CapsLock=monokai.profile

@@ -1,10 +1,11 @@
 [Added Associations]
-application/pdf=evince.desktop;calibre.desktop;firefox.desktop;
+application/pdf=firefox.desktop;calibre.desktop;draw.desktop;gimp.desktop;
 image/png=gimp.desktop;
 x-scheme-handler/sms=org.gnome.Shell.Extensions.GSConnect.desktop;
 
 [Default Applications]
 application/ogg=vlc.desktop;
+application/pdf=firefox.desktop;
 application/vnd.mozilla.xul+xml=firefox.desktop
 application/vnd.rn-realmedia=vlc.desktop;
 application/x-extension-mp4=vlc.desktop;
@@ -62,4 +63,5 @@ x-scheme-handler/ftp=firefox.desktop
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
 x-scheme-handler/mailto=firefox.desktop;
+x-scheme-handler/slack=slack.desktop
 x-scheme-handler/vscode=Code.desktop

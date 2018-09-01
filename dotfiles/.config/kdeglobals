@@ -107,6 +107,10 @@ ForegroundNormal=207,216,220
 ForegroundPositive=0,150,136
 ForegroundVisited=0,188,212
 
+[DirSelect Dialog]
+DirSelectDialog Size=640,480
+History Items[$e]=file:///drogon/Pics/wallpapers
+
 [Emoticons]
 emoticonsTheme=Konqi
 parseMode=2
@@ -125,7 +129,7 @@ smallestReadableFont=Sans Serif,8,-1,5,50,0,0,0,0,0
 toolBarFont=Sans Serif,10,-1,5,50,0,0,0,0,0
 
 [Icons]
-Theme=Paper
+Theme=Paper-Mono-Dark
 
 [KDE]
 LookAndFeelPackage=com.github.varlesh.adapta
