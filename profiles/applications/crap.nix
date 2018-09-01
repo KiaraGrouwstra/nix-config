@@ -11,6 +11,7 @@
     service-wrapper
     kdeconnect
     latte-dock
+    spectacle
 
     # nix / disk
     ncdu
