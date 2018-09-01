@@ -8,6 +8,10 @@ Show Menu Bar=true
 Show Status Bar=true
 Show Tab Bar=true
 
+[KFileDialog Settings]
+Recent Files[$e]=file:$HOME/.nix-profile/share/applications/org.gnome.ChromeGnomeShell.desktop,file:$HOME/.config/menus/applications-merged/xdg-desktop-menu-dummy.menu
+Recent URLs[$e]=file:$HOME/.nix-profile/share/applications/,file:$HOME/.config/menus/applications-merged/
+
 [MainWindow]
 Height 1080=831
 State=AAAA/wAAAAD9AAAAAAAAAzoAAAMhAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA

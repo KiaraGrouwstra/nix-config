@@ -11,8 +11,33 @@
     service-wrapper
     kdeconnect
     latte-dock
-    kdeApplications.spectacle
-    kdeApplications.okular
+    kdeApplications.spectacle # screenshots
+    kdeApplications.okular    # pdf
+    # granatier # bomberman
+    # kmines    # minesweeper
+    konversation  # irc
+    kdeApplications.akregator # rss
+    # sheets    # excel
+    # kexi      # DBs/Access
+    kile      # latex
+    # cantor    # math
+    # kalgebra  # graph calc
+    # kmplot    # plotter
+    # kst       # data viewer   # broken
+    # ktouch    # touch typing
+    # labplot   # plotter
+    minuet    # music
+    kcalc     # calc
+    # kcharselect # char
+    # kmouth    # speech synthesizer
+    # simon     # speech recognition
+    ark       # archiver
+    # ksnapshot # screenshots
+    amarok    # audio
+    # dragonplayer  # video
+    # juk       # music
+    # kaffeine  # media
+    kmplayer  # media
 
     # nix / disk
     ncdu
