@@ -12,6 +12,7 @@
     kdeconnect
     latte-dock
     kdeApplications.spectacle
+    kdeApplications.okular
 
     # nix / disk
     ncdu
