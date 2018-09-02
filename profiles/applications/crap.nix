@@ -13,6 +13,7 @@
     latte-dock
     kdeApplications.spectacle # screenshots
     kdeApplications.okular    # pdf
+    evince
     # granatier # bomberman
     # kmines    # minesweeper
     konversation  # irc
