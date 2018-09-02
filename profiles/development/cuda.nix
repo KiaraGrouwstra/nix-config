@@ -10,10 +10,10 @@
     # cudnn
   ];
 
-  # systemd.services.nvidia-control-devices = {
-  #   wantedBy = [ "multi-user.target" ];
-  #   serviceConfig.ExecStart = "${pkgs.linuxPackages.nvidia_x11}/bin/nvidia-smi";
-  # };
+  systemd.services.nvidia-control-devices = {
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig.ExecStart = "${pkgs.linuxPackages.nvidia_x11}/bin/nvidia-smi";
+  };
 
   system.activationScripts =
   {
