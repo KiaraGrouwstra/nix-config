@@ -24,7 +24,6 @@
     # cantor    # math
     # kalgebra  # graph calc
     # kmplot    # plotter
-    # kst       # data viewer   # broken
     # ktouch    # touch typing
     # labplot   # plotter
     minuet    # music

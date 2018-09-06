@@ -12,6 +12,11 @@
 
   networking.hostName = "klink";
 
+  # stop-gap solution to bcachefs
+  nix.autoOptimiseStore = true;
+
+  boot.supportedFilesystems = [ "bcachefs" ];
+
   fileSystems."/drogon" =
   { device = "/dev/sda4";
     fsType = "ext4";
