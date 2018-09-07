@@ -25,6 +25,7 @@ in
     nvidiaDocker
     snappy
     nix-generate-from-cpan
+    libtool
   ];
 
   # custom packages

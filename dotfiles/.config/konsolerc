@@ -9,10 +9,10 @@ Width 1920=700
 Favorites=monokai.profile
 
 [MainWindow]
-Height 1080=255
-State=AAAA/wAAAAD9AAAAAAAAAfEAAADhAAAABAAAAAQAAAAIAAAACPwAAAAA
+Height 1080=578
+State=AAAA/wAAAAD9AAAAAAAAA3QAAAIkAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
-Width 1920=497
+Width 1920=884
 
 [Notification Messages]
 CloseAllTabs=true
