@@ -27,6 +27,7 @@ in
     nix-generate-from-cpan
     libtool
     unzip
+    autoconf
   ];
 
   # custom packages
