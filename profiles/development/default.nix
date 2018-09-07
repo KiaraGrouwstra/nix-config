@@ -28,6 +28,7 @@ in
     libtool
     unzip
     autoconf
+    automake
   ];
 
   # custom packages
