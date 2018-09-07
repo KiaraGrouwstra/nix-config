@@ -26,6 +26,7 @@ in
     snappy
     nix-generate-from-cpan
     libtool
+    unzip
   ];
 
   # custom packages
