@@ -29,6 +29,7 @@ in
     unzip
     autoconf
     automake
+    gnum4
   ];
 
   # custom packages

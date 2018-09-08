@@ -69,7 +69,7 @@ in
 
   environment.systemPackages = with pkgs; [
     vscode
-    vscode-with-extensions
+    # vscode-with-extensions
   ];
 
 }
