@@ -11,6 +11,7 @@
     mpd
     ympd
     cantata
+    ffmpeg
   ];
 
 }
