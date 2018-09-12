@@ -7,6 +7,7 @@
     figlet
     beep
     tldr
+    neovim
     xbindkeys
     service-wrapper
     kdeconnect
