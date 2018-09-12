@@ -12,6 +12,7 @@
     ympd
     cantata
     ffmpeg
+    audacity
   ];
 
 }
