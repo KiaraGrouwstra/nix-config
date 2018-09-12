@@ -11,6 +11,7 @@
     slack
     weechat
     zoom-us
+    franz
   ];
 
 
