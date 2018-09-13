@@ -11,7 +11,8 @@
     xbindkeys
     service-wrapper
     kdeconnect
-    latte-dock
+    # latte-dock
+    mimic
     kdeApplications.spectacle # screenshots
     kdeApplications.okular    # pdf
     evince
