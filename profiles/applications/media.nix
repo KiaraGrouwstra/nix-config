@@ -13,6 +13,7 @@
     cantata
     ffmpeg
     audacity
+    sox
   ];
 
 }
