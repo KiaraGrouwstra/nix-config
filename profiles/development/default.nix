@@ -34,6 +34,7 @@ in
     c-ares
     curl
     libraw
+    sqlite
   ];
 
   # custom packages
