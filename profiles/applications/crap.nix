@@ -10,6 +10,8 @@
     neovim
     xbindkeys
     service-wrapper
+    syslinux
+
     kdeconnect
     # latte-dock
     mimic
