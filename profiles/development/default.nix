@@ -30,6 +30,10 @@ in
     autoconf
     automake
     gnum4
+    openssl
+    c-ares
+    curl
+    libraw
   ];
 
   # custom packages
