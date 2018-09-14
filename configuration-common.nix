@@ -11,7 +11,7 @@ with lib;
 
 {
   imports = [
-    ./services/default.nix
+    # ./services/default.nix
     ./users/tycho.nix
   ];
 

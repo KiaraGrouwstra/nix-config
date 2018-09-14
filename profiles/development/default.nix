@@ -6,6 +6,7 @@ in
 {
   imports = [
     ./haskell.nix
+    ./perl.nix
     ./python.nix
     ./ruby.nix
     ./web.nix
