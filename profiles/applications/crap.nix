@@ -11,6 +11,7 @@
     xbindkeys
     service-wrapper
     syslinux
+    bcachefs-tools
 
     kdeconnect
     # latte-dock
