@@ -29,6 +29,7 @@ in
     unzip
     autoconf
     automake
+    autogen
     gnum4
     openssl
     c-ares
