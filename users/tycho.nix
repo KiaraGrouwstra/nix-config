@@ -7,14 +7,15 @@ let secrets = import ../secrets.nix;
 in
 {
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.extraUsers.tycho = {
+  users.users.tycho = {
     isNormalUser = true;
-    uid = 1000;
     home = "/home/tycho";
     description = "Tycho Grouwstra <tychogrouwstra@gmail.com>";
-    hashedPassword = secrets.hashedPassword;
+    password = "password";
+    initialPassword = "password";
+    # hashedPassword = secrets.hashedPassword;
 
-    shell = pkgs.fish;
+    # shell = pkgs.fish;
 
     extraGroups = [
       "audio"

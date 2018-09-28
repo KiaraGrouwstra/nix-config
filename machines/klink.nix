@@ -17,19 +17,13 @@
 
   boot.supportedFilesystems = [ "bcachefs" ];
 
-  fileSystems."/drogon" =
-  { device = "/dev/sda4";
-    fsType = "ext4";
-    options = [ "nofail" ];
-  };
-
   services.xserver = {
     # https://nixos.wiki/wiki/Keyboard_Layout_Customization
     # xkbModel = "pc104";
     # xkbVariant = "colemak";  # this seems to work only during login, before entering the desktop
     # export to /etc/X11/
     exportConfiguration = true;
-    displayManager.sessionCommands = "${pkgs.xorg.xkbcomp}/bin/xkbcomp ${/home/tycho/X11/xkb/layout.xkb} $DISPLAY";
+    # displayManager.sessionCommands = "${pkgs.xorg.xkbcomp}/bin/xkbcomp ${/home/tycho/X11/xkb/layout.xkb} $DISPLAY";
     # xkbDir = "/home/tycho/X11/xkb";  # after copying over files from /etc/X11/xkb
   };
 

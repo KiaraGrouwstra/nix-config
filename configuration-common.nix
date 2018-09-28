@@ -75,8 +75,14 @@ with lib;
   };
 
   # Use the systemd-boot EFI boot loader.
+  boot.loader.grub.enable = true;
+  boot.loader.grub.version = 2;
+  boot.loader.grub.efiSupport = true;
+  boot.loader.grub.efiInstallAsRemovable = true;
+  boot.loader.efi.efiSysMountPoint = "/boot/efi";
+  boot.loader.grub.device = "/dev/sda";
   boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  # boot.loader.efi.canTouchEfiVariables = true;
 
   # NixOS release with which your system is to be compatible,
   # change only after NixOS release notes say you should.
