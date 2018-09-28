@@ -11,9 +11,10 @@ in
     isNormalUser = true;
     home = "/home/tycho";
     description = "Tycho Grouwstra <tychogrouwstra@gmail.com>";
-    hashedPassword = secrets.hashedPassword;
+    password = secrets.password;
+    # hashedPassword = secrets.hashedPassword;
 
-    # shell = pkgs.fish;
+    shell = pkgs.fish;
 
     extraGroups = [
       "audio"

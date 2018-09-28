@@ -13,7 +13,7 @@ in
   environment.systemPackages = with pkgs; [
     nodejs
     yarn
-    pkgs.postman
+    # pkgs.postman
   ] ++ (with nodePackages; [
     npm
     node2nix

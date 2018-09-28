@@ -32,7 +32,7 @@ rec {
     ../applications/crap.nix
 
     # DEV
-    # ../applications/devtop.nix
+    ../applications/devtop.nix
 
     # APPLICATIONS
     ../applications/browsers.nix
