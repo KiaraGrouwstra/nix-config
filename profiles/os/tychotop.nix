@@ -22,8 +22,8 @@ rec {
     # ESSENTIALS
     ./default.nix
     ./desktop.nix
-    ./networking.nix
-    ../development/cuda.nix
+    # ./networking.nix
+    # ../development/cuda.nix
 
     # PERSONALIZATION
     ./shells.nix
@@ -32,7 +32,7 @@ rec {
     ../applications/crap.nix
 
     # DEV
-    ../applications/devtop.nix
+    # ../applications/devtop.nix
 
     # APPLICATIONS
     ../applications/browsers.nix
