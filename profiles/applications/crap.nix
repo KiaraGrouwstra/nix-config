@@ -14,7 +14,7 @@
     bcachefs-tools
 
     kdeconnect
-    # latte-dock
+    latte-dock
     mimic
     kdeApplications.spectacle # screenshots
     kdeApplications.okular    # pdf
