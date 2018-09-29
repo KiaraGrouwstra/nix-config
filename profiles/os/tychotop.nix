@@ -56,7 +56,7 @@ rec {
   };
 
   environment.variables = {
-    EDITOR = "vim";
+    EDITOR = "nvim";
   };
 
   security.sudo.extraConfig = ''
