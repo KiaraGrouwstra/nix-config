@@ -67,23 +67,22 @@ in
         # load always
         {
           names = [
-            "vim-go"
-            "syntastic"
-            "nerdtree"
-            "ctrlp.vim"
-            "vim-airline"
-            "youcompleteme"
-            "vim-fugitive"
-            "nerdtree"
+            "fatih/vim-go"
+            "scrooloose/syntastic"
+            "scrooloose/nerdtree"
+            "ctrlpvim/ctrlp.vim"
+            "vim-airline/vim-airline"
+            "valloric/youcompleteme"
+            "tpope/vim-fugitive"
           ];
         }
 
         # only load when opening a .hs file
-        { name = "ghcmod-vim"; ft_regex = "^hs\$"; }
-        # { name = "ghcmod-vim"; filename_regex = "^.hs\$"; }
+        { name = "eagletmt/ghcmod-vim"; ft_regex = "^hs\$"; }
+        # { name = "eagletmt/ghcmod-vim"; filename_regex = "^.hs\$"; }
 
         # provide plugin which can be loaded manually:
-        # { name = "syntastic"; tag = "lazy"; }
+        # { name = "scrooloose/syntastic"; tag = "lazy"; }
       ];
     };
 
