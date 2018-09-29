@@ -40,6 +40,25 @@ in
 
   # custom packages
   nixpkgs.config.packageOverrides = pkgs: rec {
+
+    myVimPlugins = pkgs.neovim.override {
+      configure = {
+        customRC = ''
+          # custom configuration
+        '';
+        plug.plugins = with pkgs.vimPlugins; [
+          vim-go
+          syntastic
+          nerdtree
+          ctrlp.vim
+          vim-airline
+          youcompleteme
+          vim-fugitive
+          nerdtree
+        ];
+      };
+    };
+
   };
 
 }
