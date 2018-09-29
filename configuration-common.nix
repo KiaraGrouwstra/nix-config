@@ -86,7 +86,7 @@ with lib;
 
   # NixOS release with which your system is to be compatible,
   # change only after NixOS release notes say you should.
-  system.stateVersion = "18.03";
+  system.stateVersion = "19.03";
 
   # restrict process info access to owning user
   security.hideProcessInformation = true;
