@@ -11,8 +11,8 @@ in
     isNormalUser = true;
     home = "/home/tycho";
     description = "Tycho Grouwstra <tychogrouwstra@gmail.com>";
-    password = secrets.password;
-    # hashedPassword = secrets.hashedPassword;
+    # password = secrets.password;
+    hashedPassword = secrets.hashedPassword;
 
     shell = pkgs.fish;
 
