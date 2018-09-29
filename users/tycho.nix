@@ -20,7 +20,7 @@ in
       "audio"
       "docker"
       # "libvirtd"
-      # "networkmanager"
+      "networkmanager"
       "users"
       "vboxusers"
       "video"
