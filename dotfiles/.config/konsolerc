@@ -1,0 +1,21 @@
+[Desktop Entry]
+DefaultProfile=Profile 1.profile
+
+[DownloadDialog Settings]
+Height 1080=502
+Width 1920=700
+
+[Favorite Profiles]
+Favorites=monokai.profile
+
+[MainWindow]
+Height 1080=578
+State=AAAA/wAAAAD9AAAAAAAAA3QAAAIkAAAABAAAAAQAAAAIAAAACPwAAAAA
+ToolBarsMovable=Disabled
+Width 1920=884
+
+[Notification Messages]
+CloseAllTabs=true
+
+[Profile Shortcuts]
+CapsLock, CapsLock, CapsLock=monokai.profile

@@ -12,11 +12,10 @@
 
   networking.hostName = "klink";
 
-  fileSystems."/drogon" =
-  { device = "/dev/sda4";
-    fsType = "ext4";
-    options = [ "nofail" ];
-  };
+  # stop-gap solution to bcachefs
+  nix.autoOptimiseStore = true;
+
+  boot.supportedFilesystems = [ "bcachefs" ];
 
   services.xserver = {
     # https://nixos.wiki/wiki/Keyboard_Layout_Customization
@@ -24,8 +23,8 @@
     # xkbVariant = "colemak";  # this seems to work only during login, before entering the desktop
     # export to /etc/X11/
     exportConfiguration = true;
-    displayManager.sessionCommands = "${pkgs.xorg.xkbcomp}/bin/xkbcomp ${../dotfiles/X11/xkb/layout.xkb} $DISPLAY";
-    xkbDir = "/home/tycho/X11/xkb";  # after copying over files from /etc/X11/xkb
+    # displayManager.sessionCommands = "${pkgs.xorg.xkbcomp}/bin/xkbcomp ${/home/tycho/X11/xkb/layout.xkb} $DISPLAY";
+    # xkbDir = "/home/tycho/X11/xkb";  # after copying over files from /etc/X11/xkb
   };
 
 }

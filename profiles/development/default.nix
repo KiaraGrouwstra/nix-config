@@ -11,7 +11,7 @@ in
     ./web.nix
     ./servers.nix
     ./compilers.nix
-    ./latex.nix
+    # ./latex.nix
     ./mathematics.nix
   ];
 
@@ -25,6 +25,17 @@ in
     nvidiaDocker
     snappy
     nix-generate-from-cpan
+    libtool
+    unzip
+    autoconf
+    automake
+    autogen
+    gnum4
+    openssl
+    c-ares
+    curl
+    libraw
+    sqlite
   ];
 
   # custom packages

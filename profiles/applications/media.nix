@@ -11,6 +11,9 @@
     mpd
     ympd
     cantata
+    ffmpeg
+    audacity
+    sox
   ];
 
 }

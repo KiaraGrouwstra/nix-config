@@ -21,6 +21,8 @@ let
     # try from nix package:
     # nix-shell -p pythonPackages.pip
 
+    jupyterlab
+    jupyterlab_launcher
   ];
   python-with-my-packages = pkgs.python3.withPackages my-python-packages;
 in

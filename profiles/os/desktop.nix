@@ -15,18 +15,14 @@
     enable = true;
     # enableCtrlAltBackspace = true;
     layout = "us";
-    videoDrivers = [ "intel" "ati" "cirrus" "vesa" "vmware" "modesetting" ];
-    # "nvidiaBeta" "nvidia"
+    videoDrivers = [ "nvidiaBeta" "nvidia" "intel" "ati" "cirrus" "vesa" "vmware" "modesetting" ];
 
     # check current versions: nix-store -q --references /run/current-system/sw
-    # try build: nix-build -A gnome3
-    # install: nix-env -f . -iA gnome3
-    desktopManager.gnome3.enable = true;
-    displayManager.gdm.enable = true;
+    # try build: nix-build -A wget
+    # install: nix-env -f . -iA wget
+    desktopManager.plasma5.enable = true;
+    displayManager.sddm.enable = true;
 
   };
-
-  # DBus is needed for e.g. Gnome GSConnect extension
-  services.dbus.socketActivated = true;
 
 }
