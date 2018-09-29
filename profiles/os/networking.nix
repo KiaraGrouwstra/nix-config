@@ -29,22 +29,22 @@ rec {
 
     # /etc/hosts
     extraHosts = secrets.extraHosts;
-    networkmanager = {
-      enable = true;
-      dns = "dnsmasq";
-    };
-
-    # firewall = {
-    #   # enable = true;
-    #   allowPing = true;
-
-    #   # # Allow ChromeCast to send/receive packets
-    #   # # http://askubuntu.com/a/326224/177448
-    #   # extraCommands = ''
-    #   #   iptables -I INPUT -p udp -m udp --dport 32768:60999 -j ACCEPT
-    #   # '';
-
+    # networkmanager = {
+    #   enable = true;
+    #   dns = "dnsmasq";
     # };
+
+    firewall = {
+      # enable = true;
+      allowPing = true;
+
+      # # Allow ChromeCast to send/receive packets
+      # # http://askubuntu.com/a/326224/177448
+      # extraCommands = ''
+      #   iptables -I INPUT -p udp -m udp --dport 32768:60999 -j ACCEPT
+      # '';
+
+    };
 
     # # Set a static IP when I didn't want to set up dhcp
     # defaultGateway = "192.168.0.1";
