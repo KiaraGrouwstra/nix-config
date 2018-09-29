@@ -55,6 +55,7 @@ in
           youcompleteme
           vim-fugitive
           nerdtree
+          ghcmod-vim
         ];
       };
     };
