@@ -18,8 +18,7 @@ in
     npm
     node2nix
     azure-cli
-    node-gyp-build
-    # webtorrent-cli
+    # webtorrent-cli node-gyp-build
     webpack
   ]);
 }

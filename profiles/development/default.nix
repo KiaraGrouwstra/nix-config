@@ -41,7 +41,7 @@ in
   # custom packages
   nixpkgs.config.packageOverrides = pkgs: rec {
 
-    myVimPlugins = pkgs.neovim.override {
+    myNeoVimPlugins = pkgs.neovim.override {
       configure = {
         customRC = ''
           # custom configuration
@@ -58,6 +58,33 @@ in
           ghcmod-vim
         ];
       };
+    };
+
+    myVimPlugins = pkgs.vim_configurable.customize {
+      name = "vim-with-plugins";
+      vimrcConfig.vam.knownPlugins = pkgs.vimPlugins; # optional
+      vimrcConfig.vam.pluginDictionaries = [
+        # load always
+        {
+          names = [
+            "vim-go"
+            "syntastic"
+            "nerdtree"
+            "ctrlp.vim"
+            "vim-airline"
+            "youcompleteme"
+            "vim-fugitive"
+            "nerdtree"
+          ];
+        }
+
+        # only load when opening a .hs file
+        { name = "ghcmod-vim"; ft_regex = "^hs\$"; }
+        # { name = "ghcmod-vim"; filename_regex = "^.hs\$"; }
+
+        # provide plugin which can be loaded manually:
+        # { name = "syntastic"; tag = "lazy"; }
+      ];
     };
 
   };
