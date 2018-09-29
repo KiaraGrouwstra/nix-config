@@ -22,7 +22,7 @@ rec {
     # ESSENTIALS
     ./default.nix
     ./desktop.nix
-    # ./networking.nix
+    ./networking.nix
     # ../development/cuda.nix
 
     # PERSONALIZATION
