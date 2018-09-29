@@ -7,6 +7,7 @@ in
   imports = [
     ./haskell.nix
     ./python.nix
+    ./java.nix
     ./ruby.nix
     ./web.nix
     ./servers.nix
