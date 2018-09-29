@@ -30,8 +30,8 @@ rec {
     # /etc/hosts
     extraHosts = secrets.extraHosts;
     networkmanager = {
-      enable = true;
-      # dns = "dnsmasq";
+      # enable = true;
+      dns = "dnsmasq";
     };
 
     firewall = {
