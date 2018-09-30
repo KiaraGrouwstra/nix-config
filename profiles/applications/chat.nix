@@ -12,6 +12,7 @@
     weechat
     zoom-us
     franz
+    discord
   ];
 
 
