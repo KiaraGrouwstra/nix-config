@@ -2,6 +2,7 @@
 application/pdf=firefox.desktop;calibre.desktop;draw.desktop;gimp.desktop;
 image/png=shotwell-viewer.desktop;okularApplication_kimgio.desktop;gimp.desktop;
 x-scheme-handler/sms=org.gnome.Shell.Extensions.GSConnect.desktop;
+text/plain=org.kde.kate.desktop;
 
 [Default Applications]
 application/ogg=vlc.desktop;
