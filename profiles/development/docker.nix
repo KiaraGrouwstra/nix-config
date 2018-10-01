@@ -3,6 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     docker
+    docker_compose
     skopeo  # skopeo inspect docker://docker.io/nixos/nix:1.11 | jq -r '.Digest'
     jq
   ];
