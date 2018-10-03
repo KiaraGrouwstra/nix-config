@@ -23,6 +23,8 @@ let
 
     jupyterlab
     jupyterlab_launcher
+
+    conda
   ];
   python-with-my-packages = pkgs.python3.withPackages my-python-packages;
 in

@@ -13,6 +13,7 @@
     zoom-us
     franz
     discord
+    skypeforlinux
   ];
 
 

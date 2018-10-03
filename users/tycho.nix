@@ -37,10 +37,11 @@ in
     # Configure various dotfiles.
     dotfiles = stringAfter [ "users" ]
     (''
-      for file in $(find $nixPath); do
-        sudo ln -s /run/current-system/sw/bin/$file /bin/$file
-      done
-      sudo ln -s /run/current-system/sw/bin/nvim /bin/vi
+      # binDir=/run/current-system/sw/bin/
+      # for file in $(ls $bindir); do
+      #   [ ! -f $bindir$file ] && ln -s $bindir$file /bin/$file
+      # done
+      # ln -s /run/current-system/sw/bin/nvim /bin/vi
 
       function sha { sha256sum `realpath $1` | head -c 64; }
       function syncFiles {
