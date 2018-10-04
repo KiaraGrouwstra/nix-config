@@ -25,6 +25,10 @@ let
     jupyterlab_launcher
 
     conda
+    pytest
+    pycodestyle
+    black
+    pylint
   ];
   python-with-my-packages = pkgs.python3.withPackages my-python-packages;
 in
