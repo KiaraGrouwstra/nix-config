@@ -47,6 +47,7 @@
     tasty           # testing framework
     weeder          # dead code detection
     # zeromq4-haskell
+    ihaskell
 
     # tfHs
   ]);
