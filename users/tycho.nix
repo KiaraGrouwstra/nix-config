@@ -64,7 +64,6 @@ in
               elif [[ $mode =~ ^down$ ]]; then
                 echo "sudo cp $local $file"
               fi
-              echo
             fi
           elif [ -f "$file" ] && [ ! -f "$local" ]; then
             echo "sudo cp $file $local"
@@ -74,10 +73,13 @@ in
       }
     
       function syncFolders {
+          echo
           echo "========== $1 ==========="
+          echo
           syncFiles "dotfiles" "/home/tycho" "$1"
           syncFiles "public" "" "$1"
           syncFiles "private" "" "$1"
+          echo
       }
 
       echo
