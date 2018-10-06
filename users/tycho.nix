@@ -44,9 +44,11 @@ in
       # ln -s /run/current-system/sw/bin/nvim /bin/vi
 
       function sha { sha256sum `realpath $1` | head -c 64; }
+
       function syncFiles {
         repoPath=$1
         localPath=$2
+        mode=$3
         nixPath="/etc/nixos/$repoPath"
         i=`expr length "$nixPath"`
         for file in $(find $nixPath); do
@@ -57,14 +59,9 @@ in
             sha1=`sha $file`
             sha2=`sha $local`
             if [ "$sha1" != "$sha2" ]; then
-              echo "differences found for $local ($sha2) <-> $file ($sha1):"
-              echo "sudo diff $file $local"  # not available :(
-              read -p "override/upstream/skip $local? (o/u/s) " -n 1 -r
-              echo
-              echo
-              if [[ $REPLY =~ ^[Oo]$ ]]; then
+              if [[ $mode =~ ^up$ ]]; then
                 echo "sudo cp $file $local"
-              elif [[ $REPLY =~ ^[Uu]$ ]]; then
+              elif [[ $mode =~ ^down$ ]]; then
                 echo "sudo cp $local $file"
               fi
               echo
@@ -75,10 +72,18 @@ in
         done
         echo "sudo cp -r $nixPath/. ./$repoPath/"
       }
+    
+      function syncFolders {
+          echo "========== $1 ==========="
+          syncFiles "dotfiles" "/home/tycho" "$1"
+          syncFiles "public" "" "$1"
+          syncFiles "private" "" "$1"
+      }
+
       echo
-      syncFiles "dotfiles" "/home/tycho"
-      syncFiles "public" ""
-      syncFiles "private" ""
+      syncFolders "down"
+      syncFolders "up"
+      echo
       echo "git status"
       echo
     '');
