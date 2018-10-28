@@ -1,7 +1,7 @@
 [Added Associations]
 application/pdf=firefox.desktop;calibre.desktop;draw.desktop;gimp.desktop;
 image/png=shotwell-viewer.desktop;okularApplication_kimgio.desktop;gimp.desktop;
-x-scheme-handler/sms=org.gnome.Shell.Extensions.GSConnect.desktop;
+# x-scheme-handler/sms=org.gnome.Shell.Extensions.GSConnect.desktop;
 text/plain=org.kde.kate.desktop;
 
 [Default Applications]
@@ -67,3 +67,9 @@ x-scheme-handler/https=firefox.desktop
 x-scheme-handler/mailto=firefox.desktop;
 x-scheme-handler/slack=slack.desktop
 x-scheme-handler/vscode=Code.desktop
+x-scheme-handler/chrome=firefox.desktop
+application/x-extension-htm=firefox.desktop
+application/x-extension-html=firefox.desktop
+application/x-extension-shtml=firefox.desktop
+application/x-extension-xhtml=firefox.desktop
+application/x-extension-xht=firefox.desktop
