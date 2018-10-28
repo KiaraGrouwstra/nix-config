@@ -43,6 +43,8 @@
     # juk       # music
     # kaffeine  # media
     kmplayer  # media
+    kleopatra
+    gnupg
 
     # nix / disk
     ncdu

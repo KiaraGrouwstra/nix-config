@@ -3,7 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     retroarch
-    steam
+    # steam
   ];
 
   nixpkgs.config.packageOverrides = pkgs: rec {
