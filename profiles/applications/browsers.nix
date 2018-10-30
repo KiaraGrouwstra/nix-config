@@ -7,6 +7,7 @@
     google-chrome
     # chromium
     # tor-browser-bundle
+    # brave
   ];
 
   nixpkgs.config = {
