@@ -20,5 +20,6 @@ in
     azure-cli
     # webtorrent-cli node-gyp-build
     webpack
+    php
   ]);
 }
