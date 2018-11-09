@@ -5,5 +5,6 @@
     go
     dotnet-sdk
     scala
+    sbt
   ];
 }
