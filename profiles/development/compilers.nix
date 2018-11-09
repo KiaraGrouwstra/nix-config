@@ -7,5 +7,6 @@
     scala
     sbt
     maven
+    gradle
   ];
 }
