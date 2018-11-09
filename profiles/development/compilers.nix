@@ -6,5 +6,6 @@
     dotnet-sdk
     scala
     sbt
+    maven
   ];
 }
