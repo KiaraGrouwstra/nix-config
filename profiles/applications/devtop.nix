@@ -11,6 +11,7 @@
     dpkg
     # gitkraken
     # idea-ultimate
+    atom
   ];
 
 }
