@@ -45,6 +45,7 @@
     kmplayer  # media
     kleopatra
     gnupg
+    # pkgs."1password"
 
     # nix / disk
     ncdu

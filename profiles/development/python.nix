@@ -2,6 +2,7 @@
 
 let
   torrench = import ./python/torrench/default.nix;
+  mypip = import ./python/mypip.nix;
   my-python-packages = python-packages: with python-packages; [
     pip
     setuptools
@@ -41,5 +42,6 @@ in
     python-with-my-packages
     conda  # no conda executable exposed?
     libtensorflow
+    mypip
   ];
 }
