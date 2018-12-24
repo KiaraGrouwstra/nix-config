@@ -2,7 +2,12 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{
+let
+  nixpkgs = import ./master.nix;
+in
+ import "${nixpkgs}/nixos" {
+  configuration = {
+# {
   # v attribute 'isCross' missing, #44
   # _module.args.pkgs = import ./master.nix;
   # _module.args.pkgs = import /drogon/Coding/nix/nixpkgs {
@@ -13,5 +18,5 @@
     ./configuration-common.nix
     ./machines/klink.nix
   ];
-
+ };
 }
