@@ -44,19 +44,19 @@ in
 
     myNeoVimPlugins = pkgs.neovim.override {
       configure = {
-        customRC = ''
-          # custom configuration
-        '';
+#        customRC = ''
+#          # custom configuration
+#        '';
         plug.plugins = with pkgs.vimPlugins; [
-          vim-go
-          syntastic
-          nerdtree
-          ctrlp.vim
-          vim-airline
-          youcompleteme
-          vim-fugitive
-          nerdtree
-          ghcmod-vim
+#          vim-go
+#          syntastic
+#          nerdtree
+#          ctrlp.vim
+#          vim-airline
+#          youcompleteme
+#          vim-fugitive
+#          nerdtree
+#          ghcmod-vim
         ];
       };
     };
