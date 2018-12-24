@@ -9,7 +9,7 @@
 
   environment.systemPackages = with pkgs; [
     dpkg
-    # gitkraken
+    gitkraken
     # idea-ultimate
     atom
   ];

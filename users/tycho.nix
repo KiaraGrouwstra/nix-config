@@ -8,6 +8,7 @@ in
 {
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.tycho = {
+    uid = 1000;
     isNormalUser = true;
     home = "/home/tycho";
     description = "Tycho Grouwstra <tychogrouwstra@gmail.com>";

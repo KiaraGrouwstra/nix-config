@@ -2,3 +2,5 @@ private/
 secrets.nix
 dotfiles/.ssh/id_rsa
 result
+hardware-configuration.nix
+
