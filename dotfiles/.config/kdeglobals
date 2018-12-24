@@ -158,7 +158,7 @@ listViewIconSize=0
 [WM]
 activeBackground=34,45,50
 activeBlend=34,45,50
-activeFont=Sans Serif,12,-1,5,50,0,0,0,0,0
+activeFont=Noto Sans,12,-1,5,50,0,0,0,0,0,Bold
 activeForeground=207,216,220
 inactiveBackground=34,45,50
 inactiveBlend=34,45,50
