@@ -18,7 +18,7 @@ in
     npm
     node2nix
     azure-cli
-    # webtorrent-cli node-gyp-build
+    webtorrent-cli node-gyp-build
     webpack
     php
   ]);
