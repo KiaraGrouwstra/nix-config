@@ -12,6 +12,8 @@
     service-wrapper
     syslinux
     bcachefs-tools
+    mutt
+    neomutt
 
     kdeconnect
     latte-dock
