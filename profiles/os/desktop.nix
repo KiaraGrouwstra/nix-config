@@ -22,6 +22,8 @@
     # install: nix-env -f . -iA wget
     desktopManager.plasma5.enable = true;
     displayManager.sddm.enable = true;
+    windowManager.i3.enable = true;	
+    windowManager.default = "i3";
 
   };
 
