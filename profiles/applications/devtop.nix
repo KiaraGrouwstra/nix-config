@@ -12,6 +12,8 @@
     gitkraken
     # idea-ultimate
     atom
+    spyder
+    # pycharm-community
   ];
 
 }
