@@ -30,6 +30,7 @@ let
     black
     pylint
     coverage
+    seaborn
   ];
   python-with-my-packages = pkgs.python3.withPackages my-python-packages;
 in
