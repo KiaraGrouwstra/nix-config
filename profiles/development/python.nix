@@ -31,6 +31,7 @@ let
     pylint
     coverage
     seaborn
+    dbus-python
   ];
   python-with-my-packages = pkgs.python3.withPackages my-python-packages;
 in
