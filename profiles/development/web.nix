@@ -13,6 +13,7 @@ in
   environment.systemPackages = with pkgs; [
     nodejs
     yarn
+    gnome3.gjs
     # postman
   ] ++ (with nodePackages; [
     npm

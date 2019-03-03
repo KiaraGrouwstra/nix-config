@@ -16,6 +16,8 @@
     firefox = {
       jre = false;
       enableAdobeFlash = false;
+      enableGnomeExtensions = true;
+      # TODO: ^ debug https://extensions.gnome.org/ error "native host connector is not detected"
     };
 
     chromium = {
