@@ -30,6 +30,29 @@ in
 
   };
 
+  users.users.test = {
+    uid = 1010;
+    isNormalUser = true;
+    home = "/home/test";
+    description = "Tycho Grouwstra <tychogrouwstra@gmail.com>";
+    # password = secrets.password;
+    hashedPassword = secrets.hashedPassword;
+
+    shell = pkgs.fish;
+
+    extraGroups = [
+      "audio"
+      "docker"
+      # "libvirtd"
+      "networkmanager"
+      "users"
+      "vboxusers"
+      "video"
+      "wheel"
+    ];
+
+  };
+ 
   environment.variables.DEFAULT_USER = "tycho";
 
   system.activationScripts =
