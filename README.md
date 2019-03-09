@@ -44,8 +44,6 @@ nano /etc/nixos/users/tycho.nix  # set password
 nano /etc/nixos/profiles/os/tychotop.nix  # disable unneeded categories
 nixos-rebuild switch
 systemctl start display-manager.service
-nix-channel --add https://nixos.org/channels/nixos-unstable-small
-fish
 curl -L https://get.oh-my.fish | fish
 ```
 - readd secrets from gist
