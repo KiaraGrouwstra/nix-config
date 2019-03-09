@@ -8,7 +8,7 @@ let
     pandas
     requests
     # pkgs.python36Packages.flask
-    tensorflow
+    # tensorflow
     # tensorflow-tensorboard
     # tensorflowWithoutCuda
     # nix-store --add-fixed sha256 /drogon/dl/cuda/cudnn-9.1-linux-x64-v7.1.tgz
@@ -32,7 +32,7 @@ let
     coverage
     seaborn
   ];
-  python-with-my-packages = pkgs.python3.withPackages my-python-packages;
+  python-with-my-packages = pkgs.python37.withPackages my-python-packages;
 in
 {
   environment.systemPackages = with pkgs; [
