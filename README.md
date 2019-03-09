@@ -44,9 +44,28 @@ nano /etc/nixos/users/tycho.nix  # set password
 nano /etc/nixos/profiles/os/tychotop.nix  # disable unneeded categories
 nixos-rebuild switch
 systemctl start display-manager.service
-curl -L https://get.oh-my.fish | fish
 ```
-- readd secrets from gist
+
+- back up hardware conf to gist: `cat /etc/nixos/hardware-configuration.nix`
+- readd secrets from gist, set up ssh:
+```bash
+vi /etc/nixos/secrets.nix
+mkdir ~/.ssh
+cp /etc/nixos/dotfiles/.ssh/id_rsa.pub ~/.ssh/id_rsa.pub
+vi ~/.ssh/id_rsa
+chmod 0600 ~/.ssh/id_rsa
+```
+
+more commands:
+```
+curl -L https://get.oh-my.fish | fish
+cd ~/Desktop
+git clone git@github.com:tycho01/nix-config.git
+cd nix-config
+cp -r /etc/nixos .
+git status
+# rebuild, copy dotfiles
+```
 
 configure defaults:
 - firefox -> settings -> preferences -> auto scroll, search engine -> DDG, customize -> uncheck title bar
