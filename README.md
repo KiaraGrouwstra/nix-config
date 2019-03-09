@@ -64,7 +64,12 @@ git clone git@github.com:tycho01/nix-config.git
 cd nix-config
 cp -r /etc/nixos .
 git status
-# rebuild, copy dotfiles
+# rebuild
+# back up dotfiles
+mkdir ~/bkp
+cp -r ~/ ~/bkp
+# copy dotfiles
+cp -r ./dotfiles/**/* ~/
 ```
 
 configure defaults:
