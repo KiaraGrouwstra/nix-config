@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-
+{ pkgs, ... }: 
 {
 
   environment.systemPackages = with pkgs; [
@@ -26,6 +25,8 @@
     desktopManager.gnome3.enable = true;
     displayManager.gdm.enable = true;
 
+    # windowManager.default = "i3";
+    # windowManager.i3.enable = true;
   };
 
   # DBus is needed for e.g. Gnome GSConnect extension
