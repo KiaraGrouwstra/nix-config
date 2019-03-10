@@ -28,11 +28,11 @@ rec {
     # ./networking.nix
     # ../development/cuda.nix
 
-    # # PERSONALIZATION
-    # ./shells.nix
-    # ./theme.nix
-    # ./fonts.nix
-    # ../applications/crap.nix
+    # PERSONALIZATION
+    ./shells.nix
+    ./theme.nix
+    ./fonts.nix
+    ../applications/crap.nix
 
     # # DEV
     # ../applications/devtop.nix
