@@ -20,10 +20,10 @@
       # TODO: ^ debug https://extensions.gnome.org/ error "native host connector is not detected"
     };
 
-    chromium = {
-      jre = false;
-      enableAdobeFlash = false;
-    };
+    # chromium = {
+    #   jre = false;
+    #   enableAdobeFlash = false;
+    # };
   };
 
 }
