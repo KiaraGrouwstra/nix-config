@@ -7,7 +7,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    virtualbox
+    # virtualbox
     # kvm
     # qemu
     # vagrant
@@ -15,7 +15,7 @@
   ];
 
   virtualisation = {
-    virtualbox.host.enable = true;
+    # virtualbox.host.enable = true;
     # libvirtd = {
     #   enable = true;
     #   onShutdown = "shutdown";

@@ -11,7 +11,7 @@
     # Blackbird
     clearlooks-phenix
     e17gtk
-    elementary-gtk-theme
+    # elementary-gtk-theme
     gnome-breeze
     greybird
     # gtk-engines
