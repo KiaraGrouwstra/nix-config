@@ -59,17 +59,20 @@ chmod 0600 ~/.ssh/id_rsa
 more commands:
 ```
 curl -L https://get.oh-my.fish | fish
+omf install agnoster
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+sudo mkdir /etc/nixos/private
+sudo mkdir /etc/nixos/public
+# back up dotfiles
+sudo mkdir /bkp
+sudo cp -r ~/ /bkp
+# rebuild
 cd ~/Desktop
 git clone git@github.com:tycho01/nix-config.git
 cd nix-config
 cp -r /etc/nixos .
 git status
-# rebuild
-# back up dotfiles
-mkdir ~/bkp
-cp -r ~/ ~/bkp
-# copy dotfiles
-cp -r ./dotfiles/**/* ~/
+# copy dotfiles as per output
 ```
 
 configure defaults:
