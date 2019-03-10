@@ -11,6 +11,7 @@ rec {
     openssl
     sshfs
     sshfs-fuse
+    mosh
   ];
 
   services.dnsmasq = {
