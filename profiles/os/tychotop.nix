@@ -38,11 +38,11 @@ rec {
     # ../applications/devtop.nix
 
     # APPLICATIONS
-    # ../applications/browsers.nix
-    # ../applications/entertainment.nix
-    # ../applications/office.nix
-    # # ../applications/homeautomation.nix
-    # ../development/virtualization.nix
+    ../applications/browsers.nix
+    ../applications/entertainment.nix
+    ../applications/office.nix
+    # ../applications/homeautomation.nix
+    ../development/virtualization.nix
   ];
 
 
