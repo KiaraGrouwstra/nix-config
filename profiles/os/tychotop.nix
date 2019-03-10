@@ -34,10 +34,10 @@ rec {
     ./fonts.nix
     ../applications/crap.nix
 
-    # # DEV
+    # DEV
     # ../applications/devtop.nix
 
-    # # APPLICATIONS
+    # APPLICATIONS
     # ../applications/browsers.nix
     # ../applications/entertainment.nix
     # ../applications/office.nix
