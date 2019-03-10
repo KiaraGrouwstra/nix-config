@@ -11,7 +11,7 @@ with lib;
 
 {
   imports = [
-    ./services/default.nix
+    # ./services/default.nix
     ./users/tycho.nix
   ];
 
@@ -49,30 +49,30 @@ with lib;
   # Disable displaying the NixOS manual in a virtual console.
   services.nixosManual.showManual = false;
 
-  # Disable the infamous systemd screen/tmux killer
-  services.logind.extraConfig = ''
-    KillUserProcesses=no
-  '';
+  # # Disable the infamous systemd screen/tmux killer
+  # services.logind.extraConfig = ''
+  #   KillUserProcesses=no
+  # '';
 
-  # Increase the amount of inotify watchers
-  # Note that inotify watches consume 1kB on 64-bit machines.
-  boot.kernel.sysctl = {
-    "fs.inotify.max_user_watches"   = 1048576;   # default:  8192
-    "fs.inotify.max_user_instances" =    1024;   # default:   128
-    "fs.inotify.max_queued_events"  =   32768;   # default: 16384
-  };
+  # # Increase the amount of inotify watchers
+  # # Note that inotify watches consume 1kB on 64-bit machines.
+  # boot.kernel.sysctl = {
+  #   "fs.inotify.max_user_watches"   = 1048576;   # default:  8192
+  #   "fs.inotify.max_user_instances" =    1024;   # default:   128
+  #   "fs.inotify.max_queued_events"  =   32768;   # default: 16384
+  # };
 
-  i18n = {
-    consoleFont = "Lat2-Terminus16";
-    # consoleKeyMap = "us";
-    defaultLocale = "en_US.UTF-8";
-    consoleUseXkbConfig = true;
-  };
+  # i18n = {
+  #   consoleFont = "Lat2-Terminus16";
+  #   # consoleKeyMap = "us";
+  #   defaultLocale = "en_US.UTF-8";
+  #   consoleUseXkbConfig = true;
+  # };
 
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
+  # programs.gnupg.agent = {
+  #   enable = true;
+  #   enableSSHSupport = true;
+  # };
 
   # Use the systemd-boot EFI boot loader.
   # boot.loader.grub.enable = true;

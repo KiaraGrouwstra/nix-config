@@ -1,11 +1,11 @@
 { config, pkgs, ... }:
 
-let
-  secrets = import ../../secrets.nix;
-  # settings
-  theme = import ./gnome.nix;
-  gedit = import ../../pkgs/gedit.nix { pkgs = pkgs; };
-in
+# let
+#   secrets = import ../../secrets.nix;
+#   # settings
+#   theme = import ./gnome.nix;
+#   gedit = import ../../pkgs/gedit.nix { pkgs = pkgs; };
+# in
 rec {
 
   # when disk is full / no drive space left:
@@ -25,38 +25,38 @@ rec {
     # ESSENTIALS
     ./default.nix
     ./desktop.nix
-    ./networking.nix
-    ../development/cuda.nix
+    # ./networking.nix
+    # ../development/cuda.nix
 
-    # PERSONALIZATION
-    ./shells.nix
-    ./theme.nix
-    ./fonts.nix
-    ../applications/crap.nix
+    # # PERSONALIZATION
+    # ./shells.nix
+    # ./theme.nix
+    # ./fonts.nix
+    # ../applications/crap.nix
 
-    # DEV
-    ../applications/devtop.nix
+    # # DEV
+    # ../applications/devtop.nix
 
-    # APPLICATIONS
-    ../applications/browsers.nix
-    ../applications/entertainment.nix
-    ../applications/office.nix
-    # ../applications/homeautomation.nix
-    ../development/virtualization.nix
+    # # APPLICATIONS
+    # ../applications/browsers.nix
+    # ../applications/entertainment.nix
+    # ../applications/office.nix
+    # # ../applications/homeautomation.nix
+    # ../development/virtualization.nix
   ];
 
 
-  # https://github.com/NixOS/nixpkgs/tree/master/pkgs
-  # https://github.com/NixOS/nixpkgs/tree/master/nixos/modules
-  environment.systemPackages = with pkgs; [
-    # ...
-  ];
+  # # https://github.com/NixOS/nixpkgs/tree/master/pkgs
+  # # https://github.com/NixOS/nixpkgs/tree/master/nixos/modules
+  # environment.systemPackages = with pkgs; [
+  #   # ...
+  # ];
 
-  networking.firewall.enable = false;
+  # networking.firewall.enable = false;
 
-  programs = {
-    mtr.enable = true;
-  };
+  # programs = {
+  #   mtr.enable = true;
+  # };
 
   environment.variables = {
     EDITOR = "vim";
@@ -67,7 +67,7 @@ rec {
     %wheel ALL=(ALL) NOPASSWD:ALL
   '';
 
-  time.timeZone = "Europe/Amsterdam";
+  # time.timeZone = "Europe/Amsterdam";
 
   i18n = {
     consoleUseXkbConfig = true;
@@ -88,13 +88,13 @@ rec {
     };
   };
 
-  services.xserver.displayManager.sddm.theme = "Adapta-Nokto-Eta";
-  services.xserver.displayManager.sddm.autoLogin = {
-    enable = true;
-    user = "tycho";
-  };
+  # services.xserver.displayManager.sddm.theme = "Adapta-Nokto-Eta";
+  # services.xserver.displayManager.sddm.autoLogin = {
+  #   enable = true;
+  #   user = "tycho";
+  # };
 
-  services.xserver.desktopManager.gnome3.extraGSettingsOverridePackages = gedit.extraGSettingsOverridePackages;
+  # services.xserver.desktopManager.gnome3.extraGSettingsOverridePackages = gedit.extraGSettingsOverridePackages;
 
   services.xserver.displayManager.gdm.autoLogin = {
     enable = true;
