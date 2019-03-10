@@ -59,12 +59,20 @@ chmod 0600 ~/.ssh/id_rsa
 more commands:
 ```
 curl -L https://get.oh-my.fish | fish
+omf install agnoster
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+sudo mkdir /etc/nixos/private
+sudo mkdir /etc/nixos/public
+# back up dotfiles
+sudo mkdir /bkp
+sudo cp -r ~/ /bkp
+# rebuild
 cd ~/Desktop
 git clone git@github.com:tycho01/nix-config.git
 cd nix-config
 cp -r /etc/nixos .
 git status
-# rebuild, copy dotfiles
+# copy dotfiles as per output
 ```
 
 configure defaults:
@@ -76,4 +84,3 @@ configure defaults:
 - // lockscreen slideshow: System Settings -> Desktop Behavior -> Screen Locking -> Appearance > Slideshow > Add Folder
 - // wallpaper: Right click the desktop > Configure Desktop > Wallpaper > Wallpaper Type > Slideshow > Add Folder
 - telegram -> night mode
-- reclone nix-config from user, rebuild that
