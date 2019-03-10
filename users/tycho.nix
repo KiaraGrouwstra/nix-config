@@ -75,7 +75,7 @@ in
     
       function syncFolders {
           echo
-          echo "========== $1 ==========="
+          echo "###### $1 ######"
           echo
           syncFiles "dotfiles" "/home/tycho" "$1"
           syncFiles "public" "" "$1"

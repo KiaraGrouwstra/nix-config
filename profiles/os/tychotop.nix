@@ -88,7 +88,7 @@ rec {
     };
   };
 
-  # services.xserver.displayManager.sddm.theme = "Adapta-Nokto-Eta";
+  services.xserver.displayManager.sddm.theme = "Adapta-Nokto-Eta";
   services.xserver.displayManager.sddm.autoLogin = {
     enable = true;
     user = "tycho";

@@ -48,14 +48,15 @@ in
 #          # custom configuration
 #        '';
         plug.plugins = with pkgs.vimPlugins; [
-#          vim-go
-#          syntastic
-#          nerdtree
-#          ctrlp.vim
-#          vim-airline
-#          youcompleteme
-#          vim-fugitive
-#          nerdtree
+          vim-pathogen
+          vim-go
+          syntastic
+          nerdtree
+          ctrlp.vim
+          vim-airline
+          youcompleteme
+          vim-fugitive
+          nerdtree
 #          ghcmod-vim
         ];
       };

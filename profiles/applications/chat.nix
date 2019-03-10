@@ -14,6 +14,7 @@
     franz
     discord
     skypeforlinux
+    telegram-cli
   ];
 
 
