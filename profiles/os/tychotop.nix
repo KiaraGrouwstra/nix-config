@@ -25,7 +25,7 @@ rec {
     # ESSENTIALS
     ./default.nix
     ./desktop.nix
-    # ./networking.nix
+    ./networking.nix
     # ../development/cuda.nix
 
     # PERSONALIZATION
@@ -41,7 +41,7 @@ rec {
     ../applications/browsers.nix
     ../applications/entertainment.nix
     ../applications/office.nix
-    # ../applications/homeautomation.nix
+    ../applications/homeautomation.nix
     ../development/virtualization.nix
   ];
 
