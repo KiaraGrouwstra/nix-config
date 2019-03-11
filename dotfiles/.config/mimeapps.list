@@ -1,15 +1,14 @@
-[Added Associations]
-application/pdf=firefox.desktop;calibre.desktop;draw.desktop;gimp.desktop;
-image/png=shotwell-viewer.desktop;okularApplication_kimgio.desktop;gimp.desktop;
-# x-scheme-handler/sms=org.gnome.Shell.Extensions.GSConnect.desktop;
-text/plain=org.kde.kate.desktop;
-
 [Default Applications]
 application/ogg=vlc.desktop;
 application/pdf=firefox.desktop;
 application/vnd.mozilla.xul+xml=firefox.desktop
 application/vnd.rn-realmedia=vlc.desktop;
+application/x-extension-htm=firefox.desktop
+application/x-extension-html=firefox.desktop
 application/x-extension-mp4=vlc.desktop;
+application/x-extension-shtml=firefox.desktop
+application/x-extension-xht=firefox.desktop
+application/x-extension-xhtml=firefox.desktop
 application/x-flac=vlc.desktop;
 application/x-matroska=vlc.desktop;
 application/x-ogg=vlc.desktop;
@@ -25,8 +24,8 @@ audio/x-ms-asf=vlc.desktop;
 audio/x-ms-asx=vlc.desktop;
 audio/x-ms-wax=vlc.desktop;
 audio/x-pn-aiff;audio/x-pn-au=vlc.desktop;
-audio/x-pn-realaudio=vlc.desktop;
 audio/x-pn-realaudio-plugin=vlc.desktop;
+audio/x-pn-realaudio=vlc.desktop;
 audio/x-pn-wav=vlc.desktop;
 audio/x-pn-windows-acm=vlc.desktop;
 audio/x-real-audio=vlc.desktop;
@@ -61,15 +60,16 @@ x-content/audio-player=vlc.desktop;
 x-content/video-dvd=vlc.desktop;
 x-content/video-svcd=vlc.desktop;
 x-content/video-vcd=vlc.desktop;
+x-scheme-handler/chrome=firefox.desktop
 x-scheme-handler/ftp=firefox.desktop
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
 x-scheme-handler/mailto=firefox.desktop;
 x-scheme-handler/slack=slack.desktop
 x-scheme-handler/vscode=Code.desktop
-x-scheme-handler/chrome=firefox.desktop
-application/x-extension-htm=firefox.desktop
-application/x-extension-html=firefox.desktop
-application/x-extension-shtml=firefox.desktop
-application/x-extension-xhtml=firefox.desktop
-application/x-extension-xht=firefox.desktop
+
+[Added Associations]
+application/pdf=evince.desktop;calibre.desktop;draw.desktop;gimp.desktop;
+image/png=shotwell-viewer.desktop;okularApplication_kimgio.desktop;gimp.desktop;
+text/plain=org.kde.kate.desktop;
+x-scheme-handler/sms=org.gnome.Shell.Extensions.GSConnect.desktop;

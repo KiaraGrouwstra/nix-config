@@ -13,9 +13,9 @@
     ghc
     haskell.compiler.ghc822
     # haskell.compiler.ghc843
-    haskell.compiler.ghc861
+    # haskell.compiler.ghc861
     haskell.compiler.ghcHEAD
-    haskell.compiler.ghcjs
+    # haskell.compiler.ghcjs
 
     zeromq
   ] ++ (with haskellPackages; [
@@ -26,7 +26,7 @@
     # cabal-helper    # dep  # https://github.com/NixOS/nixpkgs/issues/32631
     alex
     happy
-    hakyll
+    # hakyll
     c2hs
 
     # tools
@@ -41,8 +41,8 @@
     hpack           # yaml based package format
     hspec           # testing framework
     # intero          # IDE tooltips
-    pointfree       # http://pointfree.io/
-    pointful        # https://github.com/23Skidoo/pointful
+    # pointfree       # http://pointfree.io/
+    # pointful        # https://github.com/23Skidoo/pointful
     stylish-haskell # pretty printer
     tasty           # testing framework
     weeder          # dead code detection
