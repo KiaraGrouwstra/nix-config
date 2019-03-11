@@ -23,7 +23,10 @@
     # desktopManager.plasma5.enable = true;
     # displayManager.sddm.enable = true;
     desktopManager.gnome3.enable = true;
-    displayManager.gdm.enable = true;
+    displayManager.gdm = {
+      enable = true;
+      wayland = false;
+    };
 
     windowManager.default = "i3";
     windowManager.i3.enable = true;
