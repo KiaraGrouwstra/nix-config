@@ -10,7 +10,7 @@
   environment.systemPackages = with pkgs; [
     dpkg
     gitkraken
-    idea-ultimate
+    # idea-ultimate
     atom
     spyder
     # pycharm-community
