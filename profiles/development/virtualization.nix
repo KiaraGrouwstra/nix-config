@@ -7,11 +7,11 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    # virtualbox
-    # kvm
-    # qemu
-    # vagrant
-    # virtmanager
+    virtualbox
+    kvm
+    qemu
+    vagrant
+    virtmanager
   ];
 
   virtualisation = {
