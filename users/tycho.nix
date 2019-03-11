@@ -15,7 +15,7 @@ in
     # password = secrets.password;
     hashedPassword = secrets.hashedPassword;
 
-    # shell = pkgs.fish;
+    shell = pkgs.fish;
 
     extraGroups = [
       "audio"
