@@ -13,7 +13,7 @@ in
     ./servers.nix
     ./compilers.nix
     ./latex.nix
-    # ./mathematics.nix
+    ./mathematics.nix
   ];
 
   # install development packages
