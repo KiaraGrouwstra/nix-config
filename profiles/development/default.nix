@@ -5,15 +5,15 @@ let
 in
 {
   imports = [
-    ./haskell.nix
-    ./python.nix
-    ./java.nix
-    ./ruby.nix
-    ./web.nix
-    ./servers.nix
-    ./compilers.nix
-    ./latex.nix
-    ./mathematics.nix
+    # ./haskell.nix
+    # ./python.nix
+    # ./java.nix
+    # ./ruby.nix
+    # ./web.nix
+    # ./servers.nix
+    # ./compilers.nix
+    # ./latex.nix
+    # ./mathematics.nix
   ];
 
   # install development packages
