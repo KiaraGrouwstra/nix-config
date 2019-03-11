@@ -12,6 +12,7 @@ rec {
     sshfs
     sshfs-fuse
     mosh
+    ethtool
   ];
 
   services.dnsmasq = {
