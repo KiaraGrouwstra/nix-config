@@ -1,13 +1,13 @@
 { pkgs, ... }: 
 {
 
-  # environment.systemPackages = with pkgs; [
-  #   wmctrl
-  #   wine
-  #   appimage-run
-  #   appimagekit
-  #   squashfsTools
-  # ];
+  environment.systemPackages = with pkgs; [
+    wmctrl
+    wine
+    appimage-run
+    appimagekit
+    squashfsTools
+  ];
 
   # X11 windowing system
   services.xserver = {
