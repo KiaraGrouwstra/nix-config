@@ -17,7 +17,7 @@
     docker = {
       enable = true;
       storageDriver = "overlay";
-      extraOptions = '' --data-root "/drogon/root/var/lib/docker" '';
+      # extraOptions = '' --data-root "/drogon/root/var/lib/docker" '';
     };
   };
 }

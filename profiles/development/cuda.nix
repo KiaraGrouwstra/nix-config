@@ -8,6 +8,7 @@
     cudatoolkit
     # nix-prefetch-url file://$PWD/cudnn-9.1-linux-x64-v7.tgz
     # cudnn
+    nvidia-docker
   ];
 
   # systemd.services.nvidia-control-devices = {
