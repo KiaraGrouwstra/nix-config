@@ -33,6 +33,7 @@
     curl
     libraw
     sqlite
+    graphviz
   ];
 
   # custom packages
