@@ -85,3 +85,4 @@ configure defaults:
 - // lockscreen slideshow: System Settings -> Desktop Behavior -> Screen Locking -> Appearance > Slideshow > Add Folder
 - // wallpaper: Right click the desktop > Configure Desktop > Wallpaper > Wallpaper Type > Slideshow > Add Folder
 - telegram -> night mode
+- systray -> keyboard -> Configure -> + -> uncheck Only Current -> Mozc, Pinyin
