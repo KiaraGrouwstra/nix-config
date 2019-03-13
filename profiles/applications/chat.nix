@@ -15,6 +15,7 @@
     discord
     skypeforlinux
     telegram-cli
+    signal-desktop
   ];
 
 
