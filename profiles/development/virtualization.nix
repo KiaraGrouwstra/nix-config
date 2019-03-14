@@ -15,10 +15,10 @@
   ];
 
   virtualisation = {
-    # virtualbox.host.enable = true;
-    # libvirtd = {
-    #   enable = true;
-    #   onShutdown = "shutdown";
-    # };
+    virtualbox.host.enable = true;
+    libvirtd = {
+      enable = true;
+      onShutdown = "shutdown";
+    };
   };
 }
