@@ -34,6 +34,7 @@
     libraw
     sqlite
     graphviz
+    dhall
   ];
 
   # custom packages
