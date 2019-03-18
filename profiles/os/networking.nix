@@ -12,6 +12,10 @@ rec {
     sshfs
     sshfs-fuse
     mosh
+
+    # hacking tools
+    metasploit
+    aircrack-ng
   ];
 
   services.dnsmasq = {

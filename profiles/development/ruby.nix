@@ -6,6 +6,5 @@
     ruby
     bundler
     bundix
-    metasploit
   ];
 }
