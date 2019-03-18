@@ -16,6 +16,7 @@ rec {
     # hacking tools
     metasploit
     aircrack-ng
+    arpoison
   ];
 
   services.dnsmasq = {
