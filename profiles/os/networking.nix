@@ -13,6 +13,11 @@ rec {
     sshfs-fuse
     mosh
     ethtool
+
+    # hacking tools
+    metasploit
+    aircrack-ng
+    arpoison
   ];
 
   services.dnsmasq = {
