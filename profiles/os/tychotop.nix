@@ -1,11 +1,11 @@
 { config, pkgs, ... }:
 
-# let
-#   secrets = import ../../secrets.nix;
-#   # settings
-#   theme = import ./gnome.nix;
-#   gedit = import ../../pkgs/gedit.nix { pkgs = pkgs; };
-# in
+let
+  secrets = import ../../secrets.nix;
+  # settings
+  theme = import ./gnome.nix;
+  gedit = import ../../pkgs/gedit.nix { pkgs = pkgs; };
+in
 rec {
 
   # when disk is full / no drive space left:
@@ -94,7 +94,7 @@ rec {
   #   user = "tycho";
   # };
 
-  # services.xserver.desktopManager.gnome3.extraGSettingsOverridePackages = gedit.extraGSettingsOverridePackages;
+  services.xserver.desktopManager.gnome3.extraGSettingsOverridePackages = gedit.extraGSettingsOverridePackages;
 
   services.xserver.displayManager.gdm.autoLogin = {
     enable = true;
