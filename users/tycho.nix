@@ -60,9 +60,9 @@ in
             sha1=`sha $file`
             sha2=`sha $local`
             if [ "$sha1" != "$sha2" ]; then
-              if [[ $mode =~ ^up$ ]]; then
+              if [[ $mode =~ ^down$ ]]; then
                 echo "sudo cp $file $local"
-              elif [[ $mode =~ ^down$ ]]; then
+              elif [[ $mode =~ ^up$ ]]; then
                 echo "sudo cp $local $file"
               fi
             fi
