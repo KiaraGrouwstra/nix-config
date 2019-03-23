@@ -10,7 +10,7 @@
     "explorer.confirmDragAndDrop": false,
     "window.zoomLevel": 0,
     "git.confirmSync": false,
-    "git.autofetch": false,
+    "git.autofetch": true,
     "update.channel": "none",
     "editor.wordWrap": "on",
     "git.enableSmartCommit": true
