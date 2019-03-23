@@ -26,6 +26,7 @@ in
       "vboxusers"
       "video"
       "wheel"
+      "adbusers"
     ];
 
   };

@@ -53,6 +53,7 @@ rec {
 
   programs = {
     mtr.enable = true;
+    adb.enable = true;
   };
 
   environment.variables = {
