@@ -15,8 +15,6 @@ Show Status Bar=true
 Show Tab Bar=true
 
 [KFileDialog Settings]
-Recent Files[$e]=file:$HOME/.nix-profile/share/applications/org.gnome.ChromeGnomeShell.desktop,file:$HOME/.config/menus/applications-merged/xdg-desktop-menu-dummy.menu
-Recent URLs[$e]=file:$HOME/.nix-profile/share/applications/,file:$HOME/.config/menus/applications-merged/
 
 [KTextEditor Document]
 Allow End of Line Detection=true
@@ -71,6 +69,7 @@ Backspace Remove Composed Characters=false
 Bookmark Menu Sorting=0
 Default Mark Type=1
 Dynamic Word Wrap=true
+Dynamic Word Wrap At Static Marker=false
 Dynamic Word Wrap Align Indent=80
 Dynamic Word Wrap Indicators=1
 Fold First Line=false
