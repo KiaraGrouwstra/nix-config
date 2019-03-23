@@ -1,8 +1,5 @@
 { config, lib, pkgs, ... }:
 
-let
-  nvidiaDocker = import ./nvidia-docker/default.nix { inherit pkgs; };
-in
 {
   imports = [
     ./haskell.nix
@@ -23,7 +20,6 @@ in
     binutils-unwrapped
     zlib
     protobuf
-    nvidiaDocker
     snappy
     nix-generate-from-cpan
     libtool
@@ -37,6 +33,8 @@ in
     curl
     libraw
     sqlite
+    graphviz
+    dhall
   ];
 
   # custom packages

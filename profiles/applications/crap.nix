@@ -14,6 +14,7 @@
     bcachefs-tools
     mutt
     neomutt
+    zip
 
     kdeconnect
     latte-dock

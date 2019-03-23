@@ -49,6 +49,7 @@ systemctl start display-manager.service
 - back up hardware conf to gist: `cat /etc/nixos/hardware-configuration.nix`
 - readd secrets from gist, set up ssh:
 ```bash
+sudo chown -R tycho ~
 vi /etc/nixos/secrets.nix
 mkdir ~/.ssh
 cp /etc/nixos/dotfiles/.ssh/id_rsa.pub ~/.ssh/id_rsa.pub
@@ -84,3 +85,4 @@ configure defaults:
 - // lockscreen slideshow: System Settings -> Desktop Behavior -> Screen Locking -> Appearance > Slideshow > Add Folder
 - // wallpaper: Right click the desktop > Configure Desktop > Wallpaper > Wallpaper Type > Slideshow > Add Folder
 - telegram -> night mode
+- systray -> keyboard -> Configure -> + -> uncheck Only Current -> Mozc, Pinyin
