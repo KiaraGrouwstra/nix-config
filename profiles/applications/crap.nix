@@ -16,6 +16,7 @@
     neomutt
     zip
     unrar
+    rxvt_unicode  # rxvt_unicode-with-plugins
 
     kdeconnect
     latte-dock
