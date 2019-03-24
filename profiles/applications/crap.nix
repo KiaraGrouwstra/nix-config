@@ -15,6 +15,7 @@
     mutt
     neomutt
     zip
+    unrar
 
     kdeconnect
     latte-dock

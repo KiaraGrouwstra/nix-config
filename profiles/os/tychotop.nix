@@ -54,9 +54,10 @@ rec {
 
   # networking.firewall.enable = false;
 
-  # programs = {
-  #   mtr.enable = true;
-  # };
+  programs = {
+    mtr.enable = true;
+    adb.enable = true;
+  };
 
   environment.variables = {
     EDITOR = "vim";
