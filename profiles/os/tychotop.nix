@@ -58,6 +58,7 @@ rec {
 
   environment.variables = {
     EDITOR = "vim";
+    TERMINAL = "konsole";  # non-standard, used by i3-sensible-terminal
   };
 
   security.sudo.extraConfig = ''
