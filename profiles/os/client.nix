@@ -9,6 +9,7 @@ rec {
 
   environment.systemPackages = with pkgs; [
     gparted
+    apulse
   ];
 
   # touchpad
