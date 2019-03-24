@@ -25,14 +25,14 @@
     desktopManager = {
       plasma5.enable = true;
       gnome3.enable = true;
-      enlightenment.enable = true;
-      kodi.enable = true;
-      lumina.enable = true;
-      lxqt.enable = true;
-      mate.enable = true;
-      maxx.enable = true;
-      xfce.enable = true;
-      xterm.enable = true;
+      # enlightenment.enable = true;
+      # kodi.enable = true;
+      # lumina.enable = true;
+      # lxqt.enable = true;
+      # mate.enable = true;
+      # maxx.enable = true;
+      # xfce.enable = true;
+      # xterm.enable = true;
     };
 
     displayManager = {
@@ -45,7 +45,7 @@
 
     windowManager = {
       i3.enable = true;
-      # default = "i3";
+      default = "i3";
     };
 
   };
