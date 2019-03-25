@@ -17,6 +17,8 @@
     zip
     unrar
     rxvt_unicode  # rxvt_unicode-with-plugins
+    i3-gaps
+    i3blocks-gaps
 
     kdeconnect
     latte-dock
