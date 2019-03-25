@@ -36,7 +36,7 @@
     # cantor    # math
     # kalgebra  # graph calc
     # kmplot    # plotter
-    # ktouch    # touch typing
+    ktouch    # touch typing
     # labplot   # plotter
     minuet    # music
     kcalc     # calc
