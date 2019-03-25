@@ -44,12 +44,23 @@
     };
 
     windowManager = {
-      i3.enable = true;
+      i3 = {
+        enable = true;
+        package = pkgs.i3-gaps;
+        extraPackages = with pkgs; [
+          dmenu #application launcher most people use
+          # i3status # gives you the default i3 status bar
+          # i3lock #default i3 screen locker
+          i3blocks-gaps #if you are planning on using i3blocks over i3status
+       ];
+      };
       awesome.enable = true;
       xmonad.enable = true;
       default = "i3";
     };
 
   };
+
+  environment.pathsToLink = [ "/libexec" ];
 
 }
