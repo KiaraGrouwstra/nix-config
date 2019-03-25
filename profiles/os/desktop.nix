@@ -45,6 +45,8 @@
 
     windowManager = {
       i3.enable = true;
+      awesome.enable = true;
+      xmonad.enable = true;
       default = "i3";
     };
 
