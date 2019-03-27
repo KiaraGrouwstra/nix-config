@@ -19,6 +19,8 @@
     rxvt_unicode  # rxvt_unicode-with-plugins
     i3-gaps
     i3blocks-gaps
+    i3status
+    xclip
 
     kdeconnect
     latte-dock
