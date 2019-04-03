@@ -21,6 +21,7 @@
     i3blocks-gaps
     i3status
     xclip
+    git-lfs
 
     kdeconnect
     latte-dock
