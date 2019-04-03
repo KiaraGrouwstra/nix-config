@@ -1,0 +1,17 @@
+# Custom options from `extraConfig`, to override generated options
+
+
+# Generated options from other settings
+Host *
+AddressFamily any
+
+XAuthLocation /nix/store/093hq0w9xi82iibrjpixzzwmi02parwa-xauth-1.0.10/bin/xauth
+
+ServerAliveInterval 15
+ServerAliveCountMax 3
+
+ForwardX11 no
+
+PubkeyAcceptedKeyTypes +ssh-dss
+HostKeyAlgorithms +ssh-dss
+
