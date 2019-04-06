@@ -8,6 +8,7 @@
     gnomeExtensions.system-monitor
     gnomeExtensions.topicons-plus
     gnomeExtensions.appindicator
+    gnomeExtensions.gsconnect
   ];
 
   services.gnome3.chrome-gnome-shell.enable = true;
