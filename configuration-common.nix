@@ -50,9 +50,15 @@ with lib;
   services.nixosManual.showManual = false;
 
   # Disable the infamous systemd screen/tmux killer
-  services.logind.extraConfig = ''
-    KillUserProcesses=no
-  '';
+  services.logind = {
+    lidSwitch = "suspend";
+    lidSwitchDocked = "ignore";
+    lidSwitchExternalPower = "ignore";
+    extraConfig = ''
+      HandlePowerKey=suspend
+      KillUserProcesses=no
+    '';
+  };
 
   # Increase the amount of inotify watchers
   # Note that inotify watches consume 1kB on 64-bit machines.
