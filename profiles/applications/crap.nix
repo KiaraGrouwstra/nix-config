@@ -22,6 +22,9 @@
     i3status
     xclip
     git-lfs
+    pmutils
+    exa
+    xorg.xbacklight
 
     kdeconnect
     latte-dock
