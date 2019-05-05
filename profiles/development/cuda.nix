@@ -13,7 +13,8 @@
 
   # systemd.services.nvidia-control-devices = {
   #   wantedBy = [ "multi-user.target" ];
-  #   serviceConfig.ExecStart = "/nix/store/498ygg4l1xgi5ji7b8vl8z4ml70gxizw-nvidia-x11-390.87-4.18.2018.09.21-bin/bin/nvidia-smi";
+  #   # serviceConfig.ExecStart = "/nix/store/498ygg4l1xgi5ji7b8vl8z4ml70gxizw-nvidia-x11-390.87-4.18.2018.09.21-bin/bin/nvidia-smi";
+  #   serviceConfig.ExecStart = "${pkgs.linuxPackages.nvidia_x11}/bin/nvidia-smi";
   #   # ${pkgs.linuxPackages.nvidia_x11}
   # };
 
