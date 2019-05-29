@@ -16,6 +16,7 @@
     '';
     docker = {
       enable = true;
+      enableNvidia = true;
       # storageDriver = "overlay";
       # extraOptions = '' --data-root "/drogon/root/var/lib/docker" '';
     };
