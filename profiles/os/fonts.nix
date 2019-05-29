@@ -24,7 +24,7 @@
       source-code-pro
       source-sans-pro
       source-serif-pro
-      vistafonts
+      # vistafonts
       ipafont # jp
       kochi-substitute # jp
     ];
