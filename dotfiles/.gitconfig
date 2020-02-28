@@ -2,8 +2,8 @@
 # https://github.com/dotphiles/dotphiles/blob/master/git/gitconfig
 
 [user]
-    email = tychogrouwstra@gmail.com
-    name = Tycho Grouwstra
+    email = tycho01@pm.me
+    name = Kiara Grouwstra
 
 [branch "master"]
     remote = origin
