@@ -2,7 +2,7 @@
 # https://github.com/dotphiles/dotphiles/blob/master/git/gitconfig
 
 [user]
-    email = tycho01@pm.me
+    email = kiara.grouwstra@gmail.com
     name = Kiara Grouwstra
 
 [branch "master"]
